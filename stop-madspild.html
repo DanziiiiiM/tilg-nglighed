@@ -8,29 +8,27 @@
 </head>
 
 <body data-mode="normal">
-<a href="#main" class="skip-link">Spring til hovedindhold</a>
 
-  <nav class="topmenu" aria-label="Hovedmenu">
+  <nav class="topmenu">
     <div class="row">
       <!-- Burger-knap -->
 
       <!-- Menu-links -->
       <div class="nav-links">
-        <div class="menulink one"><a href="index.html" aria-current="page">FORSIDE</a></div>
+        <div class="menulink one"><a href="index.html">FORSIDE</a></div>
         <div class="menulink two"><a href="bæredygtighed.html">Bæredygtighed</a></div>
         <div class="menulink three"><a href="stop-madspild.html">Stop madspild</a></div>
         <div class="menulink four"><a href="kontakt.html">KONTAKT OS</a></div>
 
         <!-- Farveblindhed -->
         <div class="colorblind">
-          <button id="colorToggle" aria-expanded="false" aria-controls="colorMenu" aria-label="Skift farvetilstand">🎨</button>
-            <div class="color-menu" id="colorMenu" hidden>
-            <button data-mode="normal">🌈Standardfarver</button>
-            <button data-mode="deuteranopia">🟢Rød-grønjusteret</button>
+          <button id="colorToggle">🎨</button>
+          <div class="color-menu">
+            <button data-mode="normal">🌈 Standardfarver</button>
+            <button data-mode="deuteranopia">🟢Rødgrønjusteret</button>
             <button data-mode="protanopia">🔴Rødvenligvisning</button>
-            <button data-mode="tritanopia">🔵Blåguljusteret</button>
-            </div>
-
+            <button data-mode="tritanopia">🔵 Blåguljusteret</button>
+          </div>
         </div>
       </div>
     </div>
@@ -42,26 +40,21 @@
   </section>
 
   <section class="broedtekst">
-    <main id="main">
-    <section class="broedtekst">
-        <div class="grid">
+    <main>
+      <div class="grid">
         <div class="box1">
-            <h2 class="boxtitel">Bæredygtighed</h2>
-            <p>Lorem ipsum dolor sit amet...</p>
+          <h2 class="boxtitel">Bæredygtighed</h2>
+          <p>Lorem ipsum dolor sit amet...</p>
         </div>
         <div class="box2">
-            <h2>Stop Madspild</h2>
+          <h2>Stop Madspild</h2>
         </div>
-        </div>
-    </section>
-    </main>    
+      </div>
+    </main>
   </section>
 
   <section class="bund">
-    <footer>
-  <p>&copy; 2025 Grøn Hverdag. Alle rettigheder forbeholdes.</p>
-    </footer>
-
+    <footer></footer>
   </section>
 
   <script src="script.js"></script>

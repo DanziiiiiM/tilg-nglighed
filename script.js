@@ -1,26 +1,39 @@
-// === GEMT FARVETILSTAND PÅ TVÆRS AF SIDER ===
+// === GEMT FARVETILSTAND ===
 const savedMode = localStorage.getItem("colorMode");
 if (savedMode) {
   document.body.setAttribute("data-mode", savedMode);
 }
 
-// === FARVEMENU ===
+// === ELEMENTER ===
 const colorToggle = document.getElementById("colorToggle");
-const colorContainer = document.querySelector(".colorblind");
+const colorMenu = document.getElementById("colorMenu");
 const modeButtons = document.querySelectorAll(".color-menu button");
 
-// Åbn/luk dropdown-menu
+// === ÅBN / LUK DROPDOWN ===
 colorToggle.addEventListener("click", () => {
-  colorContainer.classList.toggle("active");
+  const isHidden = colorMenu.hidden;
+  colorMenu.hidden = !isHidden;
+  colorToggle.setAttribute("aria-expanded", !isHidden);
+  colorToggle.parentElement.classList.toggle("active");
 });
 
-// Skift farvetilstand og gem
+// === SKIFT FARVETILSTAND ===
 modeButtons.forEach((btn) => {
   btn.addEventListener("click", () => {
     const mode = btn.getAttribute("data-mode");
     document.body.setAttribute("data-mode", mode);
-    colorContainer.classList.remove("active");
     localStorage.setItem("colorMode", mode);
+    colorMenu.hidden = true;
+    colorToggle.setAttribute("aria-expanded", false);
+    colorToggle.parentElement.classList.remove("active");
   });
 });
 
+// === LUK MENU VED KLIK UDENFOR ===
+document.addEventListener("click", (e) => {
+  if (!colorToggle.contains(e.target) && !colorMenu.contains(e.target)) {
+    colorMenu.hidden = true;
+    colorToggle.setAttribute("aria-expanded", false);
+    colorToggle.parentElement.classList.remove("active");
+  }
+});

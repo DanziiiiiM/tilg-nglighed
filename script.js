@@ -37,3 +37,10 @@ document.addEventListener("click", (e) => {
     colorToggle.parentElement.classList.remove("active");
   }
 });
+
+  const burgerBtn = document.getElementById('burgerBtn');
+  const navLinks = document.getElementById('navLinks');
+
+  burgerBtn.addEventListener('click', () => {
+    navLinks.classList.toggle('active');
+  });

@@ -11,48 +11,87 @@
 <body data-mode="normal">
 <a href="#main" class="skip-link">Spring til hovedindhold</a>
 
-  <nav class="topmenu" aria-label="Hovedmenu">
-    <div class="row">
-      <!-- Burger-knap -->
+<nav class="topmenu" aria-label="Hovedmenu">
+  <div class="nav-container">
 
-      <!-- Menu-links -->
-      <div class="nav-links">
-        <div class="menulink one"><a href="index.html" aria-current="page">FORSIDE</a></div>
-        <div class="menulink two"><a href="bæredygtighed.html">Bæredygtighed</a></div>
-        <div class="menulink three"><a href="stop-madspild.html">Stop madspild</a></div>
-        <div class="menulink four"><a href="kontakt.html">KONTAKT OS</a></div>
+    <!-- Burger-knap -->
+    <button class="burger" id="burgerBtn" aria-label="Åbn menu">
+      ☰
+    </button>
 
-        <!-- Farveblindhed -->
-        <div class="menulink colorblind">
-          <button id="colorToggle" aria-expanded="false" aria-controls="colorMenu" aria-label="Skift farvetilstand">FARVEBLINDHED</button>
-            <div class="color-menu" id="colorMenu" hidden>
-            <button data-mode="normal">🌈Standardfarver</button>
-            <button data-mode="deuteranopia">🟢Rødgrønjusteret</button>
-            <button data-mode="protanopia">🔴Rødvenligvisning</button>
-            <button data-mode="tritanopia">🔵Blåguljusteret</button>
-            </div>
+    <!-- Menu-links -->
+    <div class="nav-links" id="navLinks">
+      <img class="menulink menulink-img" src="img/logo3.png" alt="">
+      <div class="menulink"><a href="index.html" aria-current="page">FORSIDE</a></div>
+      <div class="menulink"><a href="stop-madspild.html">STOP MADSPILD</a></div>
+      <div class="menulink"><a href="kontakt.html">KONTAKT OS</a></div>
 
+      <!-- Farveblindhed dropdown -->
+      <div class="menulink colorblind">
+        <button id="colorToggle" aria-expanded="false" aria-controls="colorMenu" aria-label="Skift farvetilstand">
+          FARVEBLINDHED
+        </button>
+        
+        <div class="color-menu" id="colorMenu" hidden>
+          <button data-mode="normal">Standard</button>
+          <button data-mode="deuteranopia">Rødgrønjusteret</button>
+          <button data-mode="protanopia">Rødvenlig</button>
+          <button data-mode="tritanopia">Blåguljusteret</button>
         </div>
       </div>
     </div>
-  </nav>
+  </div>
+</nav>
+
 
   <section class="header">
     <p>Gør en <span>forskel</span> med en</p>
-    <h1 class="titel">Grøn <span>Hverdag</span></h1>
+    <h1 class="titel">GRØN <span>HVERDAG</span></h1>
   </section>
 
   <section class="broedtekst">
     <main id="main">
-  <section class="grid">
-  <div class="box1">
-    <h2>Bæredygtighed</h2>
-    <p>Lorem ipsum dolor sit amet consectetur...</p>
+  <section class="madspild-info">
+  <div class="box1  box">
+    <a href="stop-madspild.html">
+    <h2>Fødevarestyrelsen</h2>
+    <p>Fødevarestyrelsen viser, at Danmark hvert år producerer omkring 873.000 ton madspild. Det meste sker i husholdningerne, mens resten kommer fra restauranter, detailhandel og produktion. Tallene bruges til at forme nationale initiativer mod madspild – alt sammen med mål om at halvere madspildet inden 2030.</p>
+  </a>
+
   </div>
 
-  <div class="box2">
-    <h2>Stop Madspild</h2>
-    <p>Lorem ipsum dolor sit amet consectetur...</p>
+  <div class="box2 b box">
+    <a href="stop-madspild.html">
+        <h2>Stop Spild Af Mad</h2>
+    <p>Organisationen Stop Spild Af Mad kæmper for at ændre vores vaner. Hver dansker smider i gennemsnit 47 kilo spiselig mad ud om året – det koster milliarder og belaster klimaet.
+De arbejder sammen med supermarkeder og kommuner for at inspirere til små ændringer i hverdagen, så madspild bliver et fælles ansvar i stedet for et individuelt problem..</p>
+  </a>
+
+  </div>
+    <div class="box3 b box">
+      <a href="stop-madspild.html">
+        <h2>Landbrug & Fødevarer</h2>
+    <p>Landbrug & Fødevarer
+Ifølge Landbrug & Fødevarer er især unge og børnefamilier udfordret af madspild. Ofte handler det om manglende planlægning og for store portioner. Mange vil gerne gøre det bedre – de mangler bare konkrete tips og løsninger, der fungerer i en travl hverdag.</p>
+  </a>
+
+  </div>
+
+  <div class="box4 b box">
+    <a href="stop-madspild.html">
+    <h2>Miljøstyrelsen / Stop Spild Af Mad (global vinkel)</h2>
+    <p>Miljøstyrelsen / Global vinkel
+På verdensplan står madspild for omkring 8–10 % af den samlede CO₂-udledning. Når mad bliver produceret og smidt ud, går enorme ressourcer til spilde. Derfor sætter både Danmark og EU fokus på at mindske madspild – for det handler ikke kun om økonomi, men også klima og bæredygtighed.</p>
+  </a>
+    
+  </div>
+  <div class="box5 b box">
+    <a href="stop-madspild.html">
+    <h2>FN'S VERDENSMÅL</h2>
+    <p>Miljøstyrelsen / Global vinkel
+På verdensplan står madspild for omkring 8–10 % af den samlede CO₂-udledning. Når mad bliver produceret og smidt ud, går enorme ressourcer til spilde. Derfor sætter både Danmark og EU fokus på at mindske madspild – for det handler ikke kun om økonomi, men også klima og bæredygtighed.</p>
+  </a>
+    
   </div>
 </section>
 
@@ -72,11 +111,11 @@
         
       </div>
 
-      <div class="foot">
+      <div class="foot f2">
         <div class="items"><p class="topdel"><span class="pil"></span> GRØN HVERDAG </p></div>
         <div class="items"><p><span class="pil">❯</span> BÆREDYGTIGHEDSVEJ 3 </p></div>
         <div class="items"><p><span class="pil">❯</span> 8000 AARHUS C</p></div>
-        <div class="items"><p><span class="pil">❯</span> Kontaktperson: Mette Grøn, Kommunikationsansvarlig</p></div>
+        <div class="items"><p><span class="pil">❯</span> Kontaktperson: Mette Grøn</p></div>
         <div class="items"><p><span class="pil">❯</span> CVR: 69420360</p></div>
         <div class="items"><p class="topdel"><span class="pil"></span> SOCIALE MEDIER </p></div>
         <div class="items"><a href=""><p><span class="pil">❯</span> INSTAGRAM: @GRONHVERDAG </p></a></div>
@@ -84,11 +123,11 @@
         <div class="items"><a href=""><p><span class="pil">❯</span> TIKTOK: @GRONHVERDAG</p></a></div>
       </div>
 
-      <div class="foot">
+      <div class="foot f3">
           <div class="items"><p class="topdel" ><span class="pil"></span> PRIMÆR KONTAKT (GENEREL)</p></div>
           <div class="items"><p><span class="pil">❯</span> EMAIL: INFO@GRONHVERDAG.DK </p></div>
           <div class="items"><p><span class="pil">❯</span> TELEFON: +45 67 69 42 00</p></div>
-                  <div class="items"><p class="topdel"><span class="pil"></span> SUPPORT / KUNDESERVICE</p></div>
+          <div class="items"><p class="topdel"><span class="pil"></span> SUPPORT / KUNDESERVICE</p></div>
           <div class="items"><p><span class="pil">❯</span> EMAIL: SUPPORT@GRONHVERDAG.DK </p></div>
           <div class="items"><p><span class="pil">❯</span> TELEFON: +45 98 76 54 32</p></div>
           <div class="items"><p><span class="pil">❯</span> ÅBNINGSTIDER: MANDAG – FREDAG 09:00–16:00</p></div>     
@@ -96,11 +135,11 @@
             <div class="foot">
 
                <div class="items"><p class="topdel"><span class="pil"></span> PRESSE / PARTNERSKABER </p></div>
-        <div class="items"><p><span class="pil">❯</span> EMAIL: PRESSE@GRONHVERDAG.DK </p></div>
-        <div class="items"><p><span class="pil">❯</span> TELEFON: +45 22 33 44 55</p></div>
-        <div class="items"><p class="topdel"><span class="pil"></span> NEWSLETTER / MARKETINGR </p></div>
-        <div class="items"><p><span class="pil">❯</span>EMAIL: NYHEDER@GRONHVERDAG.DK</p></div>
-         <div class="items"><p><span class="pil">❯</span>MAILCHIMP-LISTE: GRON-HVERDAG-NEWSLETTER</p></div>
+              <div class="items"><p><span class="pil">❯</span> EMAIL: PRESSE@GRONHVERDAG.DK </p></div>
+              <div class="items"><p><span class="pil">❯</span> TELEFON: +45 22 33 44 55</p></div>
+              <div class="items"><p class="topdel"><span class="pil"></span> NEWSLETTER / MARKETINGR </p></div>
+               <div class="items"><p><span class="pil">❯</span>EMAIL: NYHEDER@GRONHVERDAG.DK</p></div>
+              <div class="items"><p><span class="pil">❯</span>MAILCHIMP-LISTE: GRON-HVERDAG-NEWSLETTER</p></div>
 
 
       

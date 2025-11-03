@@ -1,26 +1,28 @@
-/* === RESET === */
+/* Giver en reset på hele siden så alt starter ens */
 * {
   padding: 0;
   margin: 0;
   box-sizing: border-box;
 }
 
+/* Sætter baggrund, tekstfarve og en blød overgang på hele siden */
 body {
   background-color: var(--bg);
   color: var(--text);
   transition: all 0.4s ease;
 }
 
-/* === TEKST === */
+/* Bestemmer skrifttype for almindelig brødtekst */
 p {
   font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
 }
 
+/* Bestemmer skrifttype for overskrifter */
 h1, h2, h3 {
   font-family: Arial, Helvetica, sans-serif;
 }
 
-/* === LINKS === */
+/* Fjerner understregning på links og tilføjer hover-farve */
 a {
   text-decoration: none;
   color: var(--text);
@@ -30,12 +32,12 @@ a:hover {
   color: var(--highlight);
 }
 
+/* Skjuler vandret scroll på hele siden */
 body, html {
   overflow-x: hidden;
 }
 
-
-/* === SKIP-LINK === */
+/* Skip-link til tastaturnavigation som bliver synlig ved fokus */
 .skip-link {
   position: absolute;
   top: -40px;
@@ -45,14 +47,13 @@ body, html {
   padding: 0.5em 1em;
   z-index: 100;
 }
+/* Viser skip-link når man tab’er til det */
 .skip-link:focus { top: 0; }
 
-/* === FARVER === */
-/* === FARVER === */
-/* === NORMAL === */
+/* Definerer standard farvevariabler til hele sitet */
 :root {
   --bg: #cdcaca;
-  --text: #000000;
+  --text: #fff;
   --accent: #007bff;
   --highlight: #9e9e9e;
   --menu-color: #afafaf;
@@ -60,72 +61,71 @@ body, html {
   --green-dark: hsl(155, 40%, 25%);
   --green-mid: hsl(155, 35%, 40%);
   --green-light: hsl(155, 35%, 70%);
-  --text: #fff;
 
-  /* Harmoniske grøn-blå nuancer */
-  --box1-bg: #1f5d45; /* mørk grøn */
-  --box2-bg: #2f7a58; /* mellem grøn */
-  --box3-bg: #44997d; /* grønblå */
-  --box4-bg: #7bc4a2; /* lys grøn-turkis */
+  /* Farver til bokse i et harmonisk grøn-blåt udtryk */
+  --box1-bg: #1f5d45;
+  --box2-bg: #2f7a58;
+  --box3-bg: #44997d;
+  --box4-bg: #7bc4a2;
 }
 
-/* === DEUTERANOPIA === (grøn-rødblind) */
+/* Farvevalg når brugeren vælger deuteranopia-tilstand (grøn-rødblind) */
 [data-mode="deuteranopia"] {
   --accent: #0055ff;
   --highlight: #ffaa00;
   --menu-color: #cccccc;
   --primary-color: #00aa5a;
 
-  /* Mindre rød-komponent → tydeligere kontrast */
+  /* Gør farverne tydelige uden rød-komponent */
   --box1-bg: #355d4a;
   --box2-bg: #457863;
   --box3-bg: #5c9985;
   --box4-bg: #8fc3ad;
 }
 
-/* === PROTANOPIA === (rødblind) */
+/* Farvevalg når brugeren vælger protanopia-tilstand (rødblind) */
 [data-mode="protanopia"] {
   --accent: #3366ff;
   --highlight: #00cccc;
   --menu-color: #dddddd;
   --primary-color: #00b36b;
 
-  /* Lidt mere blåligt grøn for synlig forskel */
+  /* Skubber paletten lidt mod blåligt grøn for bedre forskel */
   --box1-bg: #2c5c52;
   --box2-bg: #3d7a6b;
   --box3-bg: #5b9c8e;
   --box4-bg: #8fc7b5;
 }
 
-/* === TRITANOPIA === (blå-gulblind) */
+/* Farvevalg når brugeren vælger tritanopia-tilstand (blå-gulblind) */
 [data-mode="tritanopia"] {
   --accent: #ff6666;
   --highlight: #ffcc99;
   --menu-color: #bbbbbb;
   --primary-color: #00cc66;
 
-  /* Varmere grøn-grå balance → bedre kontrast for blåblindhed */
+  /* Bruger en varmere grøn/grå balance for kontrast */
   --box1-bg: #4d5c3d;
   --box2-bg: #627a55;
   --box3-bg: #7e9b75;
   --box4-bg: #aec7a8;
 }
 
-
-
-
-/* === NAVIGATION === */
+/* Laver navigationen som en vandret række fordelt jævnt */
 .nav-links {
   display: flex;
-  justify-content: space-evenly; /* Fordel dem jævnt over hele bredden */
+  justify-content: space-evenly;
   align-items: center;
-  width: 100%; /* Sørg for at den fylder hele baren */
+  width: 100%;
   background: var(--menu-color);
 }
+
+/* Sætter en maks bredde på menu-billeder */
 .menulink-img{
   max-width: 10%;
 }
 
+/* Style til hvert menupunkt i topmenuen */
 .menulink {
   list-style: none;
   font-family: Arial, Helvetica, sans-serif;
@@ -135,17 +135,17 @@ body, html {
   font-weight: 600;
   transition: color 0.3s ease;
 }
-/* === COLORBLIND DROPDOWN === */
+
+/* Wrapper til farveblind-menuen så den kan åbne på klik */
 .colorblind {
   position: relative;
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: center;
-
 }
 
-
+/* Knap der åbner farveblind-menuen */
 .colorblind #colorToggle {
   background: none;
   border: none;
@@ -156,11 +156,13 @@ body, html {
   text-transform: uppercase;
   transition: transform 0.2s ease, color 0.2s ease;
 }
+/* Gør knappen lidt større og mere grøn ved hover */
 .colorblind #colorToggle:hover {
   transform: scale(1.1);
   color: var(--primary-color);
 }
 
+/* Selve dropdown-boksen med valgmuligheder */
 .colorblind .color-menu {
   display: none;
   position: absolute;
@@ -175,8 +177,10 @@ body, html {
   min-width: 180px;
   border-radius: 6px;
 }
+/* Viser dropdown når wrapperen får klassen active */
 .colorblind.active .color-menu { display: block; }
 
+/* Gør hvert valg i dropdown let at trykke på */
 .colorblind .color-menu button {
   display: block;
   width: 100%;
@@ -189,12 +193,13 @@ body, html {
   cursor: pointer;
   transition: background 0.2s ease;
 }
+/* Giver tydelig markering ved hover på et valg */
 .colorblind .color-menu button:hover {
   background: var(--highlight);
   color: white;
 }
 
-/* === HEADER === */
+/* Bygger headeren med baggrundsbillede og centreret indhold */
 .header {
   display: flex;
   flex-direction: column;
@@ -210,6 +215,8 @@ body, html {
   color: white;
   padding: 0 2em;
 }
+
+/* Gør overskriften i headeren tydelig og læsbar */
 .titel {
   color: #e3ffe3;
   font-weight: 700;
@@ -220,14 +227,17 @@ body, html {
   background: rgba(0,0,0,0.4);
   font-size: 4vw;
 }
+
+/* Giver brødtekst i headeren lidt luft og lysere farve */
 .header p {
   margin-bottom: 1em;
   font-size: 1.8vw;
   color: #d4ffd4;
 }
+/* Markerer enkelte ord i headeren med primær farve */
 .header span { color: var(--primary-color); }
 
-/* === GRID === */
+/* Wrapper til hovedindholdet så baggrund og bredde følger siden */
 #main{
   height: auto;
   background: var(--bg);
@@ -236,6 +246,8 @@ body, html {
   margin: 0;
   padding: 0;
 }
+
+/* Laver et 3-kolonne grid til dine bokse */
 .grid {
   display: grid;
   grid-template-columns: repeat(3, 1fr);
@@ -246,8 +258,9 @@ body, html {
   margin: 0;
 }
 
+/* Definerer standardstil for de små bokse */
 .box1, .box2, .box3 {
-  min-height: 40vh;  /* i stedet for max-height */
+  min-height: 40vh;
   height: auto;
   padding: 2em;
   border-radius: 10px;
@@ -256,8 +269,10 @@ body, html {
   background-blend-mode: multiply;
   color: white;
 }
+
+/* Definerer standardstil for de store bokse */
 .box4, .box5 {
-  min-height: 80vh;  /* i stedet for max-height */
+  min-height: 80vh;
   height: auto;
   padding: 2em;
   border-radius: 10px;
@@ -267,16 +282,28 @@ body, html {
   color: white;
 }
 
+/* Gør hele boksen klikbar uden at ændre farve på teksten */
+a.box {
+  display: block;
+  position: relative;
+  text-decoration: none;
+  color: inherit;
+}
+/* Giver en let zoom og skygge ved hover på bokse */
+a.box:hover {
+  transform: scale(1.02);
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+}
 
-
-
+/* Giver fælles padding i små afsnit */
 .b {
   min-height: 30vh;
   padding-top: 1em;
   padding-right: 1em;
   padding-bottom: 1em;
-
 }
+
+/* Størrelse og placering af overskrift i små afsnit */
 .b h2 { 
   font-size: 2vw; 
   text-align: left;
@@ -284,6 +311,7 @@ body, html {
   padding-left: .8em;
 }
 
+/* Positionerer og styler den første boks */
 .box1 { 
   grid-column: 1 / 2; 
   grid-row: 1/6; 
@@ -299,6 +327,8 @@ body, html {
   color: rgb(255, 255, 255);
   padding: 0 3em;
 }
+
+/* Positionerer og styler den anden boks */
 .box2 { 
   grid-column: 2 / 3; 
   grid-row: 1/6; 
@@ -312,6 +342,7 @@ body, html {
   padding: 0 3em;
 }
   
+/* Positionerer og styler den tredje boks (bred) */
 .box3 { 
   grid-column: 3 / 5; 
   grid-row: 1/6; 
@@ -323,7 +354,9 @@ body, html {
   background-position: center;
   color: white;
   padding: 0 3em;
- }
+}
+
+/* Positionerer og styler den fjerde boks (stor venstre) */
 .box4  { 
   grid-column: 1 / 3; 
   grid-row: 7/15; 
@@ -335,6 +368,8 @@ body, html {
   color: white;
   padding: 0 3em;
 }
+
+/* Positionerer og styler den femte boks (stor højre) */
 .box5  { 
   grid-column: 3 / 5; 
   grid-row: 7/15; 
@@ -347,16 +382,16 @@ body, html {
   padding: 0 3em;
 }
 
-
-/* === LAYOUT === */
+/* Laver et grid-layout til informationsbokse om madspild */
 .madspild-info {
   display: grid;
-  grid-template-columns: repeat(5, 1fr); /* 5 kolonner som default */
+  grid-template-columns: repeat(5, 1fr);
   gap: 2em;
   width: 100%;
   padding: 2em;
 }
 
+/* Ensartet stil til hver info-boks */
 .box {
   padding: 1em;
   border-radius: 0.5em;
@@ -365,54 +400,56 @@ body, html {
   transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
 
-/* === TEKST === */
+/* Giver standard størrelse på mellemoverskrifter */
 h2 {
   font-size: 1.5em;
   margin-bottom: 0.6em;
 }
 
+/* Sætter linjehøjde og skriftstørrelse på afsnit */
 p {
   line-height: 1.6;
   font-size: 1em;
 }
 
-/* === HOVER EFFEKT === */
+/* Giver hover-effekt på info-bokse */
 .box:hover {
   transform: scale(1.02);
   box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
 }
 
-/* === GLOBAL SEKTION === */
+/* Giver ekstra luft og runding til global sektion */
 .madspild-global {
   padding: 2.5em;
   margin-top: 1em;
   border-radius: 10px;
 }
 
-/* === RESPONSIVT === */
+/* Gør madspild-sektion én kolonne på smalle skærme */
 @media (max-width: 900px) {
   .madspild-info {
     grid-template-columns: 1fr;
   }
 }
 
-
+/* Sætter tekststørrelse og venstrestiller brødtekst i små afsnit */
 .b p { 
   font-size: 1vw; 
   text-align: left; 
   margin-left: 2rem;
-  
 }
 
-/* === FOOTER === */
+/* Laver bundsektionen med kontrast og venstrestillet tekst */
 footer {
   padding: 2em;
   background-color: #002D65;
   color: #FBC100;
   text-align: left;
 }
+/* Giver links i footer samme gule farve */
 footer a { color: #FBC100; }
 
+/* Fordeler footer-indhold i kolonner der tilpasser sig */
 .miniflex {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
@@ -421,26 +458,37 @@ footer a { color: #FBC100; }
   font-size: .8vw;
   align-items: start;
 }
+
+/* Giver luft og god læsbarhed i footer-elementer */
 .items {
   padding: 0.2em 0; 
   line-height: 1.5; 
 }
+
+/* Laver en mindre og rolig copyright-linje */
 .copyright {
   margin-top: 2em;
   font-size: .9vw;
   text-align: left;
 }
+
+/* Giver topdelen i footer en lidt større, tydeligere tekst */
 .topdel { 
   font-size: .9vw; 
   color: #ffffff; 
 }
+
+/* Mindre tekststørrelse til sekundære footer-ting */
 .foot { 
   font-size: .8vw;
- }
+}
+
+/* Laver lidt topmargen på en footer-sektion */
 .f1 { 
   margin-top: 1.6em; 
 }
-/*Stop Madspild siden*/
+
+/* Bygger en header til Stop Madspild siden */
 .header-stopmadsplid {
   display: flex;
   flex-direction: column;
@@ -456,6 +504,8 @@ footer a { color: #FBC100; }
   color: white;
   padding: 0 2em;
 }
+
+/* Genbruger tydelig titelstil her også */
 .titel {
   color: #e3ffe3;
   font-weight: 700;
@@ -466,20 +516,17 @@ footer a { color: #FBC100; }
   background: rgba(0,0,0,0.4);
   font-size: 4vw;
 }
+
+/* Giver header-tekst til Stop Madspild lidt luft og lys farve */
 .header-stopmadsplid p {
   margin-bottom: 1em;
   font-size: 1.8vw;
   color: #d4ffd4;
 }
+/* Marker enkelte ord med primær farve */
 .header-stopmadsplid span { color: var(--primary-color); }
 
-
-
-
-
-
-
-/*Kontakt os*/
+/* Bygger en header til Kontakt Os siden */
 .header-kontakt-os {
   display: flex;
   flex-direction: column;
@@ -494,6 +541,8 @@ footer a { color: #FBC100; }
   text-align: center;
   color: white;
 }
+
+/* Genbruger tydelig titelstil i kontakt-header */
 .titel {
   color: #e3ffe3;
   font-weight: 700;
@@ -504,59 +553,74 @@ footer a { color: #FBC100; }
   background: rgba(0,0,0,0.4);
   font-size: 4vw;
 }
+
+/* Bestemmer tekststørrelse og farve i kontakt-headeren */
 .header-kontakt-os {
   font-size: 1.8vw;
   color: #d4ffd4;
 }
+/* Marker enkelte ord i kontakt-header */
 .header-kontakt-os span { color: var(--primary-color); }
 
+/* Laver et 4-kolonne grid til kontakt-sektion */
 .grid-kon {
   display: grid;
   grid-template-columns: repeat(4, 1fr);
   width: 100%;
   max-width: none;
   margin: 0;
-
 }
 
+/* Giver vertikal padding i kontaktbokse */
 .kon {
   padding-top: 1em;
   padding-right: 1em;
   padding-bottom: 2em;
 }
 
+/* Farve og placering af første kontaktboks */
 .kon1 { 
   grid-column: 1 / 2; 
   grid-row: 1/6; 
   background: var(--box1-bg); 
 }
+
+/* Farve og placering af anden kontaktboks */
 .kon2 { 
   grid-column: 2 / 3; 
   grid-row: 1/6; 
-  background: var(--box2-bg); }
-.kon3 { 
+  background: var(--box2-bg); 
+}
 
+/* Farve og placering af tredje kontaktboks */
+.kon3 { 
   grid-column: 3 / 4; 
   grid-row: 1/6; 
   background: var(--box3-bg);
- }
+}
+
+/* Farve og placering af fjerde kontaktboks */
 .kon4 { 
   grid-column: 4 / 5; 
   grid-row: 1/6; 
   background: var(--box4-bg); 
 }
 
+/* Farve og placering af femte kontaktboks */
 .kon5 { 
   grid-column: 4 / 5;
   grid-row: 6/10; 
   background: var(--box1-bg); 
 }
+
+/* Giver samme gridplacering til h2 i nummer 5 for konsistens */
 .kon5 h2{ 
   grid-column: 4 / 5;
   grid-row: 6/10; 
   background: var(--box1-bg); 
-
 }
+
+/* Skjuler en ekstra boks (kan bruges senere) */
 .kon6 { 
   opacity: 0;
   grid-column: 4 / 5;
@@ -564,6 +628,7 @@ footer a { color: #FBC100; }
   background: var(--box1-bg); 
 }
 
+/* Skjuler en ekstra boks (kan bruges senere) */
 .kon7 { 
   opacity: 0;
   grid-column: 4 / 5;
@@ -571,23 +636,24 @@ footer a { color: #FBC100; }
   background: var(--box1-bg); 
 }
 
-
-
+/* Laver en bred kontaktboks nederst til tekst/kort */
 .kon8 { 
   grid-column:  1 / 4;
   grid-row: 6/10; 
   background: var(--box4-bg); 
   padding: 2em;
-  
 }
+
+/* Størrelse og farve på overskrifter i kontaktbokse */
 .kon h2 { 
   font-size: 1.5vw; 
   text-align: left;
   margin-left: 2.2rem; 
   color: rgb(255, 255, 255);
 }
-.kon8 h2 { 
 
+/* Justerer overskrift i den brede kontaktboks */
+.kon8 h2 { 
   font-size: 1.5vw; 
   text-align: left;
   padding-top: .3em;
@@ -595,18 +661,19 @@ footer a { color: #FBC100; }
   color: rgb(255, 255, 255);
 }
 
-
+/* Sætter tekststørrelse og venstrestiller kontakt-tekst */
 .kon p { 
   font-size: 1vw; 
   text-align: left; 
   margin-left: 2rem;
-  
 }
 
+/* Gør hovedindhold i kontakt-siden fleksibel i højden */
 #main-kon{
   height: auto;
 }
 
+/* Samler ekstra mellemrum i bunden for at holde filen ryddelig */
 
 
 
@@ -620,9 +687,9 @@ footer a { color: #FBC100; }
 
 
 
-/* === MEDIA QUERIES === */
+/* Media queries for at gøre layout responsivt */
 
-/* MOBIL OG TABLET (under 768px) */
+/* Gør topnavigationen mere mobilvenlig under 768px */
 @media (max-width: 768px) {
   .nav-links {
     flex-direction: column;
@@ -634,8 +701,8 @@ footer a { color: #FBC100; }
     font-size: 3vw; 
   }
   .colorblind { 
-    align-items: 
-    center; width: 100%; 
+    align-items: center; 
+    width: 100%; 
   }
   .colorblind .color-menu { 
     left: 50%; 
@@ -643,15 +710,15 @@ footer a { color: #FBC100; }
   }
   .grid { 
     grid-template-columns: 1fr;
-   }
+  }
   .b { 
     height: 100px; 
     width: 100%; 
   }
   footer { 
     text-align: left;
-     padding: 2em 1em; 
-    }
+    padding: 2em 1em; 
+  }
   .miniflex { 
     grid-template-columns: 1fr; 
     gap: 1em; 
@@ -664,13 +731,16 @@ footer a { color: #FBC100; }
   }
   .topdel, .copyright { 
     font-size: 3vw; 
-    text-align: left; }
-}
-.grid-kon{
-    grid-template-rows: 1fr;
+    text-align: left; 
+  }
 }
 
-/* STØRRE TABLETS OG MINDRE LAPTOPS (769px–1080px) */
+/* Sætter kontakt-grid til en række når bredden er lille */
+.grid-kon{
+  grid-template-rows: 1fr;
+}
+
+/* Justerer navigation og footer mellem 769px og 1080px */
 @media (min-width: 769px) and (max-width: 1080px) {
   .nav-links {
     flex-direction: column;
@@ -684,41 +754,38 @@ footer a { color: #FBC100; }
   .colorblind { 
     align-items: center; 
     width: 100%; 
-
   }
   .colorblind .color-menu { 
     left: 50%; 
     transform: translateX(-50%); 
   }
-
   .b { 
     height: 100px; 
-    width: 100%; }
+    width: 100%; 
+  }
   .copyright { 
     text-align:  left; 
     font-size: 1vw; 
-    margin-top: 2em; }
-
-  .foot { 
-  display: grid;
-  grid-template-columns: repeat(1, 2fr);
-  gap: 1em;
-
-  font-size: .6vw;
+    margin-top: 2em; 
   }
-  
+  .foot { 
+    display: grid;
+    grid-template-columns: repeat(1, 2fr);
+    gap: 1em;
+    font-size: .6vw;
+  }
   .items p{
     font-size: 1vw;
   }
-
 }
 
-/* === BURGER MENU SYSTEM (tilføjet) === */
+/* Bygger ramme til burger-menuen i toppen */
 .topmenu {
   background: var(--menu-color);
   position: relative;
 }
 
+/* Lægger logo og burger på hver sin side i topbaren */
 .nav-container {
   display: flex;
   justify-content: space-between;
@@ -726,7 +793,7 @@ footer a { color: #FBC100; }
   padding: 1em 2em;
 }
 
-
+/* Gør burger-knappen usynlig på store skærme */
 .burger {
   display: none;
   background: none;
@@ -736,15 +803,16 @@ footer a { color: #FBC100; }
   cursor: pointer;
   transition: transform 0.2s ease;
 }
+/* Giver en lille zoom ved hover på burger */
 .burger:hover { 
   transform: scale(1.1); 
 }
 
+/* Viser burger og laver dropdown-menu under 1080px */
 @media (max-width: 1080px) {
   .burger { 
     display: block; 
   }
-
   .nav-links {
     display: none;
     position: absolute;
@@ -759,12 +827,11 @@ footer a { color: #FBC100; }
     box-shadow: 0 5px 12px rgba(0,0,0,0.25);
     z-index: 99;
   }
-
   .nav-links.active {
     display: flex;
     animation: dropdownSlide 0.3s ease;
   }
-
+  /* Giver en lille glidende animation på dropdown */
   @keyframes dropdownSlide {
     from { 
       opacity: 0; 
@@ -775,26 +842,19 @@ footer a { color: #FBC100; }
       transform: translateY(0); 
     }
   }
-
+  /* Gør hele menupunktet klikbart i dropdown */
   .menulink a {
     display: block;
     width: 100%;
     padding: 0.5em 0;
-
   }
-
+  /* Lader farveblind-menu fylde hele bredden i dropdown */
   .colorblind { 
     width: 100%; 
-
   }
 }
-/* === FOOTER: 2 kolonner mellem 920px og 640px === */
-/* === FOOTER: 2 kolonner mellem 920px og 640px === */
-/* === FOOTER: 2x2 layout mellem 920px og 640px === */
 
-
-
-/* === MAP SECTION === */
+/* Giver kortet en fast højde og runde hjørner */
 .map {
   width: 100%;
   height: 400px;
@@ -803,6 +863,7 @@ footer a { color: #FBC100; }
   overflow: hidden;
 }
 
+/* Sørger for at kortet fylder hele boksen */
 .map iframe {
   width: 100%;
   height: 100%;
@@ -810,9 +871,7 @@ footer a { color: #FBC100; }
   border-radius: 8px;
 }
 
-/* === EKSTRA MEDIA QUERIES (BURGER MENU FORBLIVER URØRT) === */
-
-/* UNDER 1080PX */
+/* Justerer madspild-sektionen under 1080px så den bliver kolonne */
 @media (max-width: 1080px) {
   .madspild-info {
     display: flex;
@@ -821,7 +880,6 @@ footer a { color: #FBC100; }
     padding: 1.5em;
     width: 100%;
   }
-
   .madspild-info .box {
     width: 100%;
     min-height: 320px;
@@ -829,11 +887,9 @@ footer a { color: #FBC100; }
     border-radius: 12px;
     transition: transform 0.3s ease;
   }
-
   .madspild-info .box:hover {
     transform: scale(1.02);
   }
-
   .madspild-info h2 { 
     font-size: 1.6rem; 
   }
@@ -843,7 +899,7 @@ footer a { color: #FBC100; }
   }
 }
 
-/* UNDER 900PX */
+/* Tweaker spacing og font under 920px */
 @media (max-width: 920px) {
   .madspild-info { 
     gap: 1.5em; 
@@ -864,30 +920,26 @@ footer a { color: #FBC100; }
   }
   .miniflex {
     display: flex;
-    flex-direction: column; /* Alt under hinanden */
-    align-items: flex-start; /* Venstrestil alt */
+    flex-direction: column; 
+    align-items: flex-start; 
     text-align: left;
     gap: 2em;
     width: 95%;
     margin: 0 auto;
-    padding-left: 1.5rem; /* Lidt luft fra kanten */
+    padding-left: 1.5rem; 
   }
-
   .miniflex .items {
     width: 100%;
     max-width: 700px;
   }
-
   .foot {
     font-size: 2.5vw;
   }
-
   .items p,
   .items a {
     font-size: 2.3vw;
     line-height: 1.6;
   }
-
   .copyright {
     margin-top: 2em;
     text-align: left;
@@ -897,45 +949,44 @@ footer a { color: #FBC100; }
   }
 }
 
-/* === MOBIL (under 640px) === */
+/* Forbereder flere mobil-tilpasninger (sektion markeret til mobil) */
+/* (Beholder din struktur selvom der ikke var ekstra regler her) */
 
-
-
-/* UNDER 768PX */
+/* Gør bokse lidt mindre og strammere under 768px */
 @media (max-width: 768px) {
   .madspild-info { 
     gap: 1em; 
     padding: 1em; 
   }
   .madspild-info .box {
-     min-height: 260px; 
-     padding: 1em; 
-    }
+    min-height: 260px; 
+    padding: 1em; 
+  }
   .madspild-info h2 { 
     font-size: 1.2rem;
-   }
+  }
   .madspild-info p { 
     font-size: 0.9rem; 
   }
 }
 
-/* UNDER 640PX */
+/* Finjusterer tekster og spacing under 640px */
 @media (max-width: 640px) {
   .madspild-info { 
     gap: 0.9em; 
     padding: 0.8em;
-   }
+  }
   .madspild-info .box {
-     min-height: 240px; 
-     padding: 1em; 
-    }
+    min-height: 240px; 
+    padding: 1em; 
+  }
   .madspild-info h2 {
     font-size: 1.1rem; 
   }
   .madspild-info p { 
     font-size: 0.85rem; 
   }
-    .miniflex {
+  .miniflex {
     display: flex;
     flex-direction: column;
     align-items: flex-start;
@@ -945,64 +996,59 @@ footer a { color: #FBC100; }
     margin: 0 auto;
     padding-left: 1.5rem;
   }
-
   .miniflex .items {
     width: 100%;
   }
-
   .foot {
     font-size: 3.5vw;
   }
-
   .items p,
   .items a {
     font-size: 3.2vw;
     line-height: 1.6;
   }
-
   .copyright {
     margin-top: 2em;
     text-align: left;
     font-size: 3vw;
     color: #FBC100;
-}
+  }
 }
 
-/* UNDER 340PX */
+/* Gør typografi endnu mindre på helt små skærme */
 @media (max-width: 340px) {
   .madspild-info {
-     gap: 0.6em; 
-     padding: 0.5em; 
-    }
+    gap: 0.6em; 
+    padding: 0.5em; 
+  }
   .madspild-info .box { 
     min-height: 200px;
-     padding: 0.8em; 
-    }
+    padding: 0.8em; 
+  }
   .madspild-info h2 {
-     font-size: 1rem; 
-    }
+    font-size: 1rem; 
+  }
   .madspild-info p { 
     font-size: 0.8rem; 
   }
 }
-/* === FIX: LODRET LAYOUT OVER 1080PX === */
+
+/* Laver et pænt grid til info-bokse på brede skærme igen */
 @media (min-width: 1081px) {
   .madspild-info {
     display: grid;
-    grid-template-columns: repeat(3, 1fr); /* ÉN kolonne lodret */
+    grid-template-columns: repeat(3, 1fr);
     grid-auto-rows: auto;
     width: 100%;
     justify-items: center;
   }
-
   .madspild-info .box {
-    width: 100%; /* så de ikke fylder helt ud */
+    width: 100%;
     min-height: 350px;
     padding: 2em;
     border-radius: 12px;
     transition: transform 0.3s ease;
   }
-
   .madspild-info .box:hover {
     transform: scale(1.02);
   }

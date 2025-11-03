@@ -52,64 +52,59 @@ body, html {
 
 /* Definerer standard farvevariabler til hele sitet */
 :root {
-  --bg: #cdcaca;
-  --text: #fff;
-  --accent: #007bff;
-  --highlight: #9e9e9e;
-  --menu-color: #afafaf;
-  --primary-color: #00ff6a;
-  --green-dark: hsl(155, 40%, 25%);
-  --green-mid: hsl(155, 35%, 40%);
-  --green-light: hsl(155, 35%, 70%);
+  --bg: #F5F5F5;          
+  --text: #ffffff;        
+  --menu-color: #c9c9c9;  /* mørkere menu for hvid tekst */
+  --accent: #007ACC;
+  --highlight: #A1C349;
+  --primary-color: #2E8B57;
 
-  /* Farver til bokse i et harmonisk grøn-blåt udtryk */
-  --box1-bg: #1f5d45;
-  --box2-bg: #2f7a58;
-  --box3-bg: #44997d;
-  --box4-bg: #7bc4a2;
+  /* Naturinspirerede bokse i grøn-blå balance */
+  --box1-bg: #2E8B57;
+  --box2-bg: #4FB477;
+  --box3-bg: #2E8B57;
+  --box4-bg: #4FB477;
 }
 
-/* Farvevalg når brugeren vælger deuteranopia-tilstand (grøn-rødblind) */
+/* === Deuteranopia (grøn-rødblind) === */
 [data-mode="deuteranopia"] {
-  --accent: #0055ff;
-  --highlight: #ffaa00;
-  --menu-color: #cccccc;
-  --primary-color: #00aa5a;
+  --accent: #005F9E;
+  --highlight: #8DBF3C;
+  --menu-color: #DCDCDC;
+  --primary-color: #3B7E8F;
 
-  /* Gør farverne tydelige uden rød-komponent */
-  --box1-bg: #355d4a;
-  --box2-bg: #457863;
-  --box3-bg: #5c9985;
-  --box4-bg: #8fc3ad;
+  --box1-bg: #3B7E8F;
+  --box2-bg: #4D9F6B;
+  --box3-bg: #005F9E;
+  --box4-bg: #8DBF3C;
 }
 
-/* Farvevalg når brugeren vælger protanopia-tilstand (rødblind) */
+/* === Protanopia (rødblind) === */
 [data-mode="protanopia"] {
-  --accent: #3366ff;
-  --highlight: #00cccc;
-  --menu-color: #dddddd;
-  --primary-color: #00b36b;
+  --accent: #0067B3;
+  --highlight: #A4C755;
+  --menu-color: #DDDDDD;
+  --primary-color: #33896E;
 
-  /* Skubber paletten lidt mod blåligt grøn for bedre forskel */
-  --box1-bg: #2c5c52;
-  --box2-bg: #3d7a6b;
-  --box3-bg: #5b9c8e;
-  --box4-bg: #8fc7b5;
+  --box1-bg: #33896E;
+  --box2-bg: #54A87E;
+  --box3-bg: #0067B3;
+  --box4-bg: #A4C755;
 }
 
-/* Farvevalg når brugeren vælger tritanopia-tilstand (blå-gulblind) */
+/* === Tritanopia (blå-gulblind) === */
 [data-mode="tritanopia"] {
-  --accent: #ff6666;
-  --highlight: #ffcc99;
-  --menu-color: #bbbbbb;
-  --primary-color: #00cc66;
+  --accent: #4C74A5;
+  --highlight: #8BAF4A;
+  --menu-color: #CCCCCC;
+  --primary-color: #3A8A4E;
 
-  /* Bruger en varmere grøn/grå balance for kontrast */
-  --box1-bg: #4d5c3d;
-  --box2-bg: #627a55;
-  --box3-bg: #7e9b75;
-  --box4-bg: #aec7a8;
+  --box1-bg: #3A8A4E;
+  --box2-bg: #4A9A68;
+  --box3-bg: #4C74A5;
+  --box4-bg: #8BAF4A;
 }
+
 
 /* Laver navigationen som en vandret række fordelt jævnt */
 .nav-links {
@@ -158,7 +153,6 @@ body, html {
 }
 /* Gør knappen lidt større og mere grøn ved hover */
 .colorblind #colorToggle:hover {
-  transform: scale(1.1);
   color: var(--primary-color);
 }
 
@@ -573,9 +567,8 @@ footer a { color: #FBC100; }
 
 /* Giver vertikal padding i kontaktbokse */
 .kon {
-  padding-top: 1em;
-  padding-right: 1em;
-  padding-bottom: 2em;
+ padding-top: 2em;
+ padding-bottom: 2em;
 }
 
 /* Farve og placering af første kontaktboks */
@@ -596,14 +589,14 @@ footer a { color: #FBC100; }
 .kon3 { 
   grid-column: 3 / 4; 
   grid-row: 1/6; 
-  background: var(--box3-bg);
+  background: var(--box1-bg);
 }
 
 /* Farve og placering af fjerde kontaktboks */
 .kon4 { 
   grid-column: 4 / 5; 
   grid-row: 1/6; 
-  background: var(--box4-bg); 
+  background: var(--box2-bg); 
 }
 
 /* Farve og placering af femte kontaktboks */
@@ -640,7 +633,7 @@ footer a { color: #FBC100; }
 .kon8 { 
   grid-column:  1 / 4;
   grid-row: 6/10; 
-  background: var(--box4-bg); 
+  background: var(--box2-bg); 
   padding: 2em;
 }
 
@@ -663,6 +656,16 @@ footer a { color: #FBC100; }
 
 /* Sætter tekststørrelse og venstrestiller kontakt-tekst */
 .kon p { 
+  font-size: 1vw; 
+  text-align: left; 
+  margin-left: 2rem;
+}
+.kon p { 
+  font-size: 1vw; 
+  text-align: left; 
+  margin-left: 2rem;
+}
+.grid-kon a{
   font-size: 1vw; 
   text-align: left; 
   margin-left: 2rem;
@@ -880,7 +883,7 @@ footer a { color: #FBC100; }
     padding: 1.5em;
     width: 100%;
   }
-  .madspild-info .box {
+  .madspild-info .box  {
     width: 100%;
     min-height: 320px;
     padding: 1.5em;
@@ -897,7 +900,151 @@ footer a { color: #FBC100; }
     font-size: 1.05rem; 
     line-height: 1.6; 
   }
+  
+
+    .grid-kon {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: center;
+
+  }
+  .grid-kon  {
+    width: 100%;
+    min-height: 320px;
+
+  }
+  .kon1, .kon2, .kon3, .kon4, .kon5 {
+  background: var(--box1-bg);
 }
+
+  .kon p{
+    font-size: .6em;
+  }
+  .kon h2{
+    font-size: .8em;
+  }
+
+  .kon1{
+    flex: 1;
+ 
+  }
+  .kon2{
+    flex: 1;
+ 
+  }
+  .kon3{
+    flex: 1;
+    
+  }
+  .kon4{
+    flex: 1;
+
+ 
+  }
+  .kon5{
+    flex: 1;
+
+  }
+  .kon8{
+    width: 100%;
+    order: 4;
+
+  }
+
+  .miniflex .items {
+    width: 100%;
+    max-width: 700px;
+  }
+  .foot {
+    font-size: 1.5vw;
+  }
+  .items p,
+  .items a {
+    font-size: 1.5vw;
+    line-height: 1.6;
+  }
+  .copyright {
+    margin-top: .4em;
+
+    font-size: 2vw;
+    color: #FBC100;
+    width: 100%;
+  }
+}
+ 
+
+@media(max-width: 820px){
+    .grid-kon {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+
+  }
+     .kon:not(.kon5) {
+    display: flex;
+    flex-direction: row;
+    padding-bottom: 1em;
+
+  }
+  .kon5{
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    width: 80%;
+  }
+  .kon5{
+    background-color: var(--box1-bg);
+    width: 100%;
+  }
+  .grid-kon  {
+    min-height: 200px;
+
+  }
+  .kon1, .kon2, .kon3, .kon4, .kon5 {
+  background: var(--box1-bg);
+}
+   .kon a{
+    font-size: 1.2vw;
+  }
+  .kon p{
+    font-size: .9em;
+  }
+  .kon h2{
+    font-size: 1em;
+  }
+
+  .kon1{
+    flex: 1;
+ 
+  }
+  .kon2{
+    flex: 1;
+ 
+  }
+  .kon3{
+    flex: 1;
+    
+  }
+  .kon4{
+    flex: 1;
+
+ 
+  }
+  .kon5{
+    flex: 1;
+
+  }
+  .kon8{
+    width: 100%;
+    order: 4;
+
+  }
+
+}
+ 
+
+
 
 /* Tweaker spacing og font under 920px */
 @media (max-width: 920px) {
@@ -1013,6 +1160,7 @@ footer a { color: #FBC100; }
     font-size: 3vw;
     color: #FBC100;
   }
+
 }
 
 /* Gør typografi endnu mindre på helt små skærme */

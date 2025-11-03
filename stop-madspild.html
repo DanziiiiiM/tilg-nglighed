@@ -1,9 +1,9 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="da">
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>FORSIDE</title>
+  <title>Stop Madspild – Grøn Hverdag</title>
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
   <link rel="stylesheet" href="style.css">
 </head>
@@ -11,150 +11,139 @@
 <body data-mode="normal">
 <a href="#main" class="skip-link">Spring til hovedindhold</a>
 
-<nav class="topmenu" aria-label="Hovedmenu">
+<!-- === NAVIGATION === -->
+<nav class="topmenu" role="navigation" aria-label="Hovedmenu">
   <div class="nav-container">
 
     <!-- Burger-knap -->
-    <button class="burger" id="burgerBtn" aria-label="Åbn menu">
+    <button class="burger" id="burgerBtn" aria-label="Åbn hovedmenu">
       ☰
     </button>
 
     <!-- Menu-links -->
     <div class="nav-links" id="navLinks">
-      <img class="menulink menulink-img" src="img/logo3.png" alt="">
-      <div class="menulink"><a href="index.html" aria-current="page">FORSIDE</a></div>
-      <div class="menulink"><a href="stop-madspild.html">STOP MADSPILD</a></div>
-      <div class="menulink"><a href="kontakt.html">KONTAKT OS</a></div>
+      <img class="menulink menulink-img" src="img/logo3.png" alt="Grøn Hverdag logo">
+      <div class="menulink"><a href="index.html" aria-current="page" aria-label="Gå til forsiden">FORSIDE</a></div>
+      <div class="menulink"><a href="stop-madspild.html" aria-label="Læs om Stop Madspild">STOP MADSPILD</a></div>
+      <div class="menulink"><a href="kontakt.html" aria-label="Kontakt Grøn Hverdag">KONTAKT OS</a></div>
 
       <!-- Farveblindhed dropdown -->
       <div class="menulink colorblind">
-        <button id="colorToggle" aria-expanded="false" aria-controls="colorMenu" aria-label="Skift farvetilstand">
+        <button id="colorToggle" aria-expanded="false" aria-controls="colorMenu" aria-label="Åbn menu for farveblindhedstilstande">
           FARVEBLINDHED
         </button>
         <div class="color-menu" id="colorMenu" hidden>
-          <button data-mode="normal">Standard</button>
-          <button data-mode="deuteranopia">Rødgrønjusteret</button>
-          <button data-mode="protanopia">Rødvenlig</button>
-          <button data-mode="tritanopia">Blåguljusteret</button>
+          <button data-mode="normal" aria-label="Skift til standardfarver">Standard</button>
+          <button data-mode="deuteranopia" aria-label="Skift til deuteranopia tilstand">Rødgrønjusteret</button>
+          <button data-mode="protanopia" aria-label="Skift til protanopia tilstand">Rødvenlig</button>
+          <button data-mode="tritanopia" aria-label="Skift til tritanopia tilstand">Blåguljusteret</button>
         </div>
       </div>
     </div>
   </div>
 </nav>
 
+<!-- === HEADER === -->
+<header class="header-stopmadsplid" role="banner" aria-label="Stop Madspild">
+  <h1 class="titel">STOP <span>MADSPILD</span></h1>
+</header>
 
-  <section class="header-stopmadsplid">
-    
-    <h1 class="titel">STOP <span> MADSPILD</span></h1>
-  </section>
-
+<!-- === INDHOLD === -->
+<main id="main" role="main" aria-label="Information om Stop Madspild">
   <section class="broedtekst">
-    <main id="main">
-  <section class="madspild-info">
-  <div class="box1  box">
-    <a href="stop-madspild.html">
+    <section class="madspild-info" aria-label="Fakta og organisationer mod madspild">
+
+<div class="box1 box">
+  <a href="stop-madspild.html" 
+     aria-label="Læs mere om Fødevarestyrelsens indsats mod madspild. Baggrundsbillede viser grøntsager i en køkkenkurv.">
     <h2>Fødevarestyrelsen</h2>
+    <img src="img/madsplid2.webp" alt="Grøntsager i en trækasse som symbol på madspild i husholdninger" style="display:none;">
     <p>Fødevarestyrelsen viser, at Danmark hvert år producerer omkring 873.000 ton madspild. Det meste sker i husholdningerne, mens resten kommer fra restauranter, detailhandel og produktion. Tallene bruges til at forme nationale initiativer mod madspild – alt sammen med mål om at halvere madspildet inden 2030.</p>
   </a>
+</div>
 
-  </div>
+<div class="box2 box">
+  <a href="" 
+     aria-label="Læs mere om organisationen Stop Spild Af Mad. Baggrundsbillede viser madrester på en tallerken.">
+    <h2>Stop Spild Af Mad</h2>
+    <img src="img/madsplid1.jpg" alt="Tallerken med madrester som symbol på madspild i husholdninger" style="display:none;">
+    <p>Organisationen Stop Spild Af Mad kæmper for at ændre vores vaner. Hver dansker smider i gennemsnit 47 kilo spiselig mad ud om året – det koster milliarder og belaster klimaet. De arbejder sammen med supermarkeder og kommuner for at inspirere til små ændringer i hverdagen, så madspild bliver et fælles ansvar i stedet for et individuelt problem.</p>
+</div>
 
-  <div class="box2 b box">
-    <a href="stop-madspild.html">
-        <h2>Stop Spild Af Mad</h2>
-    <p>Organisationen Stop Spild Af Mad kæmper for at ændre vores vaner. Hver dansker smider i gennemsnit 47 kilo spiselig mad ud om året – det koster milliarder og belaster klimaet.
-De arbejder sammen med supermarkeder og kommuner for at inspirere til små ændringer i hverdagen, så madspild bliver et fælles ansvar i stedet for et individuelt problem..</p>
+<div class="box3 box">
+  <a href="" 
+     aria-label="Læs mere om Landbrug og Fødevarers fokus på madspild. Baggrundsbillede viser en ko på en mark.">
+    <h2>Landbrug & Fødevarer</h2>
+    <img src="img/ko.jpg" alt="Ko på grøn mark som symbol på fødevareproduktion" style="display:none;">
+    <p>Ifølge Landbrug & Fødevarer er især unge og børnefamilier udfordret af madspild. Ofte handler det om manglende planlægning og for store portioner. Mange vil gerne gøre det bedre – de mangler bare konkrete tips og løsninger, der fungerer i en travl hverdag.</p>
   </a>
+</div>
 
-  </div>
-    <div class="box3 b box">
-      <a href="stop-madspild.html">
-        <h2>Landbrug & Fødevarer</h2>
-    <p>Landbrug & Fødevarer
-Ifølge Landbrug & Fødevarer er især unge og børnefamilier udfordret af madspild. Ofte handler det om manglende planlægning og for store portioner. Mange vil gerne gøre det bedre – de mangler bare konkrete tips og løsninger, der fungerer i en travl hverdag.</p>
+<div class="box4 box">
+  <a href="" 
+     aria-label="Læs mere om Miljøstyrelsens og EU's globale indsats mod madspild. Baggrundsbillede viser affaldssortering af mad.">
+    <h2>Miljøstyrelsen / Global vinkel</h2>
+    <img src="img/madsplid3.webp" alt="Madspild sorteres i affaldscontainere som symbol på klimabelastning" style="display:none;">
+    <p>På verdensplan står madspild for omkring 8–10 % af den samlede CO₂-udledning. Når mad bliver produceret og smidt ud, går enorme ressourcer til spilde. Derfor sætter både Danmark og EU fokus på at mindske madspild – for det handler ikke kun om økonomi, men også klima og bæredygtighed.</p>
   </a>
+</div>
 
-  </div>
-
-  <div class="box4 b box">
-    <a href="stop-madspild.html">
-    <h2>Miljøstyrelsen / Stop Spild Af Mad (global vinkel)</h2>
-    <p>Miljøstyrelsen / Global vinkel
-På verdensplan står madspild for omkring 8–10 % af den samlede CO₂-udledning. Når mad bliver produceret og smidt ud, går enorme ressourcer til spilde. Derfor sætter både Danmark og EU fokus på at mindske madspild – for det handler ikke kun om økonomi, men også klima og bæredygtighed.</p>
+<div class="box5 box">
+  <a href="" 
+     aria-label="Læs mere om FN’s verdensmål for bæredygtighed. Baggrundsbillede viser FN’s farverige verdensmål-symboler.">
+    <h2>FN'S VERDENSMÅL</h2>
+    <img src="img/fnvm.png" alt="FN’s 17 farverige verdensmål-ikoner" style="display:none;">
+    <p>FN’s verdensmål fremhæver ansvarligt forbrug og produktion. Mindre madspild betyder lavere CO₂-udledning, bedre ressourceudnyttelse og et skridt tættere på et mere bæredygtigt samfund.</p>
   </a>
-    
-  </div>
-  <div class="box5 b box">
-    <a href="stop-madspild.html">
-    <h2>Miljøstyrelsen / Stop Spild Af Mad (global vinkel)</h2>
-    <p>Miljøstyrelsen / Global vinkel
-På verdensplan står madspild for omkring 8–10 % af den samlede CO₂-udledning. Når mad bliver produceret og smidt ud, går enorme ressourcer til spilde. Derfor sætter både Danmark og EU fokus på at mindske madspild – for det handler ikke kun om økonomi, men også klima og bæredygtighed.</p>
-  </a>
-    
-  </div>
-</section>
+</div>
 
+
+    </section>
+  </section>
 </main>
- 
-  </section>
 
-  <section class="bund">
-    <footer>
+<!-- === FOOTER === -->
+<footer role="contentinfo" aria-label="Sidefod med kontaktoplysninger og links">
   <div class="miniflex">
-      <div class="foot f1">
-        <div class="items"><a href="stop-madspild.html"><p class="topdel"><span class="pil"></span></p></a></div>
-        <div class="items"><a href="stop-madspild.html"><p><span class="pil">❯</span> STOP MADSPLID</p></a></div>
-        <div class="items"><a href="bæredygtighed.html"><p><span class="pil">❯</span> BÆREDYGTIGHED</p></a></div>
-        <div class="items"><a href="index.html"><p><span class="pil">❯</span> FORSIDE</p> </a></div>
-        <div class="items"><a href="kontakt.html"><p><span class="pil">❯</span> KONTAKT OS</p></a></div>
-        
-      </div>
 
-      <div class="foot f2">
-        <div class="items"><p class="topdel"><span class="pil"></span> GRØN HVERDAG </p></div>
-        <div class="items"><p><span class="pil">❯</span> BÆREDYGTIGHEDSVEJ 3 </p></div>
-        <div class="items"><p><span class="pil">❯</span> 8000 AARHUS C</p></div>
-        <div class="items"><p><span class="pil">❯</span> Kontaktperson: Mette Grøn</p></div>
-        <div class="items"><p><span class="pil">❯</span> CVR: 69420360</p></div>
-        <div class="items"><p class="topdel"><span class="pil"></span> SOCIALE MEDIER </p></div>
-        <div class="items"><a href=""><p><span class="pil">❯</span> INSTAGRAM: @GRONHVERDAG </p></a></div>
-        <div class="items"><a href=""><p><span class="pil">❯</span> FACEBOOK: /GRONHVERDAGDK</p></a></div>
-        <div class="items"><a href=""><p><span class="pil">❯</span> TIKTOK: @GRONHVERDAG</p></a></div>
-      </div>
+    <div class="foot f1" aria-label="Navigationslinks i footer">
+      <a href="stop-madspild.html" aria-label="Gå til Stop Madspild"><p>❯ STOP MADSPILD</p></a>
+      <a href="bæredygtighed.html" aria-label="Læs om bæredygtighed"><p>❯ BÆREDYGTIGHED</p></a>
+      <a href="index.html" aria-label="Gå til forsiden"><p>❯ FORSIDE</p></a>
+      <a href="kontakt.html" aria-label="Kontakt Grøn Hverdag"><p>❯ KONTAKT OS</p></a>
+    </div>
 
-      <div class="foot f3">
-          <div class="items"><p class="topdel" ><span class="pil"></span> PRIMÆR KONTAKT (GENEREL)</p></div>
-          <div class="items"><p><span class="pil">❯</span> EMAIL: INFO@GRONHVERDAG.DK </p></div>
-          <div class="items"><p><span class="pil">❯</span> TELEFON: +45 67 69 42 00</p></div>
-          <div class="items"><p class="topdel"><span class="pil"></span> SUPPORT / KUNDESERVICE</p></div>
-          <div class="items"><p><span class="pil">❯</span> EMAIL: SUPPORT@GRONHVERDAG.DK </p></div>
-          <div class="items"><p><span class="pil">❯</span> TELEFON: +45 98 76 54 32</p></div>
-          <div class="items"><p><span class="pil">❯</span> ÅBNINGSTIDER: MANDAG – FREDAG 09:00–16:00</p></div>     
-      </div>
-            <div class="foot">
+    <div class="foot f2" aria-label="Virksomhedsoplysninger og sociale medier">
+      <p>❯ GRØN HVERDAG</p>
+      <p>❯ BÆREDYGTIGHEDSVEJ 3</p>
+      <p>❯ 8000 AARHUS C</p>
+      <p>❯ Kontaktperson: Mette Grøn</p>
+      <p>❯ CVR: 69420360</p>
+      <a href="#" aria-label="Besøg Grøn Hverdag på Instagram"><p>❯ INSTAGRAM: @GRONHVERDAG</p></a>
+      <a href="#" aria-label="Besøg Grøn Hverdag på Facebook"><p>❯ FACEBOOK: /GRONHVERDAGDK</p></a>
+      <a href="#" aria-label="Besøg Grøn Hverdag på TikTok"><p>❯ TIKTOK: @GRONHVERDAG</p></a>
+    </div>
 
-               <div class="items"><p class="topdel"><span class="pil"></span> PRESSE / PARTNERSKABER </p></div>
-              <div class="items"><p><span class="pil">❯</span> EMAIL: PRESSE@GRONHVERDAG.DK </p></div>
-              <div class="items"><p><span class="pil">❯</span> TELEFON: +45 22 33 44 55</p></div>
-              <div class="items"><p class="topdel"><span class="pil"></span> NEWSLETTER / MARKETINGR </p></div>
-               <div class="items"><p><span class="pil">❯</span>EMAIL: NYHEDER@GRONHVERDAG.DK</p></div>
-              <div class="items"><p><span class="pil">❯</span>MAILCHIMP-LISTE: GRON-HVERDAG-NEWSLETTER</p></div>
+    <div class="foot f3" aria-label="Kontaktinformationer">
+      <p>❯ EMAIL: INFO@GRONHVERDAG.DK</p>
+      <p>❯ TELEFON: +45 67 69 42 00</p>
+      <p>❯ SUPPORT: SUPPORT@GRONHVERDAG.DK</p>
+      <p>❯ KUNDESERVICE: +45 98 76 54 32</p>
+      <p>❯ ÅBNINGSTIDER: MANDAG – FREDAG 09:00–16:00</p>
+    </div>
 
+    <div class="foot" aria-label="Presse og marketing kontakt">
+      <p>❯ PRESSE: PRESSE@GRONHVERDAG.DK</p>
+      <p>❯ TELEFON: +45 22 33 44 55</p>
+      <p>❯ MARKETING: NYHEDER@GRONHVERDAG.DK</p>
+      <p>❯ MAILCHIMP-LISTE: GRON-HVERDAG-NEWSLETTER</p>
+    </div>
 
-      
-      </div>
-
-
-
- 
-        
-        
   </div>
-  <p class="copyright">&copy; 2025 Grøn Hverdag. Alle rettigheder forbeholdes.</p>  
-    </footer>
 
-  </section>
+  <p class="copyright" aria-label="Ophavsret">© 2025 Grøn Hverdag. Alle rettigheder forbeholdes.</p>
+</footer>
 
-  <script src="script.js"></script>
+<script src="script.js"></script>
 </body>
 </html>

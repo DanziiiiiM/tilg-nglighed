@@ -44,3 +44,22 @@ document.addEventListener("click", (e) => {
   burgerBtn.addEventListener('click', () => {
     navLinks.classList.toggle('active');
   });
+
+  // oplæser
+function readText() {
+  const tekst = document.getElementById("tekst").innerText;
+  const speak = new SpeechSynthesisUtterance(tekst);
+
+  // Sæt dansk stemme
+  speak.lang = "da-DK";
+  speak.rate = 1; // hastighed
+  speak.pitch = 1; // tonehøjde
+
+  // Vent på at stemmerne er loaded
+  window.speechSynthesis.onvoiceschanged = () => {
+    const voices = window.speechSynthesis.getVoices();
+    const dansk = voices.find(v => v.lang.startsWith("da"));
+    if (dansk) speak.voice = dansk;
+    window.speechSynthesis.speak(speak);
+  };
+}

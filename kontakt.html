@@ -1,170 +1,158 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="da">
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>FORSIDE</title>
+  <title>Kontakt os – Grøn Hverdag</title>
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
   <link rel="stylesheet" href="style.css">
 </head>
 
 <body data-mode="normal">
-<a href="#main" class="skip-link">Spring til hovedindhold</a>
+<a href="#main-kon" class="skip-link">Spring til hovedindhold</a>
 
-<nav class="topmenu" aria-label="Hovedmenu">
+<!-- === NAVIGATION === -->
+<nav class="topmenu" role="navigation" aria-label="Hovedmenu">
   <div class="nav-container">
 
     <!-- Burger-knap -->
-    <button class="burger" id="burgerBtn" aria-label="Åbn menu">
+    <button class="burger" id="burgerBtn" aria-label="Åbn hovedmenu">
       ☰
     </button>
 
     <!-- Menu-links -->
     <div class="nav-links" id="navLinks">
-      <img class="menulink menulink-img" src="img/logo3.png" alt="">
-      <div class="menulink"><a href="index.html" aria-current="page">FORSIDE</a></div>
-      <div class="menulink"><a href="stop-madspild.html">STOP MADSPILD</a></div>
-      <div class="menulink"><a href="kontakt.html">KONTAKT OS</a></div>
+      <img class="menulink menulink-img" src="img/logo3.png" alt="Grøn Hverdag logo">
+      <div class="menulink"><a href="index.html" aria-current="page" aria-label="Gå til forsiden">FORSIDE</a></div>
+      <div class="menulink"><a href="stop-madspild.html" aria-label="Læs om Stop Madspild">STOP MADSPILD</a></div>
+      <div class="menulink"><a href="kontakt.html" aria-label="Kontakt Grøn Hverdag">KONTAKT OS</a></div>
 
       <!-- Farveblindhed dropdown -->
       <div class="menulink colorblind">
-        <button id="colorToggle" aria-expanded="false" aria-controls="colorMenu" aria-label="Skift farvetilstand">
+        <button id="colorToggle" aria-expanded="false" aria-controls="colorMenu" aria-label="Åbn menu for farveblindhedstilstande">
           FARVEBLINDHED
         </button>
         
         <div class="color-menu" id="colorMenu" hidden>
-          <button data-mode="normal">Standard</button>
-          <button data-mode="deuteranopia">Rødgrønjusteret</button>
-          <button data-mode="protanopia">Rødvenlig</button>
-          <button data-mode="tritanopia">Blåguljusteret</button>
+          <button data-mode="normal" aria-label="Skift til standardfarver">Standard</button>
+          <button data-mode="deuteranopia" aria-label="Skift til deuteranopia tilstand">Rødgrønjusteret</button>
+          <button data-mode="protanopia" aria-label="Skift til protanopia tilstand">Rødvenlig</button>
+          <button data-mode="tritanopia" aria-label="Skift til tritanopia tilstand">Blåguljusteret</button>
         </div>
       </div>
     </div>
   </div>
 </nav>
 
+<!-- === HEADER === -->
+<header class="header-kontakt-os" role="banner" aria-label="Kontakt Grøn Hverdag">
+  <h1 class="titel">KONTAKT <span>OS</span></h1>
+</header>
 
-  <section class="header-kontakt-os">
-
-    <h1 class="titel">KONTAKT <span>OS</span></h1>
-  </section>
-
+<!-- === INDHOLD === -->
+<main id="main-kon" role="main" aria-label="Kontaktinformationer">
   <section class="broedtekst">
-    <main id="main-kon">
-  <section class="grid-kon">
-  <div class="kon1 kon">
-    <h2>SIDER</h2>
-     <div class="items"><a href="stop-madspild.html"><p class="topdel"><span class="pil"></span></p></a></div>
-        <div class="items"><a href="stop-madspild.html"><p><span class="pil">❯</span> STOP MADSPLID</p></a></div>
-        <div class="items"><a href="index.html"><p><span class="pil">❯</span> FORSIDE</p> </a></div>
-        <div class="items"><a href="kontakt.html"><p><span class="pil">❯</span> KONTAKT OS</p></a></div>
-  </div>
+    <section class="grid-kon">
 
-  <div class="kon2 kon">
-    <h2>GRØN HVERDAG</h2>
-        <div class="items"><p><span class="pil">❯</span> Storegade 3 </p></div>
-        <div class="items"><p><span class="pil">❯</span> 8900 Randers C</p></div>
-        <div class="items"><p><span class="pil">❯</span> Kontaktperson: Mette Grøn</p></div>
-        <div class="items"><p><span class="pil">❯</span> CVR: 69420360</p></div>      
-  </div>
-    <div class="kon3 kon">
-    <h2>SOCIALE MEDIER </h2>
-        <div class="items"><a href=""><p><span class="pil">❯</span> INSTAGRAM: @GRONHVERDAG </p></a></div>
-        <div class="items"><a href=""><p><span class="pil">❯</span> FACEBOOK: /GRONHVERDAGDK</p></a></div>
-        <div class="items"><a href=""><p><span class="pil">❯</span> TIKTOK: @GRONHVERDAG</p></a></div>
-  </div>
+      <div class="kon1 kon" aria-label="Sidelinks">
+        <h2>SIDER</h2>
+        <div class="items"><a href="stop-madspild.html" aria-label="Gå til Stop Madspild side"><p>❯ STOP MADSPILD</p></a></div>
+        <div class="items"><a href="index.html" aria-label="Gå til forsiden"><p>❯ FORSIDE</p></a></div>
+        <div class="items"><a href="kontakt.html" aria-label="Gå til Kontakt os side"><p>❯ KONTAKT OS</p></a></div>
+      </div>
 
-  <div class="kon4 kon">
-    <h2>PRIMÆR KONTAKT</h2>
-          <div class="items"><p><span class="pil">❯</span> EMAIL: INFO@GRONHVERDAG.DK </p></div>
-          <div class="items"><p><span class="pil">❯</span> TELEFON: +45 67 69 42 00</p></div>
-  </div>
-    <div class="kon5 kon">
-    <h2>SUPPORT / KUNDESERVICE</h2>
-          <div class="items"><p><span class="pil">❯</span> EMAIL: SUPPORT@GRONHVERDAG.DK </p></div>
-          <div class="items"><p><span class="pil">❯</span> TELEFON: +45 98 76 54 32</p></div>  
-    <h2>PRESSE / PARTNERSKABER</h2>
-     <div class="items"><p><span class="pil">❯</span> EMAIL: PRESSE@GRONHVERDAG.DK </p></div>
-    <div class="items"><p><span class="pil">❯</span> TELEFON: +45 22 33 44 55</p></div>      
-    <h2>NEWSLETTER</h2>
-    <div class="items"><p><span class="pil">❯</span>EMAIL: NYHEDER@GRONHVERDAG.DK</p></div>
-     <div class="items"><p><span class="pil">❯</span>MAILCHIMP-LISTE: GRON-HVERDAG-NEWSLETTER</p></div>
-  </div>
-    <div class="kon6 kon">
+      <div class="kon2 kon" aria-label="Virksomhedsoplysninger">
+        <h2>GRØN HVERDAG</h2>
+        <p>❯ Storegade 3</p>
+        <p>❯ 8900 Randers C</p>
+        <p>❯ Kontaktperson: Mette Grøn</p>
+        <p>❯ CVR: 69420360</p>
+      </div>
 
-  </div>
-    <div class="kon7 kon">
+      <div class="kon3 kon" aria-label="Sociale medier">
+        <h2>SOCIALE MEDIER</h2>
+        <a href="#" aria-label="Besøg Grøn Hverdag på Instagram"><p>❯ INSTAGRAM: @GRONHVERDAG</p></a>
+        <a href="#" aria-label="Besøg Grøn Hverdag på Facebook"><p>❯ FACEBOOK: /GRONHVERDAGDK</p></a>
+        <a href="#" aria-label="Besøg Grøn Hverdag på TikTok"><p>❯ TIKTOK: @GRONHVERDAG</p></a>
+      </div>
 
-  </div>
-      <div class="kon8">
-    <section class="map">
+      <div class="kon4 kon" aria-label="Primær kontakt">
+        <h2>PRIMÆR KONTAKT</h2>
+        <p>❯ EMAIL: INFO@GRONHVERDAG.DK</p>
+        <p>❯ TELEFON: +45 67 69 42 00</p>
+      </div>
 
- <iframe 
- width="100%" 
- height="350" 
- src="https://www.openstreetmap.org/export/embed.html?bbox=10.035227537155151%2C56.457091632108956%2C10.039706826210024%2C56.45828320972407&amp;layer=mapnik" 
- style="border: 1px solid black"></iframe><br/><small><a href="https://www.openstreetmap.org/?#map=19/56.457687/10.037467"></a></small>
-</section>
-  </div>
-  
+      <div class="kon5 kon" aria-label="Support, presse og nyhedsbrev">
+        <h2>SUPPORT / KUNDESERVICE</h2>
+        <p>❯ EMAIL: SUPPORT@GRONHVERDAG.DK</p>
+        <p>❯ TELEFON: +45 98 76 54 32</p>
 
+        <h2>PRESSE / PARTNERSKABER</h2>
+        <p>❯ EMAIL: PRESSE@GRONHVERDAG.DK</p>
+        <p>❯ TELEFON: +45 22 33 44 55</p>
+
+        <h2>NEWSLETTER</h2>
+        <p>❯ EMAIL: NYHEDER@GRONHVERDAG.DK</p>
+        <p>❯ MAILCHIMP-LISTE: GRON-HVERDAG-NEWSLETTER</p>
+      </div>
+
+      <!-- Kort -->
+      <div class="kon8" aria-label="Kort over Grøn Hverdags adresse">
+        <section class="map" role="region" aria-label="Kortvisning af Grøn Hverdag Randers">
+          <iframe 
+            width="100%" 
+            height="350" 
+            src="https://www.openstreetmap.org/export/embed.html?bbox=10.035227537155151%2C56.457091632108956%2C10.039706826210024%2C56.45828320972407&amp;layer=mapnik" 
+            title="Kort over Grøn Hverdag i Randers"
+            style="border: 1px solid black"></iframe>
+        </section>
+      </div>
+
+    </section>
+  </section>
 </main>
- 
-  </section>
 
-  <section class="bund">
-    <footer>
+<!-- === FOOTER === -->
+<footer role="contentinfo" aria-label="Sidefod med kontaktoplysninger og links">
   <div class="miniflex">
-      <div class="foot f1">
-        <div class="items"><a href="stop-madspild.html"><p class="topdel"><span class="pil"></span></p></a></div>
-        <div class="items"><a href="stop-madspild.html"><p><span class="pil">❯</span> STOP MADSPLID</p></a></div>
-        <div class="items"><a href="index.html"><p><span class="pil">❯</span> FORSIDE</p> </a></div>
-        <div class="items"><a href="kontakt.html"><p><span class="pil">❯</span> KONTAKT OS</p></a></div>
-        
-      </div>
 
-      <div class="foot f2">
-        <div class="items"><p class="topdel"><span class="pil"></span> GRØN HVERDAG </p></div>
-        <div class="items"><p><span class="pil">❯</span> BÆREDYGTIGHEDSVEJ 3 </p></div>
-        <div class="items"><p><span class="pil">❯</span> 8000 AARHUS C</p></div>
-        <div class="items"><p><span class="pil">❯</span> Kontaktperson: Mette Grøn</p></div>
-        <div class="items"><p><span class="pil">❯</span> CVR: 69420360</p></div>
-        <div class="items"><p class="topdel"><span class="pil"></span> SOCIALE MEDIER </p></div>
-        <div class="items"><a href=""><p><span class="pil">❯</span> INSTAGRAM: @GRONHVERDAG </p></a></div>
-        <div class="items"><a href=""><p><span class="pil">❯</span> FACEBOOK: /GRONHVERDAGDK</p></a></div>
-        <div class="items"><a href=""><p><span class="pil">❯</span> TIKTOK: @GRONHVERDAG</p></a></div>
-      </div>
+    <div class="foot f1" aria-label="Navigationslinks i footer">
+      <div class="items"><a href="stop-madspild.html" aria-label="Gå til Stop Madspild"><p>❯ STOP MADSPILD</p></a></div>
+      <div class="items"><a href="index.html" aria-label="Gå til forsiden"><p>❯ FORSIDE</p></a></div>
+      <div class="items"><a href="kontakt.html" aria-label="Kontakt Grøn Hverdag"><p>❯ KONTAKT OS</p></a></div>
+    </div>
 
-      <div class="foot f3">
-          <div class="items"><p class="topdel" ><span class="pil"></span> PRIMÆR KONTAKT (GENEREL)</p></div>
-          <div class="items"><p><span class="pil">❯</span> EMAIL: INFO@GRONHVERDAG.DK </p></div>
-          <div class="items"><p><span class="pil">❯</span> TELEFON: +45 67 69 42 00</p></div>
-          <div class="items"><p class="topdel"><span class="pil"></span> SUPPORT / KUNDESERVICE</p></div>
-          <div class="items"><p><span class="pil">❯</span> EMAIL: SUPPORT@GRONHVERDAG.DK </p></div>
-          <div class="items"><p><span class="pil">❯</span> TELEFON: +45 98 76 54 32</p></div>
-          <div class="items"><p><span class="pil">❯</span> ÅBNINGSTIDER: MANDAG – FREDAG 09:00–16:00</p></div>     
-      </div>
-            <div class="foot">
+    <div class="foot f2" aria-label="Virksomhedsoplysninger og sociale medier">
+      <p>❯ GRØN HVERDAG</p>
+      <p>❯ BÆREDYGTIGHEDSVEJ 3</p>
+      <p>❯ 8000 AARHUS C</p>
+      <p>❯ Kontaktperson: Mette Grøn</p>
+      <p>❯ CVR: 69420360</p>
+      <a href="#" aria-label="Besøg Grøn Hverdag på Instagram"><p>❯ INSTAGRAM: @GRONHVERDAG</p></a>
+      <a href="#" aria-label="Besøg Grøn Hverdag på Facebook"><p>❯ FACEBOOK: /GRONHVERDAGDK</p></a>
+      <a href="#" aria-label="Besøg Grøn Hverdag på TikTok"><p>❯ TIKTOK: @GRONHVERDAG</p></a>
+    </div>
 
-               <div class="items"><p class="topdel"><span class="pil"></span> PRESSE / PARTNERSKABER </p></div>
-              <div class="items"><p><span class="pil">❯</span> EMAIL: PRESSE@GRONHVERDAG.DK </p></div>
-              <div class="items"><p><span class="pil">❯</span> TELEFON: +45 22 33 44 55</p></div>
-              <div class="items"><p class="topdel"><span class="pil"></span> NEWSLETTER / MARKETINGR </p></div>
-               <div class="items"><p><span class="pil">❯</span>EMAIL: NYHEDER@GRONHVERDAG.DK</p></div>
-              <div class="items"><p><span class="pil">❯</span>MAILCHIMP-LISTE: GRON-HVERDAG-NEWSLETTER</p></div>
-      </div>
-      
+    <div class="foot f3" aria-label="Kontaktinformationer">
+      <p>❯ EMAIL: INFO@GRONHVERDAG.DK</p>
+      <p>❯ TELEFON: +45 67 69 42 00</p>
+      <p>❯ SUPPORT: SUPPORT@GRONHVERDAG.DK</p>
+      <p>❯ KUNDESERVICE: +45 98 76 54 32</p>
+      <p>❯ ÅBNINGSTIDER: MANDAG – FREDAG 09:00–16:00</p>
+    </div>
 
+    <div class="foot" aria-label="Presse og marketing kontakt">
+      <p>❯ PRESSE: PRESSE@GRONHVERDAG.DK</p>
+      <p>❯ TELEFON: +45 22 33 44 55</p>
+      <p>❯ MARKETING: NYHEDER@GRONHVERDAG.DK</p>
+      <p>❯ MAILCHIMP-LISTE: GRON-HVERDAG-NEWSLETTER</p>
+    </div>
 
- 
-        
-        
   </div>
-  <p class="copyright">&copy; 2025 Grøn Hverdag. Alle rettigheder forbeholdes.</p>  
-    </footer>
 
-  </section>
+  <p class="copyright" aria-label="Ophavsret">© 2025 Grøn Hverdag. Alle rettigheder forbeholdes.</p>  
+</footer>
 
-  <script src="script.js"></script>
+<script src="script.js"></script>
 </body>
 </html>

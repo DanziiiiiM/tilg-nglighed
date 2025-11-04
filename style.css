@@ -611,6 +611,7 @@ footer a { color: #FBC100; }
   grid-row: 6/10; 
   background: var(--box2-bg); 
   padding: 2em;
+  width: 100%;
 }
 
 /* Typografi i kontaktbokse */
@@ -1236,7 +1237,7 @@ a:focus-visible {
 @media (min-width: 1081px) {
   .madspild-info {
     display: grid;
-    grid-template-columns: repeat(3, 1fr);
+    grid-template-columns: repeat(4, 1fr);
     grid-auto-rows: auto;
     width: 100%;
     justify-items: center;

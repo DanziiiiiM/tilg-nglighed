@@ -731,6 +731,36 @@ footer a { color: #FBC100; }
 .grid-kon{
   grid-template-rows: 1fr;
 }
+ .burger:hover,
+  .burger:focus {
+    background: #FBC100; /* gul kontrast */
+    color: #002D65;       /* mørk tekst */
+  }
+
+  /* Gør dropdown-knapperne tydelige – kun synlig under 1080px */
+  .colorblind .color-menu button {
+    border: 2px solid transparent;
+    border-radius: 4px;
+    transition: background 0.2s ease, border-color 0.2s ease;
+  }
+
+  .colorblind .color-menu button:hover,
+  .colorblind .color-menu button:focus {
+    background: #FBC100;
+    color: #002D65;
+    border-color: #002D65;
+  }
+
+  /* Fokusramme på alt, der kan klikkes/tabbes */
+
+
+  /* Marker aktiv farveblind-tilstand */
+  .color-menu button[aria-checked="true"] {
+    background: #FBC100;
+    color: #002D65;
+    font-weight: bold;
+  }
+
 
 /* Justerer navigation og footer mellem 769px og 1080px */
 @media (min-width: 769px) and (max-width: 1080px) {
@@ -770,7 +800,43 @@ footer a { color: #FBC100; }
     font-size: 1vw;
   }
 
+    .burger {
+    color: #FFFFFF;
+    background: rgba(0,0,0,0.3);
+    border-radius: 6px;
+    padding: 0.3em 0.6em;
+    transition: background 0.2s ease, color 0.2s ease;
+  }
 
+  .burger:hover,
+  .burger:focus {
+    background: #FBC100; /* gul kontrast */
+    color: #002D65;       /* mørk tekst */
+  }
+
+  /* Gør dropdown-knapperne tydelige – kun synlig under 1080px */
+  .colorblind .color-menu button {
+    border: 2px solid transparent;
+    border-radius: 4px;
+    transition: background 0.2s ease, border-color 0.2s ease;
+  }
+
+  .colorblind .color-menu button:hover,
+  .colorblind .color-menu button:focus {
+    background: #FBC100;
+    color: #002D65;
+    border-color: #002D65;
+  }
+
+  /* Fokusramme på alt, der kan klikkes/tabbes */
+
+
+  /* Marker aktiv farveblind-tilstand */
+  .color-menu button[aria-checked="true"] {
+    background: #FBC100;
+    color: #002D65;
+    font-weight: bold;
+  }
 
 }
 /* Bygger ramme til burger-menuen i toppen */
@@ -800,6 +866,23 @@ footer a { color: #FBC100; }
 /* Giver en lille zoom ved hover på burger */
 .burger:hover { 
   transform: scale(1.1); 
+}
+
+/* === WCAG 2.2 – Focus Visible === */
+a:focus,
+button:focus,
+input:focus,
+select:focus {
+  outline: 3px solid #FBC100;   /* tydelig gul ramme */
+  outline-offset: 3px;          /* lidt luft mellem element og ramme */
+  border-radius: 4px;           /* blød kant, så den matcher dit design */
+  transition: outline 0.2s ease;
+}
+
+/* Ekstra: når brugeren tabber rundt, skal link-tekst stadig tydeligt ses */
+a:focus-visible {
+  text-decoration: underline;
+  color: #FBC100;
 }
 
 /* Viser burger og laver dropdown-menu under 1080px */
@@ -883,7 +966,22 @@ footer a { color: #FBC100; }
     width: 100% !important;
   }
 }
+/* === WCAG 2.2 – Focus Visible === */
+a:focus,
+button:focus,
+input:focus,
+select:focus {
+  outline: 3px solid #FBC100;   /* tydelig gul ramme */
+  outline-offset: 3px;          /* lidt luft mellem element og ramme */
+  border-radius: 4px;           /* blød kant, så den matcher dit design */
+  transition: outline 0.2s ease;
+}
 
+/* Ekstra: når brugeren tabber rundt, skal link-tekst stadig tydeligt ses */
+a:focus-visible {
+  text-decoration: underline;
+  color: #FBC100;
+}
 
 }
 

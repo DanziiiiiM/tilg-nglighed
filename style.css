@@ -846,6 +846,45 @@ footer a { color: #FBC100; }
   .colorblind { 
     width: 100%; 
   }
+@media (max-width: 1080px) {
+  .grid-kon {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    background: var(--box1-bg);
+  }
+
+  .kon {
+    width: 100%;
+    background: var(--box1-bg);
+    padding: 1.5em 2em;
+    box-sizing: border-box;
+    border-top: 1px solid rgba(255,255,255,0.1);
+  }
+
+  /* Gør så der IKKE er nogen luft mellem boksene */
+  .kon + .kon {
+    margin: 0;
+  }
+
+  /* Tving tekst til at stå ens */
+  .kon h2,
+  .kon p,
+  .kon a {
+    font-size: 16px !important; /* samme overalt */
+    color: white;
+    text-align: left;
+    line-height: 1.6;
+  }
+
+  /* Sørger for at de gamle flex/grid-styles ikke fucker layoutet */
+  .kon1, .kon2, .kon3, .kon4, .kon5 {
+    flex: none !important;
+    width: 100% !important;
+  }
+}
+
+
 }
 
 /* Giver kortet en fast højde og runde hjørner */

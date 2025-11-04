@@ -52,6 +52,13 @@ burgerBtn.addEventListener('click', () => {
   navLinks.classList.toggle('active');
 });
 
+const buttons = document.querySelectorAll('.color-menu button');
 
+buttons.forEach(btn => {
+  btn.addEventListener('click', () => {
+    buttons.forEach(b => b.setAttribute('aria-checked', 'false'));
+    btn.setAttribute('aria-checked', 'true');
+  });
+});
 
 

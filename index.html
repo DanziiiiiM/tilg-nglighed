@@ -5,45 +5,45 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Forside – Grøn Hverdag</title>
 
-  <!-- Tilføjer font awesome ikoner og hoved CSS -->
+  <!-- Importerer font awesome og hoved-CSS til layout og ikoner -->
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
   <link rel="stylesheet" href="style.css">
 </head>
 
 <body data-mode="normal">
 
-  <!-- Skip link gør det muligt at springe direkte til hovedindhold -->
+  <!-- Skip link bruges af tastaturbrugere til at springe direkte til hovedindhold -->
   <a href="#main" class="skip-link">Spring til hovedindhold</a>
 
   <!-- === NAVIGATION === -->
   <nav class="topmenu" role="navigation" aria-label="Hovedmenu">
     <div class="nav-container">
 
-      <!-- Burger-knap som åbner og lukker menuen på mobil -->
+      <!-- Burger-knap der styrer mobilnavigation -->
       <button class="burger" id="burgerBtn" aria-label="Åbn eller luk menu">☰</button>
 
-      <!-- Menu-links der indeholder logo, sider og dropdown -->
+      <!-- Navigationens indhold med logo, links og dropdown -->
       <div class="nav-links" id="navLinks" role="menubar">
 
-        <!-- Logo i menuen -->
+        <!-- Logo i toppen, bruges som branding men ikke som navigationslink -->
         <img class="menulink menulink-img" src="img/logo3.png" alt="Grøn Hverdag logo" aria-hidden="true">
 
-        <!-- Forside-link -->
+        <!-- Link til forside -->
         <div class="menulink" role="none"><a href="index.html" role="menuitem" aria-current="page" aria-label="Gå til forsiden">FORSIDE</a></div>
 
-        <!-- Link til madspildssiden -->
+        <!-- Link til side om madspild -->
         <div class="menulink" role="none"><a href="stop-madspild.html" role="menuitem" aria-label="Læs om Stop Madspild">STOP MADSPILD</a></div>
 
-        <!-- Link til kontakt siden -->
+        <!-- Link til kontakt-side -->
         <div class="menulink" role="none"><a href="kontakt.html" role="menuitem" aria-label="Kontakt Grøn Hverdag">KONTAKT OS</a></div>
 
-        <!-- Farveblindhed dropdown-menu -->
+        <!-- Dropdown-menu til valg af farveblindhedstilstand -->
         <div class="menulink colorblind" role="none">
           <button id="colorToggle" aria-expanded="false" aria-controls="colorMenu" aria-haspopup="true">
             FARVEBLINDHED
           </button>
 
-          <!-- Valgmuligheder til farve-tilstande -->
+          <!-- Mulige farvetilstande som brugeren kan vælge -->
           <div class="color-menu" id="colorMenu" hidden role="menu">
             <button data-mode="normal" role="menuitemradio" aria-checked="true">Standard</button>
             <button data-mode="deuteranopia" role="menuitemradio" aria-checked="false">Rødgrønjusteret</button>
@@ -65,46 +65,46 @@
   <main id="main" role="main" aria-label="Hovedindhold med information om madspild">
     <section class="broedtekst" role="region" aria-label="Information og initiativer mod madspild">
 
-      <!-- Sektion med organisationer -->
+      <!-- Sektion med organisationer og aktører -->
       <section class="madspild-info" aria-label="Organisationer og myndigheder mod madspild">
 
-        <!-- Første boks -->
+        <!-- Boks 1: Fødevarestyrelsen -->
         <div class="box1 b box" role="article" aria-labelledby="fodeva">
           <a href="stop-madspild.html" aria-label="Læs mere om Fødevarestyrelsen og madspild">
             <h2 id="fodeva">Fødevarestyrelsen</h2>
-            <p>Fødevarestyrelsen viser, at Danmark hvert år producerer omkring 873.000 ton madspild. Det meste sker i husholdningerne, mens resten kommer fra restauranter, detailhandel og produktion. Tallene bruges til at forme nationale initiativer mod madspild – alt sammen med mål om at halvere madspildet inden 2030.</p>
+            <p>Fødevarestyrelsen viser, at Danmark hvert år producerer omkring 873.000 ton madspild. ...</p>
           </a>
         </div>
 
-        <!-- Anden boks -->
+        <!-- Boks 2: Stop Spild Af Mad -->
         <div class="box2 b box" role="article" aria-labelledby="ssam">
           <a href="stop-madspild.html" aria-label="Læs mere om organisationen Stop Spild Af Mad">
             <h2 id="ssam">Stop Spild Af Mad</h2>
-            <p>Organisationen Stop Spild Af Mad kæmper for at ændre vores vaner. Hver dansker smider i gennemsnit 47 kilo spiselig mad ud om året – det koster milliarder og belaster klimaet. De arbejder sammen med supermarkeder og kommuner for at inspirere til små ændringer i hverdagen, så madspild bliver et fælles ansvar i stedet for et individuelt problem.</p>
+            <p>Organisationen Stop Spild Af Mad kæmper for at ændre vores vaner. ...</p>
           </a>
         </div>
 
-        <!-- Tredje boks -->
+        <!-- Boks 3: Landbrug & Fødevarer -->
         <div class="box3 b box" role="article" aria-labelledby="landbrug">
           <a href="stop-madspild.html" aria-label="Læs mere om Landbrug og Fødevarer">
             <h2 id="landbrug">Landbrug & Fødevarer</h2>
-            <p>Landbrug & Fødevarer påpeger, at især unge og børnefamilier ofte står med madspild på grund af manglende planlægning og for store portioner. Mange vil gerne gøre det bedre – men mangler konkrete løsninger, der fungerer i en travl hverdag.</p>
+            <p>Landbrug & Fødevarer påpeger, at især unge og børnefamilier ofte står med madspild ...</p>
           </a>
         </div>
 
-        <!-- Fjerde boks -->
+        <!-- Boks 4: Miljøstyrelsen -->
         <div class="box4 b box" role="article" aria-labelledby="miljo">
           <a href="stop-madspild.html" aria-label="Læs mere om Miljøstyrelsens globale fokus på madspild">
             <h2 id="miljo">Miljøstyrelsen / Global vinkel</h2>
-            <p>På verdensplan står madspild for omkring 8–10 % af den samlede CO₂-udledning. Når mad bliver produceret og smidt ud, går enorme ressourcer til spilde. Derfor sætter både Danmark og EU fokus på at mindske madspild – for det handler ikke kun om økonomi, men også klima og bæredygtighed.</p>
+            <p>På verdensplan står madspild for omkring 8–10 % af den samlede CO₂-udledning ...</p>
           </a>
         </div>
 
-        <!-- Femte boks -->
+        <!-- Boks 5: FN's Verdensmål -->
         <div class="box5 b box" role="article" aria-labelledby="fn">
           <a href="stop-madspild.html" aria-label="Læs mere om FN’s verdensmål og madspild">
             <h2 id="fn">FN'S VERDENSMÅL</h2>
-            <p>Madspild er en central del af FN’s verdensmål nummer 12 om ansvarligt forbrug og produktion. Målet er at halvere madspild per person på globalt plan inden 2030 – noget Grøn Hverdag arbejder aktivt for gennem oplysning og samarbejde.</p>
+            <p>Madspild er en central del af FN’s verdensmål nummer 12 ...</p>
           </a>
         </div>
       </section>
@@ -115,14 +115,14 @@
   <footer role="contentinfo" aria-label="Sidefod med kontaktoplysninger og navigation">
     <div class="miniflex">
 
-      <!-- Første kolonne med menulinks -->
+      <!-- Første kolonne med interne links -->
       <div class="foot f1" role="navigation" aria-label="Navigationslinks i sidefoden">
         <div class="items"><a href="stop-madspild.html" aria-label="Læs om Stop Madspild">❯ STOP MADSPILD</a></div>
         <div class="items"><a href="index.html" aria-label="Gå til forsiden">❯ FORSIDE</a></div>
         <div class="items"><a href="kontakt.html" aria-label="Kontakt Grøn Hverdag">❯ KONTAKT OS</a></div>
       </div>
 
-      <!-- Anden kolonne med adresse og sociale medier -->
+      <!-- Anden kolonne med adresse og SoMe -->
       <div class="foot f2" role="region" aria-label="Adresse og sociale medier">
         <p>❯ GRØN HVERDAG</p>
         <p>❯ BÆREDYGTIGHEDSVEJ 3</p>
@@ -137,7 +137,7 @@
         <a href="#" aria-label="Besøg Grøn Hverdag på TikTok">❯ TIKTOK: @GRONHVERDAG</a>
       </div>
 
-      <!-- Tredje kolonne med generel kontakt -->
+      <!-- Tredje kolonne med kontaktinfo -->
       <div class="foot f3" role="region" aria-label="Generelle kontaktoplysninger">
         <p>❯ EMAIL: INFO@GRONHVERDAG.DK</p>
         <p>❯ TELEFON: +45 67 69 42 00</p>
@@ -156,14 +156,13 @@
         <p>❯ MARKETING: NYHEDER@GRONHVERDAG.DK</p>
         <p>❯ MAILCHIMP-LISTE: GRON-HVERDAG-NEWSLETTER</p>
       </div>
-
     </div>
 
-    <!-- Copyright linje -->
+    <!-- Copyright linje nederst -->
     <p class="copyright" aria-label="Ophavsret 2025 Grøn Hverdag">© 2025 Grøn Hverdag. Alle rettigheder forbeholdes.</p>  
   </footer>
 
-  <!-- Javascript som styrer farvetilstand og burger-menu -->
+  <!-- Tilkobler JavaScript der styrer farvetilstande og burger-menu -->
   <script src="script.js"></script>
 </body>
 </html>

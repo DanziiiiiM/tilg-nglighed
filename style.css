@@ -120,7 +120,7 @@ body, html {
 
 /* Sætter en maks bredde på menu-billeder */
 .menulink-img{
-  max-width: 10%;
+  max-width: 20%;
 }
 
 /* Style til hvert menupunkt i topmenuen */
@@ -710,6 +710,44 @@ footer a { color: #FBC100; }
     left: 50%; 
     transform: translateX(-50%); 
   }
+    .menulink, .colorblind #colorToggle {
+  list-style: none;
+  font-family: Arial, Helvetica, sans-serif;
+  text-transform: uppercase;
+  cursor: pointer;
+  font-size: 2.5em;
+  font-weight: 600;
+  transition: color 0.3s ease;
+}
+ .colorblind #colorToggle {
+  list-style: none;
+  font-family: Arial, Helvetica, sans-serif;
+  text-transform: uppercase;
+  cursor: pointer;
+  font-size: 1em;
+  font-weight: 600;
+  transition: color 0.3s ease;
+  
+    gap: 0.9em; 
+    padding: 0.8em;
+  }
+  .header p{
+    font-size: 1.5em;
+    
+  }
+  .header{
+  height: 70vh;
+  }
+  .titel {
+  color: #e3ffe3;
+  font-weight: 700;
+  letter-spacing: 0.5rem;
+  outline: 2px solid rgba(255,255,255,0.5);
+  outline-offset: 0.2em;
+  padding: 0.4em 0.8em;
+  background: rgba(0,0,0,0.4);
+  font-size: 6vw;
+}
   .grid { 
     grid-template-columns: 1fr;
   }
@@ -735,6 +773,7 @@ footer a { color: #FBC100; }
     font-size: 3vw; 
     text-align: left; 
   }
+  
 }
 
 /* Sætter kontakt-grid til en række når bredden er lille */
@@ -790,6 +829,27 @@ footer a { color: #FBC100; }
   .colorblind .color-menu { 
     left: 50%; 
     transform: translateX(-50%); 
+  }
+    .menulink, .colorblind #colorToggle {
+  list-style: none;
+  font-family: Arial, Helvetica, sans-serif;
+  text-transform: uppercase;
+  cursor: pointer;
+  font-size: 2.5em;
+  font-weight: 600;
+  transition: color 0.3s ease;
+}
+ .colorblind #colorToggle {
+  list-style: none;
+  font-family: Arial, Helvetica, sans-serif;
+  text-transform: uppercase;
+  cursor: pointer;
+  font-size: 1em;
+  font-weight: 600;
+  transition: color 0.3s ease;
+  
+    gap: 0.9em; 
+    padding: 0.8em;
   }
   .b { 
     height: 100px; 
@@ -1134,12 +1194,21 @@ a:focus-visible {
   }
 
 }
- 
-
-
-
-/* Tweaker spacing og font under 920px */
-@media (max-width: 920px) {
+@media (min-width: 921px) and (max-width: 1080px) {
+    .header p{
+    font-size: 1.5em;
+    
+  }
+  .titel {
+  color: #e3ffe3;
+  font-weight: 700;
+  letter-spacing: 0.5rem;
+  outline: 2px solid rgba(255,255,255,0.5);
+  outline-offset: 0.2em;
+  padding: 0.4em 0.8em;
+  background: rgba(0,0,0,0.4);
+  font-size: 6vw;
+}
   .madspild-info { 
     gap: 1.5em; 
     padding: 1.2em; 
@@ -1161,6 +1230,108 @@ a:focus-visible {
   .items p{
     font-size: .7vw;
   }
+  
+  .miniflex {
+    display: flex;
+    flex-direction: column; 
+    align-items: flex-start; 
+    text-align: left;
+    gap: 2em;
+    width: 95%;
+    margin: 0 auto;
+    padding-left: 1.5rem; 
+  }
+  .miniflex .items {
+    width: 100%;
+    max-width: 700px;
+  }
+  .foot {
+    font-size: 2.5vw;
+  }
+  .items p,
+  .items a {
+    font-size: 2.3vw;
+    line-height: 1.6;
+  }
+  .copyright {
+    margin-top: 2em;
+    text-align: left;
+    font-size: 2.2vw;
+    color: #FBC100;
+    width: 100%;
+  }
+  .grid-kon {
+    display: flex;
+    flex-direction: column;  /* gør dem under hinanden */
+    align-items: flex-start;  /* venstrestil tekst som footer */
+    width: 100%;
+  }
+
+  .kon {
+    width: 100%;
+    padding: 1em;
+  }
+
+  .kon h2 {
+    text-align: left;
+    gap: 2em;
+    width: 95%;
+    margin: 0 auto;
+    padding-left: 1.5rem; 
+  }
+
+  .kon p,
+  .kon a {
+    text-align: left;
+    gap: 2em;
+    width: 95%;
+    margin: 0 auto;
+    padding-left: 1.5rem; 
+  }
+
+
+}
+
+
+
+/* Tweaker spacing og font under 920px */
+@media (max-width: 920px) {
+    .header p{
+    font-size: 1.5em;
+    
+  }
+  .titel {
+  color: #e3ffe3;
+  font-weight: 700;
+  letter-spacing: 0.5rem;
+  outline: 2px solid rgba(255,255,255,0.5);
+  outline-offset: 0.2em;
+  padding: 0.4em 0.8em;
+  background: rgba(0,0,0,0.4);
+  font-size: 6vw;
+}
+  .madspild-info { 
+    gap: 1.5em; 
+    padding: 1.2em; 
+  }
+  .f1{
+    padding-left: 0;
+    padding-bottom: .5em;
+  }
+  .madspild-info .box { 
+    min-height: 280px; 
+    padding: 1.2em; 
+  }
+  .madspild-info h2 { 
+    font-size: 1.4rem; 
+  }
+  .madspild-info p { 
+    font-size: 0.95rem; 
+  }
+  .items p{
+    font-size: .7vw;
+  }
+  
   .miniflex {
     display: flex;
     flex-direction: column; 
@@ -1250,7 +1421,7 @@ a:focus-visible {
   font-family: Arial, Helvetica, sans-serif;
   text-transform: uppercase;
   cursor: pointer;
-  font-size: 1.5em;
+  font-size: 2em;
   font-weight: 600;
   transition: color 0.3s ease;
 }
@@ -1267,13 +1438,8 @@ a:focus-visible {
     padding: 0.8em;
   }
   .header p{
-    font-size: .8em;
+    font-size: 1.5em;
     
-  }
-  .header{
-
-  height: 70vh;
-
   }
   .titel {
   color: #e3ffe3;

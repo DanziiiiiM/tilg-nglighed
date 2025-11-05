@@ -3,7 +3,7 @@
   padding: 0;
   margin: 0;
   box-sizing: border-box;
-  font-family: Arial, Helvetica, sans-serif;
+ 
 }
 
 /* Sætter baggrund, tekstfarve og en blød overgang på hele siden */
@@ -64,8 +64,6 @@ body, html {
   /* Naturinspirerede bokse i grøn-blå balance */
   --box1-bg: #2E8B57;
   --box2-bg: #4FB477;
-  --box3-bg: #2E8B57;
-  --box4-bg: #4FB477;
 }
 
 /* === Deuteranopia (grøn-rødblind) === */
@@ -78,8 +76,6 @@ body, html {
 
   --box1-bg: #3B7E8F;
   --box2-bg: #4D9F6B;
-  --box3-bg: #005F9E;
-  --box4-bg: #8DBF3C;
 }
 
 /* === Protanopia (rødblind) === */
@@ -92,8 +88,6 @@ body, html {
 
   --box1-bg: #33896E;
   --box2-bg: #54A87E;
-  --box3-bg: #0067B3;
-  --box4-bg: #A4C755;
 }
 
 /* === Tritanopia (blå-gulblind) === */
@@ -106,8 +100,7 @@ body, html {
 
   --box1-bg: #3A8A4E;
   --box2-bg: #4A9A68;
-  --box3-bg: #4C74A5;
-  --box4-bg: #8BAF4A;
+
 }
 
 /* Laver navigationen som en vandret række fordelt jævnt */
@@ -1419,6 +1412,8 @@ button:focus {
     width: auto; /* ikke stræk */
   }
 }
-
+.copyright{
+  font-size: 1vw;
+}
   
 }

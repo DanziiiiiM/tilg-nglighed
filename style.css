@@ -747,16 +747,13 @@ button:focus {
 }
 
 /* Ekstra skjulte bokse der evt. kan bruges senere */
-.kon6, .kon7 {
-  opacity: 0;
-  background: var(--box1-bg);
-}
+
 
 /* Bred boks nederst til fx kort eller tekst */
 .kon8 { 
   grid-column: 1 / 4;
   grid-row: 6/10; 
-  background: var(--box2-bg); 
+  background: var(--box1-bg); 
   padding: 2em;
   width: 100%;
 }
@@ -1077,9 +1074,14 @@ button:focus {
 
 /* Samme baggrund på kontaktbokse */
 .kon1, .kon2, .kon3, .kon4, .kon5 {
-  background: var(--box1-bg);
+  
+  border-color: grey;
+  border-left: 4px solid rgb(0, 0, 0);
+  border-bottom: 4px solid rgb(0, 0, 0);
 }
-
+.forms{
+  padding-bottom: 2em;
+}
 /* Mindre tekst i kontaktbokse for balance */
 .kon p { 
   font-size: .6em; 
@@ -1263,7 +1265,6 @@ button:focus {
   display: flex;
   flex-direction: column;
   gap: 1.5em; /* mellemrum mellem kasserne */
-  padding-left: 3em;
   font-size: 1.2em;
 }
 
@@ -1403,7 +1404,21 @@ button:focus {
   #bio {
      width: 95vw; 
     }
+@media (min-width: 1080px) {
+  #name, #email {
+    width: 15vw;   /* Desktop normal størrelse */
+  }
 
+  #bio {
+    width: 50vw;
+    height: 35vh;
+  }
+
+  .btns button {
+    padding: 0.4em 1.4em; /* små knapper */
+    width: auto; /* ikke stræk */
+  }
+}
 
   
 }

@@ -487,7 +487,84 @@ footer a { color: #FBC100; }
 }
 
 /* Lidt venstrepadding på første sektion */
+/* === Bygger ramme til burger-menu i toppen === */
+.topmenu {
+  background: var(--menu-color);
+  position: relative;
+}
 
+/* Placerer logo og burger på hver sin side */
+.nav-container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1em 2em;
+}
+
+/* Gør burger-knappen usynlig på store skærme */
+.burger {
+  display: none;
+  background: none;
+  border: none;
+  font-size: 2rem;
+  color: var(--text);
+  cursor: pointer;
+  transition: transform 0.2s ease;
+}
+
+/* Laver lille zoom-animation på burger */
+.burger:hover { 
+  transform: scale(1.1); 
+}
+
+/* === WCAG 2.2 – Fokus synlighed === */
+/* Giver tydelig gul fokusramme på interaktive elementer */
+a:focus,
+button:focus,
+input:focus,
+select:focus {
+  outline: 3px solid #FBC100;
+  outline-offset: 3px;
+  border-radius: 4px;
+  transition: outline 0.2s ease;
+}
+.grid-kon {
+  grid-template-rows: 1fr;
+}
+
+/* Hover og fokus på burger-menu for tydelig kontrast */
+.burger:hover,
+.burger:focus {
+  background: #FBC100; /* gul kontrast */
+  color: #002D65;      /* mørk tekst */
+}
+
+/* Gør dropdown-knapperne tydelige – kun synlig under 1080px */
+.colorblind .color-menu button {
+  border: 2px solid transparent;
+  border-radius: 4px;
+  transition: background 0.2s ease, border-color 0.2s ease;
+}
+
+/* Visuel feedback ved hover/fokus på dropdown-knapper */
+.colorblind .color-menu button:hover,
+.colorblind .color-menu button:focus {
+  color: #002D65;
+  border-color: #002D65;
+}
+
+/* Marker aktiv farveblind-tilstand */
+.color-menu button[aria-checked="true"] {
+  background: #FBC100;
+  color: #002D65;
+  font-weight: bold;
+}
+
+/* Understreger links når man tab’er gennem siden */
+a:focus-visible {
+  text-decoration: underline;
+  color: #FBC100;
+}
 
 /* Header til Stop Madspild-siden */
 .header-stopmadsplid {
@@ -582,7 +659,7 @@ footer a { color: #FBC100; }
   padding-bottom: 2em;
 }
 
-/* Farver og placeringer for kontaktbokse 1-5 */
+/* Farver og placeringer for kontaktbokse 1-5 og forms */
 .kon1 { background: var(--box1-bg); 
     grid-column: 1 / 2; 
 }
@@ -596,7 +673,77 @@ footer a { color: #FBC100; }
     grid-column: 4 / 5; 
 }
 .kon5 { background: var(--box1-bg); 
-    grid-column: 4 / 5; grid-row: 6/10; 
+    grid-column: 1 / 5;
+     grid-row: 10/15; 
+}
+.forms { background: var(--box2-bg); 
+    grid-column: 1 / 5;
+     grid-row: 6/10; 
+     width: 100%;
+     align-items: left;
+}
+
+form {
+  display: flex;
+  flex-direction: column;
+  gap: 1.5em; /* mellemrum mellem kasserne */
+  padding-left: 3em;
+  
+}
+
+form div, .forms h2{
+  display: flex;
+  flex-direction: column;
+  color: #000;
+  
+}
+.forms h2 {
+  margin-top: 1em; /* skub den ned */
+  font-size: 2vw;
+}
+
+form p {
+  margin: 0 0 0.3em 0; /* tekst tæt på input */
+  
+}
+#name, #email {
+  width: 25vw;   /* small + clean */
+  height: 2.2em;
+}
+
+#bio {
+  width: 50vw;
+  height: 30vh;
+}
+
+
+/* Knap-container */
+.btns {
+  display: flex;
+  flex-direction: row;
+  width: 5vw;
+  gap: 1em;
+}
+button {
+  padding: 0.6em 1.4em; /* gør dem bredere */
+  border: none;
+  border-radius: 6px; /* lidt rund */
+  background: #2b6f44; /* mørk grøn (kan skiftes) */
+  color: white;
+  font-size: 1em;
+  cursor: pointer;
+  transition: 0.2s ease;
+}
+
+/* Hover effekt (når man holder mus over) */
+button:hover {
+  background: #3fa166; /* lidt lysere grøn */
+}
+
+/* Fokus (til accessibility) */
+button:focus {
+  outline: 3px solid #fff;
+  outline-offset: 2px;
 }
 
 /* Ekstra skjulte bokse der evt. kan bruges senere */
@@ -705,39 +852,12 @@ footer a { color: #FBC100; }
     font-size: 3vw; 
     text-align: left; 
 }
+  #name, #email { 
+    width: 65vw; }
+  #bio { 
+    width: 80vw; }
 }
 /* Sørger for at kontaktgrid kun består af én række */
-.grid-kon {
-  grid-template-rows: 1fr;
-}
-
-/* Hover og fokus på burger-menu for tydelig kontrast */
-.burger:hover,
-.burger:focus {
-  background: #FBC100; /* gul kontrast */
-  color: #002D65;      /* mørk tekst */
-}
-
-/* Gør dropdown-knapperne tydelige – kun synlig under 1080px */
-.colorblind .color-menu button {
-  border: 2px solid transparent;
-  border-radius: 4px;
-  transition: background 0.2s ease, border-color 0.2s ease;
-}
-
-/* Visuel feedback ved hover/fokus på dropdown-knapper */
-.colorblind .color-menu button:hover,
-.colorblind .color-menu button:focus {
-  color: #002D65;
-  border-color: #002D65;
-}
-
-/* Marker aktiv farveblind-tilstand */
-.color-menu button[aria-checked="true"] {
-  background: #FBC100;
-  color: #002D65;
-  font-weight: bold;
-}
 
 /* === Justerer navigation og footer mellem 769px og 1080px === */
 @media (min-width: 769px) and (max-width: 1080px) {
@@ -803,55 +923,10 @@ footer a { color: #FBC100; }
     padding: 0.3em 0.6em;
     transition: background 0.2s ease, color 0.2s ease;
   }
+
 }
 
-/* === Bygger ramme til burger-menu i toppen === */
-.topmenu {
-  background: var(--menu-color);
-  position: relative;
-}
 
-/* Placerer logo og burger på hver sin side */
-.nav-container {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  padding: 1em 2em;
-}
-
-/* Gør burger-knappen usynlig på store skærme */
-.burger {
-  display: none;
-  background: none;
-  border: none;
-  font-size: 2rem;
-  color: var(--text);
-  cursor: pointer;
-  transition: transform 0.2s ease;
-}
-
-/* Laver lille zoom-animation på burger */
-.burger:hover { 
-  transform: scale(1.1); 
-}
-
-/* === WCAG 2.2 – Fokus synlighed === */
-/* Giver tydelig gul fokusramme på interaktive elementer */
-a:focus,
-button:focus,
-input:focus,
-select:focus {
-  outline: 3px solid #FBC100;
-  outline-offset: 3px;
-  border-radius: 4px;
-  transition: outline 0.2s ease;
-}
-
-/* Understreger links når man tab’er gennem siden */
-a:focus-visible {
-  text-decoration: underline;
-  color: #FBC100;
-}
 
 /* === Navigation ved små skærme === */
 @media (max-width: 1080px) {
@@ -899,7 +974,8 @@ a:focus-visible {
   }
 
   /* Lader farveblind-menu fylde hele bredden */
-  .colorblind { width: 100%; }
+  .colorblind {
+     width: 100%; }
 }
 
 /* === Kontaktsektion ved mindre skærme === */
@@ -937,12 +1013,16 @@ a:focus-visible {
     flex: none !important;
     width: 100% !important;
   }
+    #name, #email { 
+      width: 40vw; }
+   #bio { 
+    width: 60vw; }
 }
 
 /* === Kort og infobokse === */
 .map {
   width: 100%;
-  height: 400px;
+  height: 800px;
   padding: 1em;
   border-radius: 8px;
   overflow: hidden;
@@ -1050,6 +1130,7 @@ a:focus-visible {
     line-height: 1.5; 
     color: white; 
   }
+
 }
 
 /* === Tilpasning mellem 921px og 1080px === */
@@ -1111,7 +1192,30 @@ a:focus-visible {
     align-items: flex-start;
     width: 100%;
   }
+  form {
+  display: flex;
+  flex-direction: column;
+  gap: 1.5em; /* mellemrum mellem kasserne */
+  padding-left: 3em;
+  font-size: 1.2em;
 }
+
+  form {
+    padding-left: 0; /* fjern indryk */
+    padding-right: 0;
+    align-items: center; /* centrer alt */
+  }
+
+  .btns {
+    width: auto;
+    justify-content: center;
+  }
+  .forms h2 {
+  margin-top: 1em; /* skub den ned */
+  font-size: 3vw;
+}
+}
+
 
 /* === Tilpasning under 920px === */
 @media (max-width: 920px) {
@@ -1155,6 +1259,35 @@ a:focus-visible {
     color: #FBC100;
     width: 100%;
   }
+    form {
+  display: flex;
+  flex-direction: column;
+  gap: 1.5em; /* mellemrum mellem kasserne */
+  padding-left: 3em;
+  font-size: 1.2em;
+}
+
+  form {
+    padding-left: 0; /* fjern indryk */
+    padding-right: 0;
+    align-items: center; /* centrer alt */
+  }
+    #name, #email {
+       width: 50vw; 
+      }
+  #bio { 
+    width: 70vw; 
+  }
+
+  .btns {
+    width: auto;
+    justify-content: center;
+    
+  }
+  .forms h2 {
+  margin-top: 1em; /* skub den ned */
+  font-size: 3vw;
+}
 }
 
 /* === Mobile tilpasninger under 640px === */
@@ -1215,6 +1348,18 @@ a:focus-visible {
     font-size: 3vw;
     color: #FBC100;
   }
+
+
+   .forms h2 {
+      margin-top: 1em; /* skub den ned */
+      font-size: 6vw;
+    }
+    #name, #email { 
+      width: 75vw; 
+    }
+  #bio { 
+    width: 90vw; 
+  }
 }
 
 /* === Mindste skærme under 340px === */
@@ -1252,4 +1397,13 @@ a:focus-visible {
   .madspild-info .box:hover {
     transform: scale(1.02);
   }
+  #name, #email { 
+    width: 90vw; 
+  }
+  #bio {
+     width: 95vw; 
+    }
+
+
+  
 }

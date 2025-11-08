@@ -111,31 +111,28 @@
         </div>
                 <div class="forms" role="region" aria-label="Kort over Grøn Hverdags adresse">
           <section class="forms" role="region" aria-label="Kortvisning fra OpenStreetMap">
-                <form action="">
-                  <h2>SKRIV TIL OS</h2>
-                  <div>
-                    
-                    <p>Navn:</p>
-                    <label for="name"></label>
-                    <input type="text" name="name" id="name" placeholder="Navn" required>
-                  </div>
+                    <form action="">
+                      <h2>SKRIV TIL OS</h2>
 
-                  <div>
-                    <p>Email:</p>
-                    <label for="email"></label>
-                    <input type="text" id="email" placeholder="Email" required>
-                  </div>
+                      <div class="form-group">
+                        <label for="name">Navn</label>
+                        <input type="text" name="name" id="name" placeholder="Skriv dit navn" required>
+                      </div>
 
-                  <div>
+                      <div class="form-group">
+                        <label for="email">Email</label>
+                        <input type="email" name="email" id="email" placeholder="Skriv din email" required>
+                      </div>
 
-                    <label for="bio"></label>
-                    <textarea name="bio" id="bio"></textarea>
-                  </div>
+                      <div class="form-group">
+                        <label for="bio">Besked</label>
+                        <textarea name="bio" id="bio" placeholder="Skriv din besked her..." rows="6"></textarea>
+                      </div>
 
-                  <div class="btns">
-                    <button type="reset">Reset</button>
-                    <button type="submit">Submit</button>
-                  </div>
+                      <div class="btns">
+                        <button type="reset">Reset</button>
+                        <button type="submit">Send</button>
+                      </div>
                 </form>
           </section>
         </div>

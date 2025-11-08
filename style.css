@@ -53,14 +53,19 @@ body, html {
 
 /* Definerer standard farvevariabler til hele sitet */
 :root {
+  /*Base*/
   --bg: #F5F5F5;          
   --text: #ffffff;        
   --menu-color: #c9c9c9;  /* mørkere menu for hvid tekst */
+
+  /*Brand Ui*/
   --accent: #007ACC;
-  --highlight: #A1C349;
+  --highlight: #729c06;
   --primary-color: #2E8B57;
   --yellow: #FBC100;
+  --cta-color: #0f4b35;
 
+  /*Bokse*/
   /* Naturinspirerede bokse i grøn-blå balance */
   --box1-bg: #2E8B57;
   --box2-bg: #4FB477;
@@ -314,7 +319,10 @@ a.box:hover {
   color: rgb(255, 255, 255);
   padding-left: .8em;
 }
-
+.gridbox-section {      /* det container div som holder dine kort */
+  margin-top: 4rem;   /* afstand fra hero */
+  margin-bottom: 4rem; /* afstand til footer */
+}
 /* De fem bokse placeres i grid med baggrundsbilleder */
 .box1 { 
   grid-column: 1 / 2; 
@@ -718,24 +726,26 @@ form p {
   gap: 1em;
 }
 button {
-  padding: 0.6em 1.4em; /* gør dem bredere */
+  padding: 0.6em 1.4em;
   border: none;
-  border-radius: 6px; /* lidt rund */
-  background: #2b6f44; /* mørk grøn (kan skiftes) */
+  border-radius: 8px;
+  background: #0C5B43;
   color: white;
   font-size: 1em;
+  font-weight: 600;
   cursor: pointer;
-  transition: 0.2s ease;
+  transition: 0.25s;
+  box-shadow: 0 2px 5px rgba(0,0,0,0.18);
+  margin-right: 0.6rem;
 }
 
-/* Hover effekt (når man holder mus over) */
 button:hover {
-  background: #3fa166; /* lidt lysere grøn */
+  filter: brightness(1.12);
 }
 
-/* Fokus (til accessibility) */
+
 button:focus {
-  outline: 3px solid #fff;
+  outline: 3px solid #ffffff;
   outline-offset: 2px;
 }
 
@@ -1072,9 +1082,33 @@ button:focus {
   border-left: 4px solid rgb(0, 0, 0);
   border-bottom: 4px solid rgb(0, 0, 0);
 }
-.forms{
-  padding-bottom: 2em;
+.forms {
+  background: #DEEFE3;  /* den lyse, rolige baggrund */
+  padding-left: 8vw;    /* trækker formularen ind fra venstre */
 }
+.form-group {
+  margin-bottom: 1.4rem;
+}
+
+
+label {
+  display: block;
+  margin-bottom: 0.4rem;
+  font-weight: 600;
+}
+
+input, textarea {
+  width: 100%;
+  padding: 0.6rem;
+  border-radius: 6px;
+  border: 1px solid #ddd;
+}
+form {
+  max-width: 600px;
+  margin: 0;           /* ikke center */
+  padding: 2rem 0;
+}
+
 /* Mindre tekst i kontaktbokse for balance */
 .kon p { 
   font-size: .6em; 

@@ -13,7 +13,7 @@
 <body data-mode="normal">
 
   <!-- Skip-link så man hurtigt kan hoppe ned til hovedindhold -->
-  <a href="#main-kon" class="skip-link">Spring til hovedindhold</a>
+  <a href="#main-kon"tabindex="-1" class="skip-link">Spring til hovedindhold</a>
 
   <!-- === NAVIGATION === -->
   <nav class="topmenu" role="navigation" aria-label="Hovedmenu">
@@ -57,9 +57,9 @@
   </header>
 
   <!-- Hovedindhold på siden -->
-  <main id="main-kon" role="main" aria-label="Kontaktinformationer og adresser">
-    <section class="broedtekst" role="region" aria-label="Kontaktoversigt og kort">
-      <section class="grid-kon" aria-label="Kontaktoplysninger opdelt i sektioner">
+  <main id="main-kon" role="main" aria-label="Kontaktinformationer og adresser" tabindex="-1">
+    <section class="broedtekst" tabindex="0" role="region" aria-label="Kontaktoversigt og kort">
+      <section class="grid-kon" tabindex="0"     aria-label="Kontaktoplysninger opdelt i sektioner">
 
         <!-- Første kolonne med links til sider -->
         <div class="kon1 kon" role="region" aria-label="Links til relaterede sider">
@@ -110,7 +110,7 @@
  
         </div>
                 <div class="forms" role="region" aria-label="Kort over Grøn Hverdags adresse">
-          <section class="forms" role="region" aria-label="Kortvisning fra OpenStreetMap">
+          <section class="forms" tabindex="0" role="region" aria-label="Kortvisning fra OpenStreetMap">
                     <form action="">
                       <h2>SKRIV TIL OS</h2>
 
@@ -123,7 +123,22 @@
                         <label for="email">Email</label>
                         <input type="email" name="email" id="email" placeholder="Skriv din email" required>
                       </div>
+                      <div class="form-group">
+                                <label for="emne">Emne</label>
+                                <select name="emne" id="emne" required>
+                                  <option value="" disabled selected hidden>Vælg et emne...</option>
+                                  <option value="Generel forespørgsel">Generel forespørgsel</option>
+                                  <option value="Spørgsmål om Stop Madspild">Spørgsmål om Stop Madspild</option>
+                                  <option value="Opskrifter og madidéer">Opskrifter og madidéer</option>
+                                  <option value="Farveblindhed / Tilgængelighed">Farveblindhed / Tilgængelighed</option>
+                                  <option value="Fejl på hjemmesiden">Fejl på hjemmesiden</option>
+                                  <option value="Samarbejde / Partnerskab">Samarbejde / Partnerskab</option>
+                                  <option value="Pressehenvendelse">Pressehenvendelse</option>
+                                  <option value="Feedback / Forslag">Feedback / Forslag</option>
+                                  <option value="Andet">Andet (skriv i beskeden)</option>
+                                </select>
 
+                      </div>
                       <div class="form-group">
                         <label for="bio">Besked</label>
                         <textarea name="bio" id="bio" placeholder="Skriv din besked her..." rows="6"></textarea>
@@ -139,7 +154,7 @@
 
         <!-- Kort med adressevisning -->
         <div class="kon8" role="region" aria-label="Kort over Grøn Hverdags adresse">
-          <section class="map" role="region" aria-label="Kortvisning fra OpenStreetMap">
+          <section class="map" tabindex="0" role="region" aria-label="Kortvisning fra OpenStreetMap">
             <iframe 
               width="100%" 
               height="350" 
@@ -155,7 +170,7 @@
   </main>
 
   <!-- Footer-->
-  <footer role="contentinfo" aria-label="Sidefod med kontaktoplysninger og navigation">
+  <footer tabindex="0" role="contentinfo" aria-label="Sidefod med kontaktoplysninger og navigation">
     <div class="miniflex">
 
       <!-- Første kolonne med menulinks -->

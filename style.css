@@ -133,11 +133,13 @@ body, html {
   font-weight: 600;
   transition: color 0.3s ease;
 }
-.menulink a{
-  color: var(--primary-color);
+.menulink a {
+  color: #1A1A1A;
+  font-weight: 700;
 }
-.menulink a:hover{
-  color: var(--highlight);
+
+.menulink a:hover {
+  color: var(--primary-color);
 }
 
 /* Wrapper til farveblind-menuen så den kan åbne på klik */
@@ -332,7 +334,7 @@ a.box:hover {
   flex-direction: column;
   align-items: left;
   max-height: 40vh;
-  background-color: #3f3f3f;
+  background-color: #363636;
   background-image: url(img/madsplid2.webp);
   background-blend-mode: multiply;
   background-size: cover;
@@ -346,7 +348,7 @@ a.box:hover {
   grid-column: 2 / 3; 
   grid-row: 1/6; 
   max-height: 40vh;
-  background-color: #3f3f3f;
+  background-color: #363636;
   background-image: url(img/madsplid1.jpg);
   background-blend-mode: multiply;
   background-size: cover;
@@ -360,8 +362,8 @@ a.box:hover {
   grid-column: 3 / 5; 
   grid-row: 1/6; 
   max-height: 40vh;
-  background-color: #3f3f3f;
-  background-image: url(img/ko.jpg);
+  background-color: #363636;
+  background-image: url(img/madsplid4.jpg);
   background-blend-mode: multiply;
   background-size: cover;
   background-position: center;
@@ -373,7 +375,7 @@ a.box:hover {
 .box4  { 
   grid-column: 1 / 3; 
   grid-row: 7/15; 
-  background-color: #3f3f3f;
+  background-color: #363636;
   background-image: url(img/madsplid3.webp);
   background-blend-mode: multiply;
   background-size: cover;
@@ -386,7 +388,7 @@ a.box:hover {
 .box5  { 
   grid-column: 3 / 5; 
   grid-row: 7/15; 
-  background-color: #3f3f3f;
+  background-color: #363636;
   background-image: url(img/fnvm.png);
   background-blend-mode: multiply;
   background-size: cover;
@@ -708,16 +710,23 @@ form p {
   margin: 0 0 0.3em 0; /* tekst tæt på input */
   
 }
-#name, #email {
-  width: 25vw;   /* small + clean */
+#name, #email, #Emne {
+  width: 25vw;
   height: 2.2em;
 }
+#emne option{
+  color: black;
+  
+}
+
 
 #bio {
   width: 50vw;
   height: 30vh;
 }
-
+form input, form textarea, form select {
+  border: 2px solid #0C5B43;
+}
 
 /* Knap-container */
 .btns {
@@ -853,7 +862,7 @@ button:focus {
     font-size: 3vw; 
     text-align: left; 
 }
-  #name, #email { 
+  #name, #email, #emne { 
     width: 65vw; }
   #bio { 
     width: 80vw; }
@@ -995,9 +1004,11 @@ button:focus {
     padding: 1.5em 2em;
     border-top: 1px solid rgba(255,255,255,0.1);
   }
-
+  
   /* Fjerner ekstra mellemrum mellem bokse */
-  .kon + .kon { margin: 0; }
+  .kon + .kon { 
+    margin: 0; 
+  }
 
   /* Gør tekst ensartet på mindre skærme */
   .kon h2,
@@ -1014,7 +1025,7 @@ button:focus {
     flex: none !important;
     width: 100% !important;
   }
-    #name, #email { 
+    #name, #email, #emne  {  
       width: 40vw; }
    #bio { 
     width: 60vw; }
@@ -1098,9 +1109,9 @@ label {
   font-weight: 600;
 }
 
-input, textarea {
+input, textarea, select {
   width: 100%;
-  padding: 0.6rem;
+  padding: 1rem;
   border-radius: 6px;
   border: 1px solid #ddd;
 }
@@ -1301,7 +1312,7 @@ form {
     padding-right: 0;
     align-items: center; /* centrer alt */
   }
-    #name, #email {
+    #name, #email, #emne  { 
        width: 50vw; 
       }
   #bio { 
@@ -1383,12 +1394,8 @@ form {
       margin-top: 1em; /* skub den ned */
       font-size: 6vw;
     }
-    #name, #email { 
-      width: 75vw; 
-    }
-  #bio { 
-    width: 90vw; 
-  }
+
+
 }
 
 /* === Mindste skærme under 340px === */
@@ -1426,14 +1433,14 @@ form {
   .madspild-info .box:hover {
     transform: scale(1.02);
   }
-  #name, #email { 
+  #name, #email, #emne{ 
     width: 90vw; 
   }
   #bio {
      width: 95vw; 
     }
 @media (min-width: 1080px) {
-  #name, #email {
+  #name, #email, #emne { 
     width: 15vw;   /* Desktop normal størrelse */
   }
 

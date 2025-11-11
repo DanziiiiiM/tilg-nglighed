@@ -724,9 +724,6 @@ form p {
   width: 50vw;
   height: 30vh;
 }
-form input, form textarea, form select {
-  border: 2px solid #0C5B43;
-}
 
 /* Knap-container */
 .btns {

@@ -53,60 +53,101 @@ body, html {
 
 /* Definerer standard farvevariabler til hele sitet */
 :root {
-  /*Base*/
+  /* === Normal === */
   --bg: #c9c9c9;          
   --text: #ffffff;        
-  --menu-color: #c9c9c9;  /* mørkere menu for hvid tekst */
-
-  /*Brand Ui*/
+  --menu-color: #c9c9c9;
   --accent: #007ACC;
   --highlight: #729c06;
   --primary-color: #2E8B57;
   --yellow: #FBC100;
   --cta-color: #0f4b35;
-
-  /*Bokse*/
-  /* Naturinspirerede bokse i grøn-blå balance */
   --box1-bg: #2E8B57;
   --box2-bg: #4FB477;
 }
 
+/* === Deuteranomaly (grøn-svag) === */
+[data-mode="deuteranomaly"] {
+  --accent: #006CB5;
+  --highlight: #A5D86E;
+  --menu-color: #DDDDDD;
+  --primary-color: #4C8A7E;
+  --box1-bg: #4C8A7E;
+  --box2-bg: #5CA48E;
+}
 
-/* === Deuteranopia (grøn-rødblind) === */
-/* Ændrer farver til at fungere for brugere med grøn-rødblindhed */
+/* === Deuteranopia (grøn-blind) === */
 [data-mode="deuteranopia"] {
   --accent: #005F9E;
   --highlight: #bcf267;
   --menu-color: #DCDCDC;
   --primary-color: #3B7E8F;
-
   --box1-bg: #3B7E8F;
   --box2-bg: #4D9F6B;
 }
 
-/* === Protanopia (rødblind) === */
-/* Justerer farver for at bevare kontrast uden brug af rødtoner */
+/* === Protanomaly (rød-svag) === */
+[data-mode="protanomaly"] {
+  --accent: #006BA3;
+  --highlight: #A3E078;
+  --menu-color: #DDDDDD;
+  --primary-color: #3E896D;
+  --box1-bg: #3E896D;
+  --box2-bg: #58A77E;
+}
+
+/* === Protanopia (rød-blind) === */
 [data-mode="protanopia"] {
   --accent: #0067B3;
   --highlight: #bcf267;
   --menu-color: #DDDDDD;
   --primary-color: #33896E;
-
   --box1-bg: #33896E;
   --box2-bg: #54A87E;
 }
 
-/* === Tritanopia (blå-gulblind) === */
-/* Bruger grønne og blålige toner for tydelig kontrast */
+/* === Tritanomaly (blå-svag) === */
+[data-mode="tritanomaly"] {
+  --accent: #5171A8;
+  --highlight: #CDEB6B;
+  --menu-color: #CCCCCC;
+  --primary-color: #3A8E58;
+  --box1-bg: #3A8E58;
+  --box2-bg: #4A9C70;
+}
+
+/* === Tritanopia (blå-blind) === */
 [data-mode="tritanopia"] {
   --accent: #4C74A5;
   --highlight: #bcf267;
   --menu-color: #CCCCCC;
   --primary-color: #3A8A4E;
-
   --box1-bg: #3A8A4E;
   --box2-bg: #4A9A68;
+}
 
+/* === Monochromacy (sort-hvid) === */
+[data-mode="achromatopsia"] {
+  --bg: #E0E0E0;
+  --text: #111111;
+  --menu-color: #C0C0C0;
+  --accent: #777777;
+  --highlight: #AAAAAA;
+  --primary-color: #666666;
+  --box1-bg: #888888;
+  --box2-bg: #999999;
+}
+
+/* === Blue Cone Monochromacy (blå-konemonokromasi) === */
+[data-mode="bluecone"] {
+  --bg: #C8D2E0;
+  --text: #101010;
+  --menu-color: #AEBBCC;
+  --accent: #4E6EA7;
+  --highlight: #98C1E0;
+  --primary-color: #6788B4;
+  --box1-bg: #6788B4;
+  --box2-bg: #8FAED1;
 }
 
 /* Laver navigationen som en vandret række fordelt jævnt */

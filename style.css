@@ -807,7 +807,7 @@ form p {
   
 }
 #name, #email, #Emne {
-  width: 25vw;
+  width: 20vw;
   height: 2.2em;
 }
 #emne option{
@@ -887,6 +887,9 @@ button:focus {
 
 /* Gør navigationen mobilvenlig under 768px */
 @media (max-width: 768px) { 
+  .menulink-img{
+  max-width: 25%;
+}
   .nav-links {
     flex-direction: column;
     align-items: center;
@@ -955,15 +958,19 @@ button:focus {
     font-size: 3vw; 
     text-align: left; 
 }
-  #name, #email, #emne { 
-    width: 65vw; }
-  #bio { 
-    width: 80vw; }
+
     
-    .faktabox-info .fakta {
+    .faktabox-info {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .faktabox-info .fakta {
     width: 100%;
-    min-height: 280px;
-    font-size: 0.95rem;
+    min-height: 300px;
+    border: 0px solid;
+    margin: 0;
   }
 }
 /* Sørger for at kontaktgrid kun består af én række */
@@ -1040,13 +1047,19 @@ button:focus {
     border: 0px solid;
     margin: 0;
   }
+  
 }
 
 
 
 /* === Navigation ved små skærme === */
 @media (max-width: 1080px) {
-  .burger { display: block; }
+ .menulink-img{
+  max-width: 15%;
+}
+  .burger {
+     display: block; 
+    }
 
   /* Dropdown-menuen placeres under navigationen */
   .nav-links {
@@ -1339,28 +1352,8 @@ form {
     align-items: flex-start;
     width: 100%;
   }
-  form {
-  display: flex;
-  flex-direction: column;
-  gap: 1.5em; /* mellemrum mellem kasserne */
-  padding-left: 3em;
-  font-size: 1.2em;
-}
 
-  form {
-    padding-left: 0; /* fjern indryk */
-    padding-right: 0;
-    align-items: center; /* centrer alt */
-  }
 
-  .btns {
-    width: auto;
-    justify-content: center;
-  }
-  .forms h2 {
-  margin-top: 1em; /* skub den ned */
-  font-size: 3vw;
-}
 }
 
 
@@ -1406,39 +1399,6 @@ form {
     color: #FBC100;
     width: 100%;
   }
-    form {
-  display: flex;
-  flex-direction: column;
-  gap: 1.5em; /* mellemrum mellem kasserne */
-  font-size: 1.2em;
-}
-
-  form {
-    padding-left: 0; /* fjern indryk */
-    padding-right: 0;
-    align-items: center; /* centrer alt */
-  }
-    #name, #email, #emne  { 
-       width: 50vw; 
-      }
-  #bio { 
-    width: 70vw; 
-  }
-
-  .btns {
-    width: auto;
-    justify-content: center;
-    
-  }
-  .forms h2 {
-  margin-top: 1em; /* skub den ned */
-  font-size: 3vw;
-}
-    .faktabox-info {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-  }
 
   .faktabox-info .fakta {
     width: 100%;
@@ -1451,6 +1411,9 @@ form {
 
 /* === Mobile tilpasninger under 640px === */
 @media (max-width: 640px) {
+  .menulink-img{
+  max-width: 25%;
+}
   .menulink, .colorblind #colorToggle {
     list-style: none;
     font-family: Arial, Helvetica, sans-serif;
@@ -1508,10 +1471,7 @@ form {
   }
 
 
-   .forms h2 {
-      margin-top: 1em; /* skub den ned */
-      font-size: 6vw;
-    }
+
         .faktabox-info {
     display: flex;
     flex-direction: column;
@@ -1524,12 +1484,19 @@ form {
     border: 0px solid;
     margin: 0;
   }
+  #name, #email, #Emne {
+  width: 40vw;
+  height: 2.2em;
+}
 }
 
 
 
 /* === Mindste skærme under 340px === */
 @media (max-width: 340px) {
+  .menulink-img{
+  max-width: 40%;
+}
   .madspild-info {
     gap: 0.6em;
     padding: 0.5em;
@@ -1554,12 +1521,13 @@ form {
     border: 0px solid;
     margin: 0;
   }
+  
 }
 
 
 /* === Desktop grid over 1081px === */
 @media (min-width: 1081px) {
-  .madspild-info {
+    .madspild-info {
     display: grid;
     grid-template-columns: repeat(4, 1fr);
     grid-auto-rows: auto;
@@ -1576,15 +1544,8 @@ form {
   .madspild-info .box:hover {
     transform: scale(1.02);
   }
-  #name, #email, #emne{ 
-    width: 90vw; 
-  }
-  #bio {
-     width: 95vw; 
-    }
-@media (min-width: 1080px) {
   #name, #email, #emne { 
-    width: 15vw;   /* Desktop normal størrelse */
+    width: 30vw;   /* Desktop normal størrelse */
   }
 
   #bio {
@@ -1596,7 +1557,7 @@ form {
     padding: 0.4em 1.4em; /* små knapper */
     width: auto; /* ikke stræk */
   }
-}
+
 .copyright{
   font-size: 1vw;
 }

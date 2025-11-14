@@ -108,22 +108,22 @@
 
         <!-- FORM -->
         <div class="forms" role="region" aria-labelledby="sektionForm" tabindex="0">
-          <form aria-label="Kontaktformular">
+          <form aria-labelledby="sektionForm">
             <h2 id="sektionForm">SKRIV TIL OS</h2>
 
             <div class="form-group">
               <label for="name">Navn</label>
-              <input type="text" id="name" aria-label="Indtast dit navn" required>
+              <input type="text" id="name" aria-required="true" required>
             </div>
 
             <div class="form-group">
               <label for="email">Email</label>
-              <input type="email" id="email" aria-label="Indtast din email" required>
+              <input type="email" id="email" aria-required="true" required>
             </div>
 
             <div class="form-group">
               <label for="emne">Emne</label>
-              <select id="emne" aria-label="Vælg et emne" required>
+              <select id="emne" aria-required="true" required>
                 <option disabled selected hidden>Vælg et emne...</option>
                 <option>Generel forespørgsel</option>
                 <option>Stop Madspild</option>
@@ -133,20 +133,21 @@
 
             <div class="form-group">
               <label for="bio">Besked</label>
-              <textarea id="bio" rows="6" aria-label="Skriv din besked her"></textarea>
+              <textarea id="bio" rows="6"></textarea>
             </div>
 
             <div class="btns">
-              <button type="reset" aria-label="Nulstil formular">Reset</button>
-              <button type="submit" aria-label="Send formularen">Send</button>
+              <button type="reset">Reset</button>
+              <button type="submit">Send</button>
             </div>
           </form>
         </div>
 
         <!-- MAP -->
         <div class="kon8" role="region" aria-labelledby="sektionMap" tabindex="0">
-          <section class="map" role="region" aria-labelledby="sektionMap">
-            <h2 id="sektionMap" style="position:absolute; left:-9999px;">Kort over virksomhedens placering</h2>
+          <section class="map" aria-labelledby="sektionMap">
+            <h2 id="sektionMap" class="visually-hidden">Kort over virksomhedens placering</h2>
+
             <iframe 
               width="100%" 
               height="350" 
@@ -166,27 +167,28 @@
 
     <div class="miniflex">
 
-      <div class="foot f1" aria-label="Menu i footer">
-        <div class="items"><a href="stop-madspild.html" tabindex="0" aria-label="Gå til Stop Madspild">❯ STOP MADSPILD</a></div>
-        <div class="items"><a href="index.html" tabindex="0" aria-label="Gå til forsiden">❯ FORSIDE</a></div>
-        <div class="items"><a href="kontakt.html" tabindex="0" aria-label="Gå til Kontakt os">❯ KONTAKT OS</a></div>
+      <div class="foot f1" aria-labelledby="footerLinks">
+        <h2 id="footerLinks" class="visually-hidden">Footer menu</h2>
+        <div class="items"><a href="stop-madspild.html" tabindex="0">❯ STOP MADSPILD</a></div>
+        <div class="items"><a href="index.html" tabindex="0">❯ FORSIDE</a></div>
+        <div class="items"><a href="kontakt.html" tabindex="0">❯ KONTAKT OS</a></div>
       </div>
 
       <div class="foot f2" aria-labelledby="footerAdresse" tabindex="0">
-        <h2 id="footerAdresse" style="position:absolute; left:-9999px;">Adresse og sociale medier</h2>
+        <h2 id="footerAdresse" class="visually-hidden">Adresse og sociale medier</h2>
         <p>❯ GRØN HVERDAG</p>
         <p>❯ BÆREDYGTIGHEDSVEJ 3</p>
         <p>❯ 8000 AARHUS C</p>
         <p>❯ KONTAKTPERSON: METTE</p>
         <p>❯ CVR: 69420360</p>
         <br>
-        <a href="#" tabindex="0" aria-label="Instagram profil">❯ INSTAGRAM: @GRONHVERDAG</a><br>
-        <a href="#" tabindex="0" aria-label="Facebook side">❯ FACEBOOK: /GRONHVERDAGDK</a><br>
-        <a href="#" tabindex="0" aria-label="TikTok profil">❯ TIKTOK: @GRONHVERDAG</a><br>
+        <a href="#" tabindex="0">❯ INSTAGRAM: @GRONHVERDAG</a><br>
+        <a href="#" tabindex="0">❯ FACEBOOK: /GRONHVERDAGDK</a><br>
+        <a href="#" tabindex="0">❯ TIKTOK: @GRONHVERDAG</a><br>
       </div>
 
       <div class="foot f3" aria-labelledby="footerKontakt" tabindex="0">
-        <h2 id="footerKontakt" style="position:absolute; left:-9999px;">Kontaktoplysninger</h2>
+        <h2 id="footerKontakt" class="visually-hidden">Kontaktoplysninger</h2>
         <p>❯ EMAIL: INFO@GRONHVERDAG.DK</p>
         <p>❯ TELEFON: +45 67 69 42 00</p>
         <br>
@@ -197,7 +199,7 @@
       </div>
 
       <div class="foot" aria-labelledby="footerPresse" tabindex="0">
-        <h2 id="footerPresse" style="position:absolute; left:-9999px;">Presse kontakt</h2>
+        <h2 id="footerPresse" class="visually-hidden">Presse kontakt</h2>
         <p>❯ PRESSE: PRESSE@GRONHVERDAG.DK</p>
         <p>❯ TELEFON: +45 22 33 44 55</p>
         <br>

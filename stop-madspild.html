@@ -7,7 +7,7 @@
   <link rel="stylesheet" href="style.css">
 </head>
 
-<body data-mode="normal">
+<body data-mode="normal" aria-label="Stop Madspild side">
 
   <!-- SKIP LINK -->
   <a href="#main" class="skip-link" tabindex="0" aria-label="Spring direkte til hovedindhold">
@@ -29,7 +29,7 @@
         </div>
 
         <div class="menulink">
-          <a href="stop-madspild.html" role="menuitem" tabindex="0" aria-label="Læs om Stop Madspild">STOP MADSPILD</a>
+          <a href="stop-madspild.html" role="menuitem" tabindex="0" aria-current="page" aria-label="Du er på Stop Madspild">STOP MADSPILD</a>
         </div>
 
         <div class="menulink">
@@ -60,17 +60,17 @@
   </nav>
 
   <!-- HEADER -->
-  <header class="header-stopmadsplid" role="banner" tabindex="0" aria-label="Sideheader Stop Madspild">
+  <header class="header-stopmadsplid" role="banner" tabindex="0" aria-labelledby="stopTitel">
     <p>Små ændringer <span>Stor forskel</span></p>
-    <h1 class="titel">STOP <span>MADSPILD</span></h1>
+    <h1 id="stopTitel" class="titel">STOP <span>MADSPILD</span></h1>
   </header>
 
   <!-- MAIN -->
-  <main id="main" role="main" tabindex="0" aria-label="Indhold om madspild">
+  <main id="main" role="main" tabindex="-1" aria-label="Indhold om madspild">
 
     <section class="gridbox-section" role="region" aria-label="Sektion med tips mod madspild">
 
-      <section class="madspild-info">
+      <section class="madspild-info" aria-label="Tips opdelt i bokse">
 
         <!-- BOX 1 -->
         <div class="box1 box" role="article" tabindex="0" aria-labelledby="tip1-title">
@@ -122,7 +122,7 @@
         <div class="items"><a href="kontakt.html" tabindex="0">❯ KONTAKT OS</a></div>
       </div>
 
-      <div class="foot f2" tabindex="0">
+      <div class="foot f2" tabindex="0" aria-label="Adresse og virksomhedsinfo">
         <p>❯ GRØN HVERDAG</p>
         <p>❯ BÆREDYGTIGHEDSVEJ 3</p>
         <p>❯ 8000 AARHUS C</p>
@@ -134,7 +134,7 @@
         <a href="#" tabindex="0">❯ TIKTOK: @GRONHVERDAG</a><br>
       </div>
 
-      <div class="foot f3" tabindex="0">
+      <div class="foot f3" tabindex="0" aria-label="Kontakt og kundeservice">
         <p>❯ EMAIL: INFO@GRONHVERDAG.DK</p>
         <p>❯ TELEFON: +45 67 69 42 00</p>
         <br>
@@ -143,7 +143,7 @@
         <p>❯ MANDAG – FREDAG 09:00–16:00</p>
       </div>
 
-      <div class="foot" tabindex="0">
+      <div class="foot" tabindex="0" aria-label="Presse kontakt">
         <p>❯ PRESSE: PRESSE@GRONHVERDAG.DK</p>
         <p>❯ TELEFON: +45 22 33 44 55</p>
         <br>

@@ -58,3 +58,14 @@ buttons.forEach(btn => {
     btn.setAttribute('aria-checked', 'true'); // Markerer den valgte
   });
 });
+
+document.addEventListener("click", (e) => {
+  const isClickInsideMenu = navLinks.contains(e.target);
+  const isClickOnBurger = burgerBtn.contains(e.target);
+
+  // Hvis menuen er åben + man klikker udenfor = luk menuen
+  if (navLinks.classList.contains("active") && !isClickInsideMenu && !isClickOnBurger) {
+    navLinks.classList.remove("active");
+  }
+});
+

@@ -5,188 +5,142 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Stop Madspild – Grøn Hverdag</title>
 
-  <!-- Tilføjer font awesome og hoved CSS -->
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
   <link rel="stylesheet" href="style.css">
 </head>
 
 <body data-mode="normal">
 
-  <!-- Skip link som gør man kan springe direkte til indholdet -->
-  <a href="#main" class="skip-link">Spring til hovedindhold</a>
+  <!-- SKIP LINK -->
+  <a href="#main" class="skip-link" tabindex="0">Spring til hovedindhold</a>
 
-  <!-- === NAVIGATION === -->
+  <!-- NAVIGATION -->
   <nav class="topmenu" role="navigation" aria-label="Hovedmenu">
     <div class="nav-container">
 
-      <!-- Burger-knap til mobilversion -->
-      <button class="burger" id="burgerBtn" aria-label="Åbn eller luk menu">☰</button>
+      <button class="burger" id="burgerBtn" aria-label="Åbn eller luk menu" tabindex="0">☰</button>
 
-      <!-- Navigation med logo, links og farvetilstand -->
       <div class="nav-links" id="navLinks" role="menubar">
 
-        <!-- Logo til venstre i menuen -->
-        <img class="menulink menulink-img" src="img/logo3.png" alt="Grøn Hverdag logo" aria-hidden="true">
+        <img class="menulink menulink-img" src="img/logo3.png" alt="Grøn Hverdag logo">
 
-        <!-- Menupunkter -->
-        <div class="menulink" role="none"><a href="index.html" role="menuitem" aria-current="page">FORSIDE</a></div>
-        <div class="menulink" role="none"><a href="stop-madspild.html" role="menuitem">STOP MADSPILD</a></div>
-        <div class="menulink" role="none"><a href="kontakt.html" role="menuitem">KONTAKT OS</a></div>
+        <div class="menulink"><a href="index.html" role="menuitem" tabindex="0">FORSIDE</a></div>
+        <div class="menulink"><a href="stop-madspild.html" role="menuitem" tabindex="0">STOP MADSPILD</a></div>
+        <div class="menulink"><a href="kontakt.html" role="menuitem" tabindex="0">KONTAKT OS</a></div>
 
-        <!-- Dropdown til farveblindhed -->
-        <div class="menulink colorblind" role="none">
-          <button id="colorToggle" aria-expanded="false" aria-controls="colorMenu" aria-haspopup="true">
+        <div class="menulink colorblind">
+          <button id="colorToggle" tabindex="0" aria-expanded="false" aria-controls="colorMenu" aria-haspopup="true">
             FARVEBLINDHED
           </button>
 
-          <!-- Valgmuligheder for forskellige farveindstillinger -->
-          <div class="color-menu" id="colorMenu" hidden role="menu" aria-label="Vælg farvetilstand">
-            <button data-mode="normal" role="menuitemradio" aria-checked="true" aria-label="Standard farver">Normal</button>
-            <button data-mode="deuteranomaly" role="menuitemradio" aria-checked="false" aria-label="Grøn-svag tilstand">Grønsvag</button>
-            <button data-mode="deuteranopia" role="menuitemradio" aria-checked="false" aria-label="Grøn-blind tilstand">Grønblind</button>
-            <button data-mode="protanomaly" role="menuitemradio" aria-checked="false" aria-label="Rød-svag tilstand">Rødsvag</button>
-            <button data-mode="protanopia" role="menuitemradio" aria-checked="false" aria-label="Rød-blind tilstand">Rødblind</button>
-            <button data-mode="tritanomaly" role="menuitemradio" aria-checked="false" aria-label="Blå-svag tilstand">Blåsvag</button>
-            <button data-mode="tritanopia" role="menuitemradio" aria-checked="false" aria-label="Blå-blind tilstand">Blåblind</button>
-            <button data-mode="achromatopsia" role="menuitemradio" aria-checked="false" aria-label="Sort-hvid tilstand">Sorthvid</button>
-            <button data-mode="bluecone" role="menuitemradio" aria-checked="false" aria-label="Blå-kone tilstand">Blåkone</button>
+          <div class="color-menu" id="colorMenu" hidden role="menu">
+            <button data-mode="normal" role="menuitemradio" aria-checked="true" tabindex="0">Normal</button>
+            <button data-mode="deuteranomaly" role="menuitemradio" aria-checked="false" tabindex="0">Grønsvag</button>
+            <button data-mode="deuteranopia" role="menuitemradio" aria-checked="false" tabindex="0">Grønblind</button>
+            <button data-mode="protanomaly" role="menuitemradio" aria-checked="false" tabindex="0">Rødsvag</button>
+            <button data-mode="protanopia" role="menuitemradio" aria-checked="false" tabindex="0">Rødblind</button>
+            <button data-mode="tritanomaly" role="menuitemradio" aria-checked="false" tabindex="0">Blåsvag</button>
+            <button data-mode="tritanopia" role="menuitemradio" aria-checked="false" tabindex="0">Blåblind</button>
+            <button data-mode="achromatopsia" role="menuitemradio" aria-checked="false" tabindex="0">Sorthvid</button>
+            <button data-mode="bluecone" role="menuitemradio" aria-checked="false" tabindex="0">Blåkone</button>
           </div>
-
         </div>
+
       </div>
     </div>
   </nav>
 
-  <!-- Header -->
-  <header class="header-stopmadsplid" role="banner" aria-label="Sidehoved med titel Stop Madspild">
-    <p>Små ændringer <span>Stor forske</span></p>
+  <!-- HEADER -->
+  <header class="header-stopmadsplid" role="banner" tabindex="0">
+    <p>Små ændringer <span>Stor forskel</span></p>
     <h1 class="titel">STOP <span>MADSPILD</span></h1>
   </header>
 
-  <!-- Hovedindhold på siden -->
-  <main id="main" role="main" tabindex="1" aria-label="Indhold om madspild i Danmark">
-    <section class="gridbox-section " role="region" aria-label="Sektion med organisationer og fakta om madspild">
-      <section class="madspild-info" aria-label="Madspild oplysninger fra forskellige kilder">
+  <!-- MAIN -->
+  <main id="main" role="main" tabindex="0">
+    <section class="gridbox-section" role="region" aria-label="Information om madspild">
 
-        <!-- Boks 1  Fødevarestyrelsen -->
-        <div class="box1 box" role="article">
-            <h2 id="fodeva">Fødevarestyrelsen</h2 aria-label="Planlæg din madplaner">
-                       <div>
-                        <h3>1. Planlæg dine madplaner</h3>
-              <p>Lav en madplan så du, hvad du skal handle og ikke spilder mad og penge på ting du ikke har brug for. Med dette så bliver det kun ting som er på listen du køber også er der store chance for det ikke bliver glemt, men ren faktisk brugt.</p>
-            </div>
+      <section class="madspild-info">
 
-
-
-          </a>
+        <!-- BOX 1 -->
+        <div class="box1 box" role="article" tabindex="0">
+          <h2>1. Planlæg dine madplaner</h2>
+          <p>Lav en madplan så du ved, hvad du skal handle...</p>
         </div>
 
-        <!-- Boks 2  Organisationen Stop Spild Af Mad -->
-        <div class="box2 box" role="article">
-            <h2 id="ssam">2. Brug en indkøbsliste</h2 aria-label="Brug en indkøbsliste">
-           <div>
-              <p>Lav en indkøbsliste så du kun køber de ting du mangler og ikke alt muligt ekstra. Så er du også sikker på at kun køber det du har brug for og ikke ender med at lave impluskøb
-                Så kan du også få et realistik overblik over, hvad du mangler.
-              </p>
-            </div>
-          </a>
+        <!-- BOX 2 -->
+        <div class="box2 box" role="article" tabindex="0">
+          <h2>2. Brug en indkøbsliste</h2>
+          <p>Lav en indkøbsliste så du kun køber det, du mangler...</p>
         </div>
 
-        <!-- Boks 3  Landbrug og Fødevarer -->
-        <div class="box3  box" role="article">
-             <h2 id="landbrug">3. Frys overskud ned</h2 aria-label="3. Frys overskud ned">
-            <div>
-              <p>Hvis du ikke får tingene spise med det samme så kan du fryse dem bed som fx brød, kød og grønt på denne måde vile det holde længere
-                og i sidste ende kan bliver brugt til noget andet. Du skal også optø maden i køleskabet og ikke på køkken border på den måde er der mere smag og mere fødevarsikkerhed
-              </p>
-              
-            </div>
-          </a>
+        <!-- BOX 3 -->
+        <div class="box3 box" role="article" tabindex="0">
+          <h2>3. Frys overskud ned</h2>
+          <p>Frys rester som brød, kød og grønt ned...</p>
         </div>
 
-        <!-- Boks 4 Miljøstyrelsen og globalt perspektiv -->
-        <div class="box4  box" role="article">
-            <h2 id="fnmaal">FN'S VERDENSMÅL</h2 aria-label="FN'S VERDENSMÅL">
-
-            <p>Verdensmål 2 ved at mindske madspild og kan det bruges til at fodre dem som er udsatte derfor kan det hjælpe
-              Fn er har et mål at halvere madsplid inden 2030 så der mulighed for at give folk nogen som er mere udsatte. 
-              Så kommer der også til at være mindre mængder af fødevarer der forsvinder. 
-            </p>
-          </a>
+        <!-- BOX 4 -->
+        <div class="box4 box" role="article" tabindex="0">
+          <h2>FN’S VERDENSMÅL</h2>
+          <p>Verdensmål 2 arbejder for at mindske madspild globalt...</p>
         </div>
 
-        <!-- Boks 5 FN’s verdensmål -->
-        <div class="box5  box" role="article" aria-labelledby="Brug apps mod madspild">
-            <h2 id="fnmaal">4. Brug apps mod madspild</h2 aria-label="Læs mere om FN’s verdensmål og madspild">
-              <div class="tekst-sektion">
-                    <div class="tekst">
-
-                      <p>
-                        Hvis du vælger at bruge apps som Togoodtogo så er der mulig for du kan ende med at bruge mad som endelige bare skulle i skraldespanden til at bliver brugt og ikke være spild.
-                        Men du kan også støtte en orginations som stop spild af mad så kan du hjælpe dem med at gøre en forskel og sørger for der bliver spildt mindre mad. 
-                      </p>
-                    </div>
-              </div>
-
-          </a>
+        <!-- BOX 5 -->
+        <div class="box5 box" role="article" tabindex="0">
+          <h2>4. Brug apps mod madspild</h2>
+          <p>Apps som TooGoodToGo gør det muligt...</p>
         </div>
 
       </section>
     </section>
   </main>
-
   <!-- Footer-->
-  <footer role="contentinfo madsplid-sektion" aria-label="Sidefod med kontaktoplysninger og navigation">
+  <footer role="contentinfo" tabindex="0">
+
     <div class="miniflex">
 
-      <!-- Første kolonne med menulinks -->
-      <div class="foot f1" role="navigation" aria-label="Navigationslinks i sidefoden">
-        <div class="items"><a href="stop-madspild.html" aria-label="Læs om Stop Madspild">❯ STOP MADSPILD</a></div>
-        <div class="items"><a href="index.html" aria-label="Gå til forsiden">❯ FORSIDE</a></div>
-        <div class="items"><a href="kontakt.html" aria-label="Kontakt Grøn Hverdag">❯ KONTAKT OS</a></div>
+      <div class="foot f1">
+        <div class="items"><a href="stop-madspild.html" tabindex="0">❯ STOP MADSPILD</a></div>
+        <div class="items"><a href="index.html" tabindex="0">❯ FORSIDE</a></div>
+        <div class="items"><a href="kontakt.html" tabindex="0">❯ KONTAKT OS</a></div>
       </div>
 
-      <!-- Anden kolonne med adresse og sociale medier -->
-      <div class="foot f2" role="region" aria-label="Adresse og sociale medier">
+      <div class="foot f2" tabindex="0">
         <p>❯ GRØN HVERDAG</p>
         <p>❯ BÆREDYGTIGHEDSVEJ 3</p>
         <p>❯ 8000 AARHUS C</p>
         <p>❯ KONTAKTPERSON: METTE</p>
         <p>❯ CVR: 69420360</p>
         <br>
-        <a href="#" aria-label="Besøg Grøn Hverdag på Instagram">❯ INSTAGRAM: @GRONHVERDAG</a>
-        <br>
-        <a href="#" aria-label="Besøg Grøn Hverdag på Facebook">❯ FACEBOOK: /GRONHVERDAGDK</a>
-        <br>
-        <a href="#" aria-label="Besøg Grøn Hverdag på TikTok">❯ TIKTOK: @GRONHVERDAG</a>
+        <a href="#" tabindex="0">❯ INSTAGRAM: @GRONHVERDAG</a><br>
+        <a href="#" tabindex="0">❯ FACEBOOK: /GRONHVERDAGDK</a><br>
+        <a href="#" tabindex="0">❯ TIKTOK: @GRONHVERDAG</a><br>
       </div>
 
-      <!-- Tredje kolonne med generel kontakt -->
-      <div class="foot f3" role="region" aria-label="Generelle kontaktoplysninger">
+      <div class="foot f3" tabindex="0">
         <p>❯ EMAIL: INFO@GRONHVERDAG.DK</p>
         <p>❯ TELEFON: +45 67 69 42 00</p>
         <br>
-        <p>❯ SUPPORT: SUPPORT@GRONHVERDAG.DK</p>
+
         <p>❯ KUNDESERVICE: +45 98 76 54 32</p>
-        <p>❯ ÅBNINGSTIDER: MANDAG – FREDAG 09:00–16:00</p>
+        <p>❯ ÅBENINGSTIDER</p>
+        <p>❯ MANDAG – FREDAG 09:00–16:00</p>
       </div>
 
-      <!-- Fjerde kolonne med presse og marketing -->
-      <div class="foot" role="region" aria-label="Presse og marketing kontakt">
+      <div class="foot" tabindex="0">
         <p>❯ PRESSE: PRESSE@GRONHVERDAG.DK</p>
         <p>❯ TELEFON: +45 22 33 44 55</p>
         <br>
-        <p>❯ MARKETING: NYHEDER@GRONHVERDAG.DK</p>
-       
       </div>
 
     </div>
 
-    <!-- Ophavsret -->
-    <p class="copyright" aria-label="Ophavsret og årstal">© 2025 Grøn Hverdag. Alle rettigheder forbeholdes.</p>
+    <p class="copyright">
+      © 2025 Grøn Hverdag. Alle rettigheder forbeholdes.
+    </p>
   </footer>
 
-  <!-- Script som styrer burger-menu og farvevalg -->
   <script src="script.js"></script>
 </body>
 </html>

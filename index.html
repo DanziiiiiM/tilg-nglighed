@@ -5,55 +5,47 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Forside – Grøn Hverdag</title>
 
-  <!-- Importerer font awesome og hoved-CSS til layout og ikoner -->
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
   <link rel="stylesheet" href="style.css">
 </head>
 
-<body data-mode="normal">
+<body data-mode="normal" tabindex="0">
 
-  <!-- Skip link bruges af tastaturbrugere til at springe direkte til hovedindhold -->
-  <a href="#main" class="skip-link">Spring til hovedindhold</a>
+  <!-- SKIPLINK -->
+  <a href="#main" class="skip-link" tabindex="0">Spring til hovedindhold</a>
 
   <!-- === NAVIGATION === -->
   <nav class="topmenu" role="navigation" aria-label="Hovedmenu">
     <div class="nav-container">
 
-      <!-- Burger-knap der styrer mobilnavigation -->
-      <button class="burger" id="burgerBtn" aria-label="Åbn eller luk menu">☰</button>
+      <!-- Burger-knap -->
+      <button class="burger" id="burgerBtn" aria-label="Åbn eller luk menu" tabindex="0">☰</button>
 
-      <!-- Navigationens indhold med logo, links og dropdown -->
       <div class="nav-links" id="navLinks" role="menubar">
 
-        <!-- Logo i toppen, bruges som branding men ikke som navigationslink -->
-        <img class="menulink menulink-img" src="img/logo3.png" alt="Grøn Hverdag logo" aria-hidden="true">
+        <!-- Logo -->
+        <img class="menulink menulink-img" src="img/logo3.png" alt="Grøn Hverdag logo">
 
-        <!-- Link til forside -->
-        <div class="menulink"><a href="index.html" role="navigationdel" aria-current="page" aria-label="Gå til forsiden">FORSIDE</a></div>
+        <div class="menulink"><a href="index.html" aria-current="page" tabindex="0">FORSIDE</a></div>
+        <div class="menulink"><a href="stop-madspild.html" tabindex="0">STOP MADSPILD</a></div>
+        <div class="menulink"><a href="kontakt.html" tabindex="0">KONTAKT OS</a></div>
 
-        <!-- Link til side om madspild -->
-        <div class="menulink"><a href="stop-madspild.html" role="navigationdel" aria-label="Læs om Stop Madspild">STOP MADSPILD</a></div>
-
-        <!-- Link til kontakt side -->
-        <div class="menulink"><a href="kontakt.html" role="navigationdel" aria-label="Kontakt Grøn Hverdag">KONTAKT OS</a></div>
-
-        <!-- Dropdown menu til valg af farveblindhedstilstand -->
-        <div class="menulink colorblind" role="none">
-          <button id="colorToggle" aria-expanded="false" aria-controls="colorMenu" aria-haspopup="true">
+        <!-- Dropdown -->
+        <div class="menulink colorblind">
+          <button id="colorToggle" aria-expanded="false" aria-controls="colorMenu" aria-haspopup="true" tabindex="0">
             FARVEBLINDHED
           </button>
-          
-          <!-- Mulige farvetilstande som brugeren kan vælge -->
-          <div class="color-menu" id="colorMenu" hidden role="menu" aria-label="Vælg farvetilstand">
-            <button data-mode="normal" role="menuitemradio" aria-checked="true" aria-label="Standard farver">Normal</button>
-            <button data-mode="deuteranomaly" role="menuitemradio" aria-checked="false" aria-label="Grøn-svag tilstand">Grønsvag</button>
-            <button data-mode="deuteranopia" role="menuitemradio" aria-checked="false" aria-label="Grøn-blind tilstand">Grønblind</button>
-            <button data-mode="protanomaly" role="menuitemradio" aria-checked="false" aria-label="Rød-svag tilstand">Rødsvag</button>
-            <button data-mode="protanopia" role="menuitemradio" aria-checked="false" aria-label="Rød-blind tilstand">Rødblind</button>
-            <button data-mode="tritanomaly" role="menuitemradio" aria-checked="false" aria-label="Blå-svag tilstand">Blåsvag</button>
-            <button data-mode="tritanopia" role="menuitemradio" aria-checked="false" aria-label="Blå-blind tilstand">Blåblind</button>
-            <button data-mode="achromatopsia" role="menuitemradio" aria-checked="false" aria-label="Sort-hvid tilstand">Sorthvid</button>
-            <button data-mode="bluecone" role="menuitemradio" aria-checked="false" aria-label="Blå-kone tilstand">Blåkone</button>
+
+          <div class="color-menu" id="colorMenu" hidden role="menu">
+            <button data-mode="normal" role="menuitemradio" aria-checked="true" tabindex="0">Normal</button>
+            <button data-mode="deuteranomaly" role="menuitemradio" tabindex="0">Grønsvag</button>
+            <button data-mode="deuteranopia" role="menuitemradio" tabindex="0">Grønblind</button>
+            <button data-mode="protanomaly" role="menuitemradio" tabindex="0">Rødsvag</button>
+            <button data-mode="protanopia" role="menuitemradio" tabindex="0">Rødblind</button>
+            <button data-mode="tritanomaly" role="menuitemradio" tabindex="0">Blåsvag</button>
+            <button data-mode="tritanopia" role="menuitemradio" tabindex="0">Blåblind</button>
+            <button data-mode="achromatopsia" role="menuitemradio" tabindex="0">Sorthvid</button>
+            <button data-mode="bluecone" role="menuitemradio" tabindex="0">Blåkone</button>
           </div>
 
         </div>
@@ -62,126 +54,94 @@
   </nav>
 
   <!-- Header -->
-  <header class="header" role="banner" aria-label="Sidehoved med slogan og titel samt et billede af en som holder et lille frø">
+  <header class="header" role="banner" tabindex="0">
     <p>Stop Madspild <span>uden</span> at gøre livet svært</p>
     <h1 class="titel">GRØN <span>HVERDAG</span></h1>
   </header>
 
-  <!-- Hovedindhold på siden -->
-  <main id="main" role="main" tabindex="-1" aria-label="Hovedindhold med information om madspild">
-    <section class="broedtekst" role="region" aria-label="Information og initiativer mod madspild">
+  <!-- MAIN -->
+  <main id="main" role="main" tabindex="-1">
+    <section class="broedtekst">
 
-      <!-- Sektion med organisationer og aktører -->
-      <section class="faktabox-info " aria-label="Faktabokse og billeder omkring madspild">
+      <section class="faktabox-info">
 
-        <!-- Boks 1: Fødevarestyrelsen -->
-        <div class="faktabox1 fakta" role="article">
-          <a href="stop-madspild.html" aria-label="Tips til at bekæmpe madspild">
+        <!-- FAKTABOKS 1 -->
+        <div class="faktabox1 fakta" role="article" tabindex="0">
+          <a href="stop-madspild.html" tabindex="0">
             <h2 id="fodeva">Tips til at bekæmpe madspild</h2>
-            <div>
-              <p>1. Planlæg dine målgrupper</p>
-            </div>
-            <div>
-              <p>2. Brug en indkøbsliste</p>
-            </div>
-            <div>
-              <p>3. Frys overskud ned</p>
-            </div>
-            <div>
-              <p>4. Brug dine rester kreativt</p>
-            </div>
-              
-
-              
-
+            <p>1. Planlæg dine måltider</p>
+            <p>2. Brug en indkøbsliste</p>
+            <p>3. Frys overskud ned</p>
+            <p>4. Brug dine rester kreativt</p>
             <br>
-
-            <button>Læs mere</button>
-
+            <button tabindex="0">Læs mere</button>
           </a>
-          
-        </div>
-        
-        <div class="faktabox2 fakta" role="article" aria-labelledby="Billede af madsplid">
         </div>
 
-        <div class="faktabox3 fakta" role="article" aria-labelledby="Billede af madsplid">
-          
-            
-        </div>
+        <!-- FAKTABOKS 2 -->
+        <div class="faktabox2 fakta" role="article" tabindex="0"></div>
 
-        <!-- Boks 5: FN's Verdensmål -->
-        <div class="faktabox4 fakta" role="article" aria-labelledby="Tips til bekæmpe madsplid">
-          <a href="stop-madspild.html" aria-label="Læs mere om Fødevarestyrelsen og madspild">
-            <h2 id="fodeva">FN og madspild</h2>
-            <p>
-              En af FN's verdensmål er at inden 2030 så skal der være halvdelen af den sult som er i verden være væk-
+        <!-- FAKTABOKS 3 -->
+        <div class="faktabox3 fakta" role="article" tabindex="0"></div>
 
-              
-            </p>
+        <!-- FAKTABOKS 4 -->
+        <div class="faktabox4 fakta" role="article" tabindex="0">
+          <a href="stop-madspild.html" tabindex="0">
+            <h2>FN og madspild</h2>
+            <p>En af FN’s verdensmål er at reducere madspild markant inden 2030 …</p>
             <br>
-
-            <button>Læs mere</button>
-            
+            <button tabindex="0">Læs mere</button>
           </a>
-          
         </div>
+
       </section>
     </section>
   </main>
 
-  <!-- Footer-->
-  <footer role="contentinfo" aria-label="Sidefod med kontaktoplysninger og navigation">
+  <!-- FOOTER -->
+  <footer role="contentinfo" tabindex="0">
+
     <div class="miniflex">
 
-      <!-- Første kolonne med interne links -->
-      <div class="foot f1" role="navigation" aria-label="Navigationslinks i sidefoden">
-        <div class="items"><a href="stop-madspild.html" aria-label="Læs om Stop Madspild">❯ STOP MADSPILD</a></div>
-        <div class="items"><a href="index.html" aria-label="Gå til forsiden">❯ FORSIDE</a></div>
-        <div class="items"><a href="kontakt.html" aria-label="Kontakt Grøn Hverdag">❯ KONTAKT OS</a></div>
+      <div class="foot f1">
+        <div class="items"><a href="stop-madspild.html" tabindex="0">❯ STOP MADSPILD</a></div>
+        <div class="items"><a href="index.html" tabindex="0">❯ FORSIDE</a></div>
+        <div class="items"><a href="kontakt.html" tabindex="0">❯ KONTAKT OS</a></div>
       </div>
 
-      <!-- Anden kolonne med adresse og SoMe -->
-      <div class="foot f2" role="region" aria-label="Adresse og sociale medier">
+      <div class="foot f2" tabindex="0">
         <p>❯ GRØN HVERDAG</p>
         <p>❯ BÆREDYGTIGHEDSVEJ 3</p>
         <p>❯ 8000 AARHUS C</p>
         <p>❯ KONTAKTPERSON: METTE</p>
         <p>❯ CVR: 69420360</p>
         <br>
-        <a href="#" aria-label="Besøg Grøn Hverdag på Instagram">❯ INSTAGRAM: @GRONHVERDAG</a>
-        <br>
-        <a href="#" aria-label="Besøg Grøn Hverdag på Facebook">❯ FACEBOOK: /GRONHVERDAGDK</a>
-        <br>
-        <a href="#" aria-label="Besøg Grøn Hverdag på TikTok">❯ TIKTOK: @GRONHVERDAG</a>
+        <a href="#" tabindex="0">❯ INSTAGRAM: @GRONHVERDAG</a><br>
+        <a href="#" tabindex="0">❯ FACEBOOK: /GRONHVERDAGDK</a><br>
+        <a href="#" tabindex="0">❯ TIKTOK: @GRONHVERDAG</a><br>
       </div>
 
-      <!-- Tredje kolonne med kontaktinfo -->
-      <div class="foot f3" role="region" aria-label="Generelle kontaktoplysninger">
+      <div class="foot f3" tabindex="0">
         <p>❯ EMAIL: INFO@GRONHVERDAG.DK</p>
         <p>❯ TELEFON: +45 67 69 42 00</p>
         <br>
-        <p>❯ SUPPORT: SUPPORT@GRONHVERDAG.DK</p>
+
         <p>❯ KUNDESERVICE: +45 98 76 54 32</p>
         <p>❯ ÅBENINGSTIDER</p>
         <p>❯ MANDAG – FREDAG 09:00–16:00</p>
       </div>
 
-      <!-- Fjerde kolonne med presse og marketing -->
-      <div class="foot" role="region" aria-label="Presse og marketing kontakt">
+      <div class="foot" tabindex="0">
         <p>❯ PRESSE: PRESSE@GRONHVERDAG.DK</p>
         <p>❯ TELEFON: +45 22 33 44 55</p>
         <br>
-        <p>❯ MARKETING: NYHEDER@GRONHVERDAG.DK</p>
-        <p>❯ MAILCHIMP-LISTE: GRON-HVERDAG-NEWSLETTER</p>
       </div>
-    </div>
 
-    <!-- Copyright linje nederst -->
-    <p class="copyright" aria-label="Ophavsret 2025 Grøn Hverdag">© 2025 Grøn Hverdag. Alle rettigheder forbeholdes.</p>  
+    <p class="copyright">
+      © 2025 Grøn Hverdag. Alle rettigheder forbeholdes.
+    </p>
   </footer>
 
-  <!-- Tilkobler JavaScript der styrer farvetilstande og burger-menu -->
   <script src="script.js"></script>
 </body>
 </html>

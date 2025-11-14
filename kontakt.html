@@ -5,78 +5,76 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Kontakt os – Grøn Hverdag</title>
 
-  <!-- Tilføjer ikoner og hoved CSS -->
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
   <link rel="stylesheet" href="style.css">
 </head>
 
-<body data-mode="normal">
+<!-- GIVER BODY FOKUS MULIGHED -->
+<body data-mode="normal" tabindex="0">
 
-  <!-- Skip-link så man hurtigt kan hoppe ned til hovedindhold -->
-  <a href="#main-kon"tabindex="-1" class="skip-link">Spring til hovedindhold</a>
+  <!-- SKIP-LINK -->
+  <a href="#main-kon" class="skip-link">Spring til hovedindhold</a>
 
-  <!-- === NAVIGATION === -->
-  <nav class="topmenu" role="navigation" aria-label="Hovedmenu">
+  <!-- NAVIGATION -->
+  <nav class="topmenu" role="navigation" aria-label="Hovedmenu" tabindex="0">
     <div class="nav-container">
 
-      <!-- Burgerknap som bruges på mobil -->
+      <!-- BURGER -->
       <button class="burger" id="burgerBtn" aria-label="Åbn eller luk menu">☰</button>
 
-      <!-- Selve menuen med links og farvevalg -->
+      <!-- LINKS -->
       <div class="nav-links" id="navLinks" role="menubar">
 
-        <!-- Logo i venstre side -->
-        <img class="menulink menulink-img" src="img/logo3.png" alt="Grøn Hverdag logo" aria-hidden="true">
+        <img class="menulink menulink-img" src="img/logo3.png" alt="Grøn Hverdag logo">
 
-        <!-- Almindelige menupunkter -->
-        <div class="menulink" role="none"><a href="index.html" role="menuitem" aria-label="Gå til forsiden">FORSIDE</a></div>
-        <div class="menulink" role="none"><a href="stop-madspild.html" role="menuitem" aria-label="Læs om Stop Madspild">STOP MADSPILD</a></div>
-        <div class="menulink" role="none"><a href="kontakt.html" role="menuitem" aria-label="Kontakt Grøn Hverdag">KONTAKT OS</a></div>
+        <div class="menulink"><a href="index.html" role="menuitem">FORSIDE</a></div>
+        <div class="menulink"><a href="stop-madspild.html" role="menuitem">STOP MADSPILD</a></div>
+        <div class="menulink"><a href="kontakt.html" role="menuitem" aria-current="page">KONTAKT OS</a></div>
 
-        <!-- Dropdown-menu til farveblindhed -->
-        <div class="menulink colorblind" role="none">
-          <button id="colorToggle" aria-expanded="false" aria-controls="colorMenu" aria-haspopup="true">
+        <!-- Farveblindhed -->
+        <div class="menulink colorblind">
+          <button id="colorToggle" aria-expanded="false" aria-controls="colorMenu">
             FARVEBLINDHED
           </button>
 
-          <!-- Her kan man vælge farvetilstand -->
-            <div class="color-menu" id="colorMenu" hidden role="menu" aria-label="Vælg farvetilstand">
-            <button data-mode="normal" role="menuitemradio" aria-checked="true" aria-label="Standard farver">Normal</button>
-            <button data-mode="deuteranomaly" role="menuitemradio" aria-checked="false" aria-label="Grøn-svag tilstand">Grønsvag</button>
-            <button data-mode="deuteranopia" role="menuitemradio" aria-checked="false" aria-label="Grøn-blind tilstand">Grønblind</button>
-            <button data-mode="protanomaly" role="menuitemradio" aria-checked="false" aria-label="Rød-svag tilstand">Rødsvag</button>
-            <button data-mode="protanopia" role="menuitemradio" aria-checked="false" aria-label="Rød-blind tilstand">Rødblind</button>
-            <button data-mode="tritanomaly" role="menuitemradio" aria-checked="false" aria-label="Blå-svag tilstand">Blåsvag</button>
-            <button data-mode="tritanopia" role="menuitemradio" aria-checked="false" aria-label="Blå-blind tilstand">Blåblind</button>
-            <button data-mode="achromatopsia" role="menuitemradio" aria-checked="false" aria-label="Sort-hvid tilstand">Sorthvid</button>
-            <button data-mode="bluecone" role="menuitemradio" aria-checked="false" aria-label="Blå-kone tilstand">Blåkone</button>
-            </div>
+          <div class="color-menu" id="colorMenu" hidden role="menu">
+            <button data-mode="normal" role="menuitemradio" aria-checked="true">Normal</button>
+            <button data-mode="deuteranomaly" role="menuitemradio">Grønsvag</button>
+            <button data-mode="deuteranopia" role="menuitemradio">Grønblind</button>
+            <button data-mode="protanomaly" role="menuitemradio">Rødsvag</button>
+            <button data-mode="protanopia" role="menuitemradio">Rødblind</button>
+            <button data-mode="tritanomaly" role="menuitemradio">Blåsvag</button>
+            <button data-mode="tritanopia" role="menuitemradio">Blåblind</button>
+            <button data-mode="achromatopsia" role="menuitemradio">Sorthvid</button>
+            <button data-mode="bluecone" role="menuitemradio">Blåkone</button>
+          </div>
 
         </div>
       </div>
     </div>
   </nav>
 
-  <!-- Header -->
-  <header class="header-kontakt-os" role="banner" aria-label="Sidehoved med titel Kontakt Grøn Hverdag">
+  <!-- HEADER -->
+  <header class="header-kontakt-os" role="banner" tabindex="0">
     <h1 class="titel">KONTAKT <span>OS</span></h1>
   </header>
 
-  <!-- Hovedindhold på siden -->
-  <main id="main-kon" role="main" aria-label="Kontaktinformationer og adresser" tabindex="-1">
-    <section class="broedtekst" tabindex="0" role="region" aria-label="Kontaktoversigt og kort">
-      <section class="grid-kon" tabindex="0"     aria-label="Kontaktoplysninger opdelt i sektioner">
+  <!-- MAIN -->
+  <main id="main-kon" role="main" tabindex="-1">
 
-        <!-- Første kolonne med links til sider -->
-        <div class="kon1 kon" role="region" aria-label="Links til relaterede sider">
+    <!-- Hele containeren gøres tabbable -->
+    <section class="broedtekst" role="region" aria-label="Kontaktoversigt og kort" tabindex="0">
+
+      <section class="grid-kon" aria-label="Kontaktoplysninger opdelt i sektioner" tabindex="0">
+
+        <div class="kon1 kon" role="region" tabindex="0">
           <h2>SIDER</h2>
-          <div class="itemskontakt"><a href="stop-madspild.html" aria-label="Læs om Stop Madspild">❯ STOP MADSPILD</a></div>
-          <div class="itemskontakt"><a href="index.html" aria-label="Gå til forsiden">❯ FORSIDE</a></div>
-          <div class="itemskontakt"><a href="kontakt.html" aria-label="Kontakt Grøn Hverdag">❯ KONTAKT OS</a></div>
+          <div class="itemskontakt"><a href="stop-madspild.html">❯ STOP MADSPILD</a></div>
+          <div class="itemskontakt"><a href="index.html">❯ FORSIDE</a></div>
+          <div class="itemskontakt"><a href="kontakt.html" aria-current="page">❯ KONTAKT OS</a></div>
         </div>
 
-        <!-- Anden kolonne med virksomhedsinfo -->
-        <div class="kon2 kon" role="region" aria-label="Virksomhedsoplysninger">
+        <div class="kon2 kon" role="region" tabindex="0">
           <h2>GRØN HVERDAG</h2>
           <p>❯ Storegade 3</p>
           <p>❯ 8900 Randers C</p>
@@ -84,89 +82,77 @@
           <p>❯ CVR: 69420360</p>
         </div>
 
-        <!-- Tredje kolonne med sociale medier -->
-        <div class="kon3 kon" role="region" aria-label="Sociale medier">
+        <div class="kon3 kon" role="region" tabindex="0">
           <h2>SOCIALE MEDIER</h2>
-          <a href="#" aria-label="Besøg Grøn Hverdag på Instagram">❯ INSTAGRAM: @GRONHVERDAG</a>
-          <br>
-          <a href="#" aria-label="Besøg Grøn Hverdag på Facebook">❯ FACEBOOK: /GRONHVERDAGDK</a>
-          <br>
-          <a href="#" aria-label="Besøg Grøn Hverdag på TikTok">❯ TIKTOK: @GRONHVERDAG</a>
+          <a href="#">❯ INSTAGRAM: @GRONHVERDAG</a><br>
+          <a href="#">❯ FACEBOOK: /GRONHVERDAGDK</a><br>
+          <a href="#">❯ TIKTOK: @GRONHVERDAG</a>
         </div>
 
-        <!-- Fjerde kolonne med primær kontakt -->
-        <div class="kon4 kon" role="region" aria-label="Primær kontaktoplysninger">
+        <div class="kon4 kon" role="region" tabindex="0">
           <h2>PRIMÆR KONTAKT</h2>
           <p>❯ EMAIL: INFO@GRONHVERDAG.DK</p>
           <p>❯ TELEFON: +45 67 69 42 00</p>
         </div>
 
-        <!-- Femte kolonne med support, presse og nyhedsbrev -->
-        <div class="kon5 kon" role="region" aria-label="Support, presse og nyhedsbrev">
+        <div class="kon5 kon" role="region" tabindex="0">
           <h2>SUPPORT / KUNDESERVICE</h2>
           <p>❯ EMAIL: SUPPORT@GRONHVERDAG.DK</p>
           <p>❯ TELEFON: +45 98 76 54 32</p>
-          <br>
+
           <h2>PRESSE / PARTNERSKABER</h2>
           <p>❯ EMAIL: PRESSE@GRONHVERDAG.DK</p>
           <p>❯ TELEFON: +45 22 33 44 55</p>
-          <br>
+
           <h2>NEWSLETTER</h2>
           <p>❯ EMAIL: NYHEDER@GRONHVERDAG.DK</p>
- 
-        </div>
-                <div class="forms" role="region" aria-label="Kort over Grøn Hverdags adresse">
-          <section class="forms" tabindex="0" role="region" aria-label="Kortvisning fra OpenStreetMap">
-                    <form action="">
-                      <h2>SKRIV TIL OS</h2>
-
-                      <div class="form-group">
-                        <label for="name">Navn</label>
-                        <input type="text" name="name" id="name" placeholder="Skriv dit navn" required>
-                      </div>
-
-                      <div class="form-group">
-                        <label for="email">Email</label>
-                        <input type="email" name="email" id="email" placeholder="Skriv din email" required>
-                      </div>
-                      <div class="form-group">
-                                <label for="emne">Emne</label>
-                                <select name="emne" id="emne" required>
-                                  <option value="" disabled selected hidden>Vælg et emne...</option>
-                                  <option value="Generel forespørgsel">Generel forespørgsel</option>
-                                  <option value="Spørgsmål om Stop Madspild">Spørgsmål om Stop Madspild</option>
-                                  <option value="Opskrifter og madidéer">Opskrifter og madidéer</option>
-                                  <option value="Farveblindhed / Tilgængelighed">Farveblindhed / Tilgængelighed</option>
-                                  <option value="Fejl på hjemmesiden">Fejl på hjemmesiden</option>
-                                  <option value="Samarbejde / Partnerskab">Samarbejde / Partnerskab</option>
-                                  <option value="Pressehenvendelse">Pressehenvendelse</option>
-                                  <option value="Feedback / Forslag">Feedback / Forslag</option>
-                                  <option value="Andet">Andet (skriv i beskeden)</option>
-                                </select>
-
-                      </div>
-                      <div class="form-group">
-                        <label for="bio">Besked</label>
-                        <textarea name="bio" id="bio" placeholder="Skriv din besked her..." rows="6"></textarea>
-                      </div>
-
-                      <div class="btns">
-                        <button type="reset">Reset</button>
-                        <button type="submit">Send</button>
-                      </div>
-                </form>
-          </section>
         </div>
 
-        <!-- Kort med adressevisning -->
-        <div class="kon8" role="region" aria-label="Kort over Grøn Hverdags adresse">
-          <section class="map" tabindex="0" role="region" aria-label="Kortvisning fra OpenStreetMap">
+        <!-- FORM -->
+        <div class="forms" role="region" tabindex="0">
+          <form>
+            <h2>SKRIV TIL OS</h2>
+
+            <div class="form-group">
+              <label for="name">Navn</label>
+              <input type="text" id="name" required>
+            </div>
+
+            <div class="form-group">
+              <label for="email">Email</label>
+              <input type="email" id="email" required>
+            </div>
+
+            <div class="form-group">
+              <label for="emne">Emne</label>
+              <select id="emne" required>
+                <option disabled selected hidden>Vælg et emne...</option>
+                <option>Generel forespørgsel</option>
+                <option>Stop Madspild</option>
+                <option>Farveblindhed</option>
+              </select>
+            </div>
+
+            <div class="form-group">
+              <label for="bio">Besked</label>
+              <textarea id="bio" rows="6"></textarea>
+            </div>
+
+            <div class="btns">
+              <button type="reset">Reset</button>
+              <button type="submit">Send</button>
+            </div>
+          </form>
+        </div>
+
+        <!-- MAP -->
+        <div class="kon8" role="region" tabindex="0">
+          <section class="map" role="region">
             <iframe 
               width="100%" 
               height="350" 
               src="https://www.openstreetmap.org/export/embed.html?bbox=10.035227537155151%2C56.457091632108956%2C10.039706826210024%2C56.45828320972407&amp;layer=mapnik"
-              title="Kort over Grøn Hverdag i Randers"
-              style="border: 1px solid black">
+              title="Kort over Grøn Hverdag i Randers">
             </iframe>
           </section>
         </div>
@@ -175,59 +161,52 @@
     </section>
   </main>
 
-  <!-- Footer-->
-  <footer tabindex="0" role="contentinfo" aria-label="Sidefod med kontaktoplysninger og navigation">
+  <!-- FOOTER -->
+  <footer role="contentinfo" tabindex="0">
+
     <div class="miniflex">
 
-      <!-- Første kolonne med menulinks -->
-      <div class="foot f1" role="navigation" aria-label="Navigationslinks i sidefoden">
-        <div class="items"><a href="stop-madspild.html" aria-label="Læs om Stop Madspild">❯ STOP MADSPILD</a></div>
-        <div class="items"><a href="index.html" aria-label="Gå til forsiden">❯ FORSIDE</a></div>
-        <div class="items"><a href="kontakt.html" aria-label="Kontakt Grøn Hverdag">❯ KONTAKT OS</a></div>
+      <div class="foot f1">
+        <div class="items"><a href="stop-madspild.html" tabindex="0">❯ STOP MADSPILD</a></div>
+        <div class="items"><a href="index.html" tabindex="0">❯ FORSIDE</a></div>
+        <div class="items"><a href="kontakt.html" tabindex="0">❯ KONTAKT OS</a></div>
       </div>
 
-      <!-- Anden kolonne med adresse og sociale medier -->
-      <div class="foot f2" role="region" aria-label="Adresse og sociale medier">
+      <div class="foot f2" tabindex="0">
         <p>❯ GRØN HVERDAG</p>
         <p>❯ BÆREDYGTIGHEDSVEJ 3</p>
         <p>❯ 8000 AARHUS C</p>
         <p>❯ KONTAKTPERSON: METTE</p>
         <p>❯ CVR: 69420360</p>
         <br>
-        <a href="#" aria-label="Besøg Grøn Hverdag på Instagram">❯ INSTAGRAM: @GRONHVERDAG</a>
-        <br>
-        <a href="#" aria-label="Besøg Grøn Hverdag på Facebook">❯ FACEBOOK: /GRONHVERDAGDK</a>
-        <br>
-        <a href="#" aria-label="Besøg Grøn Hverdag på TikTok">❯ TIKTOK: @GRONHVERDAG</a>
+        <a href="#" tabindex="0">❯ INSTAGRAM: @GRONHVERDAG</a><br>
+        <a href="#" tabindex="0">❯ FACEBOOK: /GRONHVERDAGDK</a><br>
+        <a href="#" tabindex="0">❯ TIKTOK: @GRONHVERDAG</a><br>
       </div>
 
-      <!-- Tredje kolonne med generel kontakt -->
-      <div class="foot f3" role="region" aria-label="Generelle kontaktoplysninger">
+      <div class="foot f3" tabindex="0">
         <p>❯ EMAIL: INFO@GRONHVERDAG.DK</p>
         <p>❯ TELEFON: +45 67 69 42 00</p>
         <br>
-        <p> SUPPORT: SUPPORT@GRONHVERDAG.DK</p>
+
         <p>❯ KUNDESERVICE: +45 98 76 54 32</p>
         <p>❯ ÅBENINGSTIDER</p>
         <p>❯ MANDAG – FREDAG 09:00–16:00</p>
       </div>
 
-      <!-- Fjerde kolonne med presse og marketing -->
-      <div class="foot" role="region" aria-label="Presse og marketing kontakt">
+      <div class="foot" tabindex="0">
         <p>❯ PRESSE: PRESSE@GRONHVERDAG.DK</p>
         <p>❯ TELEFON: +45 22 33 44 55</p>
         <br>
-        <p>  MARKETING:</p>
-        <p>❯ NYHEDER@GRONHVERDAG.DK</p>
       </div>
 
     </div>
 
-    <!-- Ophavsret nederst -->
-    <p class="copyright" aria-label="Ophavsret 2025 Grøn Hverdag">© 2025 Grøn Hverdag. Alle rettigheder forbeholdes.</p>  
+    <p class="copyright">
+      © 2025 Grøn Hverdag. Alle rettigheder forbeholdes.
+    </p>
   </footer>
 
-  <!-- Tilføjer JavaScript som styrer farvevalg og menu -->
   <script src="script.js"></script>
 </body>
 </html>

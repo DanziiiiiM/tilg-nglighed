@@ -149,6 +149,69 @@ body, html {
   --box1-bg: #6788B4;
   --box2-bg: #8FAED1;
 }
+/* ---------- TASTATUR FOKUS / OUTLINE ---------- */
+
+:focus {
+  outline: 3px solid #007ACC;  /* Blå tydelig kant */
+  outline-offset: 4px;         /* Lidt luft rundt om elementet */
+}
+
+/* Gør skip-link synlig når den får fokus */
+.skip-link {
+  position: absolute;
+  left: -999px;
+  top: 10px;
+  background: #2E8B57;
+  color: white;
+  padding: 10px 14px;
+  border-radius: 6px;
+  text-decoration: none;
+  font-weight: bold;
+  z-index: 9999;
+}
+
+.skip-link:focus {
+  left: 10px; 
+}
+
+/* Gør bokse fokuserbare og får outline */
+.box, .box1, .box2, .box3, .box4, .box5 {
+  outline: none;
+}
+
+  .box:focus,
+  .box1:focus,
+  .box2:focus,
+  .box3:focus,
+  .box4:focus,
+  .box5:focus {
+  outline: 3px solid #007ACC;
+  outline-offset: 6px;
+}
+
+/* Navigation fokus */
+  nav a:focus,
+  nav button:focus {
+  outline: 3px solid #007ACC;
+  outline-offset: 4px;
+}
+
+/* Footer fokus */
+  footer a:focus,
+  footer p:focus {
+  outline: 3px solid #007ACC;
+  outline-offset: 4px;
+}
+
+/* Formular felter */
+  input:focus,
+  select:focus,
+  textarea:focus,
+  button:focus {
+  outline: 3px solid #007ACC;
+  outline-offset: 4px;
+}
+
 
 /* Laver navigationen som en vandret række fordelt jævnt */
 .nav-links {
@@ -618,16 +681,7 @@ footer a { color: #FBC100; }
 }
 
 /* === WCAG 2.2 – Fokus synlighed === */
-/* Giver tydelig gul fokusramme på interaktive elementer */
-a:focus,
-button:focus,
-input:focus,
-select:focus {
-  outline: 3px solid #FBC100;
-  outline-offset: 3px;
-  border-radius: 4px;
-  transition: outline 0.2s ease;
-}
+
 .grid-kon {
   grid-template-rows: 1fr;
 }

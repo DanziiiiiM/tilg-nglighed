@@ -177,7 +177,9 @@ body, html {
 /* Gør bokse fokuserbare og får outline */
 .box, .box1, .box2, .box3, .box4, .box5 {
   outline: none;
+  
 }
+
 
   .box:focus,
   .box1:focus,
@@ -1246,7 +1248,7 @@ button:focus {
   font-size: 1.6rem; 
 }
 .madspild-info p { 
-  font-size: 1.05rem; 
+  font-size: 1.2em; 
   line-height: 1.6; 
 }
 
@@ -1358,7 +1360,7 @@ form {
 
   /* Mindre spacing i bokse */
   .madspild-info { 
-    gap: 1.5em; 
+    gap: 2em; 
     padding: 1.2em; 
   }
   .madspild-info .box { 
@@ -1367,7 +1369,7 @@ form {
   }
   .madspild-info h2 { font-size: 1.4rem; }
   .madspild-info p { 
-    font-size: 0.95rem; 
+    font-size: 1.1em; 
   }
 
   /* Footer tekst og struktur */

@@ -682,7 +682,6 @@ a:focus-visible {
   color: white;
   padding: 0 2em;
 }
-
 /* Samme titel-stil som på forsiden */
 .titel {
   color: #e3ffe3;
@@ -757,26 +756,27 @@ a:focus-visible {
 .kon {
   padding-top: 2em;
   padding-bottom: 2em;
+  background: var(--box2-bg) ;
 }
 
 /* Farver og placeringer for kontaktbokse 1-5 og forms */
-.kon1 { background: var(--box1-bg); 
+.kon1 { 
     grid-column: 1 / 2; 
 }
-.kon2 { background: var(--box2-bg); 
+.kon2 { 
     grid-column: 2 / 3; 
 }
-.kon3 { background: var(--box1-bg);
+.kon3{
      grid-column: 3 / 4; 
     }
-.kon4 { background: var(--box2-bg); 
+.kon4{ 
     grid-column: 4 / 5; 
 }
-.kon5 { background: var(--box1-bg); 
+.kon5 { 
     grid-column: 1 / 5;
      grid-row: 10/15; 
 }
-.forms { background: var(--box2-bg); 
+.forms {  
     grid-column: 1 / 5;
      grid-row: 6/10; 
      width: 100%;
@@ -868,7 +868,7 @@ button:focus {
 .grid-kon .kon h2 {
   font-size: 1.4vw;
   margin: 0 0 .5em 0;
-  color: white;
+  color: rgb(0, 0, 0);
   margin-left: 1em;
 }
 .grid-kon .kon p,
@@ -876,7 +876,7 @@ button:focus {
   font-size: 1vw;
   line-height: 1.6;
   margin: 0;
-  color: white;
+  color: rgb(0, 0, 0);
   margin-left: 1em;
 }
 
@@ -1119,7 +1119,7 @@ button:focus {
   /* Bokse tilpasses lodret visning */
   .kon {
     width: 100%;
-    background: var(--box1-bg);
+    background: var(--box2-bg);
     padding: 1.5em 2em;
     border-top: 1px solid rgba(255,255,255,0.1);
   }
@@ -1134,7 +1134,7 @@ button:focus {
   .kon p,
   .kon a {
     font-size: 16px !important;
-    color: white;
+    color: rgb(0, 0, 0);
     text-align: left;
     line-height: 1.6;
   }
@@ -1283,12 +1283,12 @@ form {
     padding: 1em; }
   .kon h2 { 
     font-size: 2.5vw; 
-    color: white; 
+    color: rgb(0, 0, 0); 
   }
   .kon p, .kon a { 
     font-size: 2vw; 
     line-height: 1.5; 
-    color: white; 
+    color: rgb(0, 0, 0); 
   }
 
 }

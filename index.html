@@ -4,48 +4,59 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Forside – Grøn Hverdag</title>
-
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
   <link rel="stylesheet" href="style.css">
 </head>
 
-<body data-mode="normal" tabindex="0">
+<body data-mode="normal" tabindex="0" aria-label="Forside for Grøn Hverdag">
 
   <!-- SKIPLINK -->
-  <a href="#main" class="skip-link" tabindex="0">Spring til hovedindhold</a>
+  <a href="#main" class="skip-link" tabindex="0" aria-label="Spring direkte til hovedindhold">Spring til hovedindhold</a>
 
   <!-- === NAVIGATION === -->
-  <nav class="topmenu" role="navigation" aria-label="Hovedmenu">
+  <nav class="topmenu" role="navigation" aria-label="Hovedmenu" tabindex="0">
     <div class="nav-container">
 
       <!-- Burger-knap -->
-      <button class="burger" id="burgerBtn" aria-label="Åbn eller luk menu" tabindex="0">☰</button>
+      <button class="burger" id="burgerBtn" aria-label="Åbn eller luk menuen" tabindex="0">☰</button>
 
-      <div class="nav-links" id="navLinks" role="menubar">
+      <div class="nav-links" id="navLinks" role="menubar" aria-label="Navigation links">
 
         <!-- Logo -->
         <img class="menulink menulink-img" src="img/logo3.png" alt="Grøn Hverdag logo">
 
-        <div class="menulink"><a href="index.html" aria-current="page" tabindex="0">FORSIDE</a></div>
-        <div class="menulink"><a href="stop-madspild.html" tabindex="0">STOP MADSPILD</a></div>
-        <div class="menulink"><a href="kontakt.html" tabindex="0">KONTAKT OS</a></div>
+        <div class="menulink">
+          <a href="index.html" aria-current="page" tabindex="0" aria-label="Gå til forsiden">FORSIDE</a>
+        </div>
+
+        <div class="menulink">
+          <a href="stop-madspild.html" tabindex="0" aria-label="Læs om Stop Madspild">STOP MADSPILD</a>
+        </div>
+
+        <div class="menulink">
+          <a href="kontakt.html" tabindex="0" aria-label="Kontakt Grøn Hverdag">KONTAKT OS</a>
+        </div>
 
         <!-- Dropdown -->
         <div class="menulink colorblind">
-          <button id="colorToggle" aria-expanded="false" aria-controls="colorMenu" aria-haspopup="true" tabindex="0">
+          <button id="colorToggle"
+                  aria-expanded="false"
+                  aria-controls="colorMenu"
+                  aria-haspopup="true"
+                  tabindex="0"
+                  aria-label="Åbn menu for farveblindhed">
             FARVEBLINDHED
           </button>
 
-          <div class="color-menu" id="colorMenu" hidden role="menu">
-            <button data-mode="normal" role="menuitemradio" aria-checked="true" tabindex="0">Normal</button>
-            <button data-mode="deuteranomaly" role="menuitemradio" tabindex="0">Grønsvag</button>
-            <button data-mode="deuteranopia" role="menuitemradio" tabindex="0">Grønblind</button>
-            <button data-mode="protanomaly" role="menuitemradio" tabindex="0">Rødsvag</button>
-            <button data-mode="protanopia" role="menuitemradio" tabindex="0">Rødblind</button>
-            <button data-mode="tritanomaly" role="menuitemradio" tabindex="0">Blåsvag</button>
-            <button data-mode="tritanopia" role="menuitemradio" tabindex="0">Blåblind</button>
-            <button data-mode="achromatopsia" role="menuitemradio" tabindex="0">Sorthvid</button>
-            <button data-mode="bluecone" role="menuitemradio" tabindex="0">Blåkone</button>
+          <div class="color-menu" id="colorMenu" hidden role="menu" aria-label="Vælg farvetilstand">
+            <button data-mode="normal" role="menuitemradio" aria-checked="true" tabindex="0" aria-label="Normal farvetilstand">Normal</button>
+            <button data-mode="deuteranomaly" role="menuitemradio" tabindex="0" aria-label="Grønsvag tilstand">Grønsvag</button>
+            <button data-mode="deuteranopia" role="menuitemradio" tabindex="0" aria-label="Grønblind tilstand">Grønblind</button>
+            <button data-mode="protanomaly" role="menuitemradio" tabindex="0" aria-label="Rødsvag tilstand">Rødsvag</button>
+            <button data-mode="protanopia" role="menuitemradio" tabindex="0" aria-label="Rødblind tilstand">Rødblind</button>
+            <button data-mode="tritanomaly" role="menuitemradio" tabindex="0" aria-label="Blåsvag tilstand">Blåsvag</button>
+            <button data-mode="tritanopia" role="menuitemradio" tabindex="0" aria-label="Blåblind tilstand">Blåblind</button>
+            <button data-mode="achromatopsia" role="menuitemradio" tabindex="0" aria-label="Sort-hvid tilstand">Sorthvid</button>
+            <button data-mode="bluecone" role="menuitemradio" tabindex="0" aria-label="Blåkone tilstand">Blåkone</button>
           </div>
 
         </div>
@@ -54,43 +65,72 @@
   </nav>
 
   <!-- Header -->
-  <header class="header" role="banner" tabindex="0">
+  <header class="header"
+          role="banner"
+          tabindex="0"
+          aria-label="Forside banner med titel og slogan">
     <p>Stop Madspild <span>uden</span> at gøre livet svært</p>
-    <h1 class="titel">GRØN <span>HVERDAG</span></h1>
+    <h1 class="titel" id="forsideTitel">GRØN <span>HVERDAG</span></h1>
   </header>
 
   <!-- MAIN -->
-  <main id="main" role="main" tabindex="-1">
+  <main id="main"
+        role="main"
+        tabindex="-1"
+        aria-labelledby="forsideTitel">
+
     <section class="broedtekst">
 
-      <section class="faktabox-info">
+      <section class="faktabox-info" aria-label="Faktabokse med information om madspild">
 
         <!-- FAKTABOKS 1 -->
-        <div class="faktabox1 fakta" role="article" tabindex="0">
-          <a href="stop-madspild.html" tabindex="0">
-            <h2 id="fodeva">Tips til at bekæmpe madspild</h2>
+        <div class="faktabox1 fakta"
+             role="article"
+             tabindex="0"
+             aria-labelledby="fakta1Titel">
+
+          <a href="stop-madspild.html"
+             tabindex="0"
+             aria-label="Læs tips til at bekæmpe madspild">
+
+            <h2 id="fakta1Titel">Tips til at bekæmpe madspild</h2>
             <p>1. Planlæg dine måltider</p>
             <p>2. Brug en indkøbsliste</p>
             <p>3. Frys overskud ned</p>
             <p>4. Brug dine rester kreativt</p>
             <br>
-            <button tabindex="0">Læs mere</button>
+            <button tabindex="0" aria-label="Læs mere om madspild">Læs mere</button>
+
           </a>
         </div>
 
         <!-- FAKTABOKS 2 -->
-        <div class="faktabox2 fakta" role="article" tabindex="0"></div>
+        <div class="faktabox2 fakta"
+             role="article"
+             tabindex="0"
+             aria-label="Illustration eller billede relateret til madspild">
+        </div>
 
         <!-- FAKTABOKS 3 -->
-        <div class="faktabox3 fakta" role="article" tabindex="0"></div>
+        <div class="faktabox3 fakta"
+             role="article"
+             tabindex="0"
+             aria-label="Illustration eller billede relateret til madspild">
+        </div>
 
         <!-- FAKTABOKS 4 -->
-        <div class="faktabox4 fakta" role="article" tabindex="0">
-          <a href="stop-madspild.html" tabindex="0">
-            <h2>FN og madspild</h2>
+        <div class="faktabox4 fakta"
+             role="article"
+             tabindex="0"
+             aria-labelledby="fakta4Titel">
+
+          <a href="stop-madspild.html" tabindex="0" aria-label="Læs mere om FN og madspild">
+
+            <h2 id="fakta4Titel">FN og madspild</h2>
             <p>En af FN’s verdensmål er at reducere madspild markant inden 2030 …</p>
             <br>
-            <button tabindex="0">Læs mere</button>
+            <button tabindex="0" aria-label="Læs mere om FN og madspild">Læs mere</button>
+
           </a>
         </div>
 
@@ -99,43 +139,43 @@
   </main>
 
   <!-- FOOTER -->
-  <footer role="contentinfo" tabindex="0">
+  <footer role="contentinfo" tabindex="0" aria-label="Sidefod med kontakt og links">
 
     <div class="miniflex">
 
-      <div class="foot f1">
+      <div class="foot f1" aria-label="Footer navigation">
         <div class="items"><a href="stop-madspild.html" tabindex="0">❯ STOP MADSPILD</a></div>
         <div class="items"><a href="index.html" tabindex="0">❯ FORSIDE</a></div>
         <div class="items"><a href="kontakt.html" tabindex="0">❯ KONTAKT OS</a></div>
       </div>
 
-      <div class="foot f2" tabindex="0">
+      <div class="foot f2" tabindex="0" aria-label="Adresse og virksomhedsinformation">
         <p>❯ GRØN HVERDAG</p>
         <p>❯ BÆREDYGTIGHEDSVEJ 3</p>
         <p>❯ 8000 AARHUS C</p>
         <p>❯ KONTAKTPERSON: METTE</p>
         <p>❯ CVR: 69420360</p>
         <br>
-        <a href="#" tabindex="0">❯ INSTAGRAM: @GRONHVERDAG</a><br>
-        <a href="#" tabindex="0">❯ FACEBOOK: /GRONHVERDAGDK</a><br>
-        <a href="#" tabindex="0">❯ TIKTOK: @GRONHVERDAG</a><br>
+        <a href="#" tabindex="0" aria-label="Instagram profil">❯ INSTAGRAM: @GRONHVERDAG</a><br>
+        <a href="#" tabindex="0" aria-label="Facebook side">❯ FACEBOOK: /GRONHVERDAGDK</a><br>
+        <a href="#" tabindex="0" aria-label="TikTok profil">❯ TIKTOK: @GRONHVERDAG</a><br>
       </div>
 
-      <div class="foot f3" tabindex="0">
+      <div class="foot f3" tabindex="0" aria-label="Kontaktinformation">
         <p>❯ EMAIL: INFO@GRONHVERDAG.DK</p>
         <p>❯ TELEFON: +45 67 69 42 00</p>
         <br>
-
         <p>❯ KUNDESERVICE: +45 98 76 54 32</p>
         <p>❯ ÅBENINGSTIDER</p>
         <p>❯ MANDAG – FREDAG 09:00–16:00</p>
       </div>
 
-      <div class="foot" tabindex="0">
+      <div class="foot" tabindex="0" aria-label="Pressekontakt">
         <p>❯ PRESSE: PRESSE@GRONHVERDAG.DK</p>
         <p>❯ TELEFON: +45 22 33 44 55</p>
-        <br>
       </div>
+
+    </div>
 
     <p class="copyright">
       © 2025 Grøn Hverdag. Alle rettigheder forbeholdes.
@@ -143,5 +183,6 @@
   </footer>
 
   <script src="script.js"></script>
+
 </body>
 </html>

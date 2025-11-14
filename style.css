@@ -1248,7 +1248,7 @@ button:focus {
   font-size: 1.6rem; 
 }
 .madspild-info p { 
-  font-size: 1.2em; 
+  font-size: 1.09rem; 
   line-height: 1.6; 
 }
 
@@ -1543,6 +1543,9 @@ form {
   #name, #email, #Emne {
   width: 40vw;
   height: 2.2em;
+}
+.forms h2 {
+  font-size: 1.5em;
 }
 }
 

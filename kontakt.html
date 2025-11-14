@@ -9,44 +9,43 @@
   <link rel="stylesheet" href="style.css">
 </head>
 
-<!-- GIVER BODY FOKUS MULIGHED -->
-<body data-mode="normal" tabindex="0">
+<body data-mode="normal" tabindex="0" aria-label="Hele kontakt siden">
 
   <!-- SKIP-LINK -->
-  <a href="#main-kon" class="skip-link">Spring til hovedindhold</a>
+  <a href="#main-kon" class="skip-link" aria-label="Spring direkte til kontaktindhold">Spring til hovedindhold</a>
 
   <!-- NAVIGATION -->
-  <nav class="topmenu" role="navigation" aria-label="Hovedmenu" tabindex="0">
+  <nav class="topmenu" role="navigation" aria-label="Hovedmenu med navigation" tabindex="0">
     <div class="nav-container">
 
       <!-- BURGER -->
-      <button class="burger" id="burgerBtn" aria-label="Åbn eller luk menu">☰</button>
+      <button class="burger" id="burgerBtn" aria-label="Åbn eller luk navigationen">☰</button>
 
       <!-- LINKS -->
-      <div class="nav-links" id="navLinks" role="menubar">
+      <div class="nav-links" id="navLinks" role="menubar" aria-label="Navigationslinks">
 
         <img class="menulink menulink-img" src="img/logo3.png" alt="Grøn Hverdag logo">
 
-        <div class="menulink"><a href="index.html" role="menuitem">FORSIDE</a></div>
-        <div class="menulink"><a href="stop-madspild.html" role="menuitem">STOP MADSPILD</a></div>
-        <div class="menulink"><a href="kontakt.html" role="menuitem" aria-current="page">KONTAKT OS</a></div>
+        <div class="menulink"><a href="index.html" role="menuitem" aria-label="Gå til forsiden">FORSIDE</a></div>
+        <div class="menulink"><a href="stop-madspild.html" role="menuitem" aria-label="Læs om Stop Madspild">STOP MADSPILD</a></div>
+        <div class="menulink"><a href="kontakt.html" role="menuitem" aria-current="page" aria-label="Du er på Kontaktsiden">KONTAKT OS</a></div>
 
         <!-- Farveblindhed -->
         <div class="menulink colorblind">
-          <button id="colorToggle" aria-expanded="false" aria-controls="colorMenu">
+          <button id="colorToggle" aria-expanded="false" aria-controls="colorMenu" aria-haspopup="true" aria-label="Åbn indstillinger for farveblindhed">
             FARVEBLINDHED
           </button>
 
-          <div class="color-menu" id="colorMenu" hidden role="menu">
-            <button data-mode="normal" role="menuitemradio" aria-checked="true">Normal</button>
-            <button data-mode="deuteranomaly" role="menuitemradio">Grønsvag</button>
-            <button data-mode="deuteranopia" role="menuitemradio">Grønblind</button>
-            <button data-mode="protanomaly" role="menuitemradio">Rødsvag</button>
-            <button data-mode="protanopia" role="menuitemradio">Rødblind</button>
-            <button data-mode="tritanomaly" role="menuitemradio">Blåsvag</button>
-            <button data-mode="tritanopia" role="menuitemradio">Blåblind</button>
-            <button data-mode="achromatopsia" role="menuitemradio">Sorthvid</button>
-            <button data-mode="bluecone" role="menuitemradio">Blåkone</button>
+          <div class="color-menu" id="colorMenu" hidden role="menu" aria-label="Vælg farvetilstand">
+            <button data-mode="normal" role="menuitemradio" aria-checked="true" aria-label="Skift til normal farvetilstand">Normal</button>
+            <button data-mode="deuteranomaly" role="menuitemradio" aria-label="Skift til grønsvag tilstand">Grønsvag</button>
+            <button data-mode="deuteranopia" role="menuitemradio" aria-label="Skift til grønblind tilstand">Grønblind</button>
+            <button data-mode="protanomaly" role="menuitemradio" aria-label="Skift til rødsvag tilstand">Rødsvag</button>
+            <button data-mode="protanopia" role="menuitemradio" aria-label="Skift til rødblind tilstand">Rødblind</button>
+            <button data-mode="tritanomaly" role="menuitemradio" aria-label="Skift til blåsvag tilstand">Blåsvag</button>
+            <button data-mode="tritanopia" role="menuitemradio" aria-label="Skift til blåblind tilstand">Blåblind</button>
+            <button data-mode="achromatopsia" role="menuitemradio" aria-label="Skift til sort-hvid visning">Sorthvid</button>
+            <button data-mode="bluecone" role="menuitemradio" aria-label="Skift til blå-kone tilstand">Blåkone</button>
           </div>
 
         </div>
@@ -55,77 +54,76 @@
   </nav>
 
   <!-- HEADER -->
-  <header class="header-kontakt-os" role="banner" tabindex="0">
-    <h1 class="titel">KONTAKT <span>OS</span></h1>
+  <header class="header-kontakt-os" role="banner" aria-labelledby="kontaktTitel" tabindex="0">
+    <h1 id="kontaktTitel" class="titel">KONTAKT <span>OS</span></h1>
   </header>
 
   <!-- MAIN -->
-  <main id="main-kon" role="main" tabindex="-1">
+  <main id="main-kon" role="main" tabindex="-1" aria-label="Kontakt indhold">
 
-    <!-- Hele containeren gøres tabbable -->
-    <section class="broedtekst" role="region" aria-label="Kontaktoversigt og kort" tabindex="0">
+    <section class="broedtekst" role="region" aria-label="Oversigt over alle kontaktsektioner" tabindex="0">
 
-      <section class="grid-kon" aria-label="Kontaktoplysninger opdelt i sektioner" tabindex="0">
+      <section class="grid-kon" aria-label="Kontaktoplysninger opdelt efter kategorier" tabindex="0">
 
-        <div class="kon1 kon" role="region" tabindex="0">
-          <h2>SIDER</h2>
-          <div class="itemskontakt"><a href="stop-madspild.html">❯ STOP MADSPILD</a></div>
-          <div class="itemskontakt"><a href="index.html">❯ FORSIDE</a></div>
-          <div class="itemskontakt"><a href="kontakt.html" aria-current="page">❯ KONTAKT OS</a></div>
+        <div class="kon1 kon" role="region" aria-labelledby="sektionSider" tabindex="0">
+          <h2 id="sektionSider">SIDER</h2>
+          <div class="itemskontakt"><a href="stop-madspild.html" aria-label="Gå til Stop Madspild">❯ STOP MADSPILD</a></div>
+          <div class="itemskontakt"><a href="index.html" aria-label="Gå til Forside">❯ FORSIDE</a></div>
+          <div class="itemskontakt"><a href="kontakt.html" aria-current="page" aria-label="Du er på Kontaktsiden">❯ KONTAKT OS</a></div>
         </div>
 
-        <div class="kon2 kon" role="region" tabindex="0">
-          <h2>GRØN HVERDAG</h2>
+        <div class="kon2 kon" role="region" aria-labelledby="sektionAdresse" tabindex="0">
+          <h2 id="sektionAdresse">GRØN HVERDAG</h2>
           <p>❯ Storegade 3</p>
           <p>❯ 8900 Randers C</p>
           <p>❯ KONTAKTPERSON: METTE</p>
           <p>❯ CVR: 69420360</p>
         </div>
 
-        <div class="kon3 kon" role="region" tabindex="0">
-          <h2>SOCIALE MEDIER</h2>
-          <a href="#">❯ INSTAGRAM: @GRONHVERDAG</a><br>
-          <a href="#">❯ FACEBOOK: /GRONHVERDAGDK</a><br>
-          <a href="#">❯ TIKTOK: @GRONHVERDAG</a>
+        <div class="kon3 kon" role="region" aria-labelledby="sektionSoMe" tabindex="0">
+          <h2 id="sektionSoMe">SOCIALE MEDIER</h2>
+          <a href="#" aria-label="Instagram profil">❯ INSTAGRAM: @GRONHVERDAG</a><br>
+          <a href="#" aria-label="Facebook side">❯ FACEBOOK: /GRONHVERDAGDK</a><br>
+          <a href="#" aria-label="TikTok profil">❯ TIKTOK: @GRONHVERDAG</a>
         </div>
 
-        <div class="kon4 kon" role="region" tabindex="0">
-          <h2>PRIMÆR KONTAKT</h2>
+        <div class="kon4 kon" role="region" aria-labelledby="sektionPrimaerKontakt" tabindex="0">
+          <h2 id="sektionPrimaerKontakt">PRIMÆR KONTAKT</h2>
           <p>❯ EMAIL: INFO@GRONHVERDAG.DK</p>
           <p>❯ TELEFON: +45 67 69 42 00</p>
         </div>
 
-        <div class="kon5 kon" role="region" tabindex="0">
-          <h2>SUPPORT / KUNDESERVICE</h2>
+        <div class="kon5 kon" role="region" aria-labelledby="sektionSupport" tabindex="0">
+          <h2 id="sektionSupport">SUPPORT / KUNDESERVICE</h2>
           <p>❯ EMAIL: SUPPORT@GRONHVERDAG.DK</p>
           <p>❯ TELEFON: +45 98 76 54 32</p>
 
-          <h2>PRESSE / PARTNERSKABER</h2>
+          <h2 id="sektionPresse">PRESSE / PARTNERSKABER</h2>
           <p>❯ EMAIL: PRESSE@GRONHVERDAG.DK</p>
           <p>❯ TELEFON: +45 22 33 44 55</p>
 
-          <h2>NEWSLETTER</h2>
+          <h2 id="sektionNyhedsbrev">NEWSLETTER</h2>
           <p>❯ EMAIL: NYHEDER@GRONHVERDAG.DK</p>
         </div>
 
         <!-- FORM -->
-        <div class="forms" role="region" tabindex="0">
-          <form>
-            <h2>SKRIV TIL OS</h2>
+        <div class="forms" role="region" aria-labelledby="sektionForm" tabindex="0">
+          <form aria-label="Kontaktformular">
+            <h2 id="sektionForm">SKRIV TIL OS</h2>
 
             <div class="form-group">
               <label for="name">Navn</label>
-              <input type="text" id="name" required>
+              <input type="text" id="name" aria-label="Indtast dit navn" required>
             </div>
 
             <div class="form-group">
               <label for="email">Email</label>
-              <input type="email" id="email" required>
+              <input type="email" id="email" aria-label="Indtast din email" required>
             </div>
 
             <div class="form-group">
               <label for="emne">Emne</label>
-              <select id="emne" required>
+              <select id="emne" aria-label="Vælg et emne" required>
                 <option disabled selected hidden>Vælg et emne...</option>
                 <option>Generel forespørgsel</option>
                 <option>Stop Madspild</option>
@@ -135,24 +133,26 @@
 
             <div class="form-group">
               <label for="bio">Besked</label>
-              <textarea id="bio" rows="6"></textarea>
+              <textarea id="bio" rows="6" aria-label="Skriv din besked her"></textarea>
             </div>
 
             <div class="btns">
-              <button type="reset">Reset</button>
-              <button type="submit">Send</button>
+              <button type="reset" aria-label="Nulstil formular">Reset</button>
+              <button type="submit" aria-label="Send formularen">Send</button>
             </div>
           </form>
         </div>
 
         <!-- MAP -->
-        <div class="kon8" role="region" tabindex="0">
-          <section class="map" role="region">
+        <div class="kon8" role="region" aria-labelledby="sektionMap" tabindex="0">
+          <section class="map" role="region" aria-labelledby="sektionMap">
+            <h2 id="sektionMap" style="position:absolute; left:-9999px;">Kort over virksomhedens placering</h2>
             <iframe 
               width="100%" 
               height="350" 
               src="https://www.openstreetmap.org/export/embed.html?bbox=10.035227537155151%2C56.457091632108956%2C10.039706826210024%2C56.45828320972407&amp;layer=mapnik"
-              title="Kort over Grøn Hverdag i Randers">
+              title="Kort over Grøn Hverdag i Randers"
+              aria-label="Kort der viser hvor Grøn Hverdag ligger">
             </iframe>
           </section>
         </div>
@@ -162,29 +162,31 @@
   </main>
 
   <!-- FOOTER -->
-  <footer role="contentinfo" tabindex="0">
+  <footer role="contentinfo" aria-label="Sidefod med kontakt og info" tabindex="0">
 
     <div class="miniflex">
 
-      <div class="foot f1">
-        <div class="items"><a href="stop-madspild.html" tabindex="0">❯ STOP MADSPILD</a></div>
-        <div class="items"><a href="index.html" tabindex="0">❯ FORSIDE</a></div>
-        <div class="items"><a href="kontakt.html" tabindex="0">❯ KONTAKT OS</a></div>
+      <div class="foot f1" aria-label="Menu i footer">
+        <div class="items"><a href="stop-madspild.html" tabindex="0" aria-label="Gå til Stop Madspild">❯ STOP MADSPILD</a></div>
+        <div class="items"><a href="index.html" tabindex="0" aria-label="Gå til forsiden">❯ FORSIDE</a></div>
+        <div class="items"><a href="kontakt.html" tabindex="0" aria-label="Gå til Kontakt os">❯ KONTAKT OS</a></div>
       </div>
 
-      <div class="foot f2" tabindex="0">
+      <div class="foot f2" aria-labelledby="footerAdresse" tabindex="0">
+        <h2 id="footerAdresse" style="position:absolute; left:-9999px;">Adresse og sociale medier</h2>
         <p>❯ GRØN HVERDAG</p>
         <p>❯ BÆREDYGTIGHEDSVEJ 3</p>
         <p>❯ 8000 AARHUS C</p>
         <p>❯ KONTAKTPERSON: METTE</p>
         <p>❯ CVR: 69420360</p>
         <br>
-        <a href="#" tabindex="0">❯ INSTAGRAM: @GRONHVERDAG</a><br>
-        <a href="#" tabindex="0">❯ FACEBOOK: /GRONHVERDAGDK</a><br>
-        <a href="#" tabindex="0">❯ TIKTOK: @GRONHVERDAG</a><br>
+        <a href="#" tabindex="0" aria-label="Instagram profil">❯ INSTAGRAM: @GRONHVERDAG</a><br>
+        <a href="#" tabindex="0" aria-label="Facebook side">❯ FACEBOOK: /GRONHVERDAGDK</a><br>
+        <a href="#" tabindex="0" aria-label="TikTok profil">❯ TIKTOK: @GRONHVERDAG</a><br>
       </div>
 
-      <div class="foot f3" tabindex="0">
+      <div class="foot f3" aria-labelledby="footerKontakt" tabindex="0">
+        <h2 id="footerKontakt" style="position:absolute; left:-9999px;">Kontaktoplysninger</h2>
         <p>❯ EMAIL: INFO@GRONHVERDAG.DK</p>
         <p>❯ TELEFON: +45 67 69 42 00</p>
         <br>
@@ -194,7 +196,8 @@
         <p>❯ MANDAG – FREDAG 09:00–16:00</p>
       </div>
 
-      <div class="foot" tabindex="0">
+      <div class="foot" aria-labelledby="footerPresse" tabindex="0">
+        <h2 id="footerPresse" style="position:absolute; left:-9999px;">Presse kontakt</h2>
         <p>❯ PRESSE: PRESSE@GRONHVERDAG.DK</p>
         <p>❯ TELEFON: +45 22 33 44 55</p>
         <br>

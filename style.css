@@ -1549,7 +1549,16 @@ form {
 }
 }
 
+@media(max-width: 450px){
 
+#emne option{
+  color: black;
+  
+}
+#emne{
+  width: 50%;
+}
+}
 
 /* === Mindste skærme under 340px === */
 @media (max-width: 340px) {

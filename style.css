@@ -262,10 +262,10 @@ body, html {
 
 /* Knap der åbner farveblind-menuen */
 .colorblind #colorToggle {
-  background: #555555;
+  background: var(--primary-color);
   border: none;
-  color: var(--primary-color);
   font-size: 1.8vw;
+  color: #fff;
   font-weight: 600;
   cursor: pointer;
   text-transform: uppercase;
@@ -273,8 +273,10 @@ body, html {
 }
 /* Gør knappen lidt større og mere grøn ved hover */
 .colorblind #colorToggle:hover {
-  color: var(--highlight);
+  color: black;
 }
+
+
 
 /* Selve dropdown-boksen med valgmuligheder */
 .colorblind .color-menu {
@@ -346,11 +348,11 @@ body, html {
 }
 
 /* Giver brødtekst i headeren lidt luft og lysere farve */
-.header p {
+.header p, .header-stopmadsplid p {
   margin-bottom: 1em;
   font-size: 1.8vw;
   color: #d4ffd4;
-    background-color: rgba(0,0,0,0.4);
+  background-color: rgba(0,0,0,0.4);
   padding: .3em .6em;
   border-radius: 4px;
 }

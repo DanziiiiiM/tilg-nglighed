@@ -51,7 +51,7 @@ body, html {
   top: -40px;
   left: 0;
   background: #000;
-  color: #fff;
+  color:              #000000;
   padding: 0.5em 1em;
   z-index: 100;
 }
@@ -262,7 +262,7 @@ body, html {
 
 /* Knap der åbner farveblind-menuen */
 .colorblind #colorToggle {
-  background: #C0C0C0;
+  background: #555555;
   border: none;
   color: var(--primary-color);
   font-size: 1.8vw;
@@ -616,12 +616,14 @@ p {
 footer {
   padding: 2em;
   background-color: #002D65;
-  color: #E7A800;
+  color: #ffffff;
   text-align: left;
 }
 
 /* Samme gule farve på footer-links */
-footer a { color: #E7A800; }
+footer a, footer, footer p {
+   color: #ffffff; 
+  }
 
 /* Footer opdeles i fleksible kolonner */
 .miniflex {
@@ -1328,7 +1330,6 @@ form {
 .copyright {
   margin-top: .4em;
   font-size: 2vw;
-  color: #FBC100;
   width: 100%;
 }
 
@@ -1403,7 +1404,6 @@ form {
     margin-top: 2em;
     text-align: left;
     font-size: 2.2vw;
-    color: #FBC100;
     width: 100%;
   }
 
@@ -1458,7 +1458,6 @@ form {
     margin-top: 2em;
     text-align: left;
     font-size: 2.2vw;
-    color: #FBC100;
     width: 100%;
   }
 
@@ -1529,7 +1528,7 @@ form {
     margin-top: 2em;
     text-align: left;
     font-size: 3vw;
-    color: #FBC100;
+
   }
 
 

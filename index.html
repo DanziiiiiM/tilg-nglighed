@@ -19,10 +19,10 @@
       <!-- Burger-knap -->
       <button class="burger" id="burgerBtn" aria-label="Åbn eller luk menuen" tabindex="0">☰</button>
 
-      <div class="nav-links" id="navLinks" role="menubar" aria-label="Navigation links">
+      <div class="nav-links" id="navLinks">
 
         <!-- Logo -->
-        <img class="menulink menulink-img" src="img/logo3.png" alt="Grøn Hverdag logo">
+        <img class="menulink menulink-img" src="img/logo3.png" alt="Til forsiden – Grøn Hverdag">
 
         <div class="menulink">
           <a href="index.html" aria-current="page" tabindex="0" aria-label="Gå til forsiden">FORSIDE</a>
@@ -33,7 +33,7 @@
         </div>
 
         <div class="menulink">
-          <a href="kontakt.html" tabindex="0" aria-label="Kontakt Grøn Hverdag">KONTAKT OS</a>
+          <a href="kontakt.html" aria-label="Kontakt os – Grøn Hverdag">KONTAKT OS</a>
         </div>
 
         <!-- Dropdown -->
@@ -47,17 +47,17 @@
             FARVEBLINDHED
           </button>
 
-          <div class="color-menu" id="colorMenu" hidden role="menu" aria-label="Vælg farvetilstand">
-            <button data-mode="normal" role="menuitemradio" aria-checked="true" tabindex="0">Normal</button>
-            <button data-mode="deuteranomaly" role="menuitemradio" tabindex="0">Grønsvag</button>
-            <button data-mode="deuteranopia" role="menuitemradio" tabindex="0">Grønblind</button>
-            <button data-mode="protanomaly" role="menuitemradio" tabindex="0">Rødsvag</button>
-            <button data-mode="protanopia" role="menuitemradio" tabindex="0">Rødblind</button>
-            <button data-mode="tritanomaly" role="menuitemradio" tabindex="0">Blåsvag</button>
-            <button data-mode="tritanopia" role="menuitemradio" tabindex="0">Blåblind</button>
-            <button data-mode="achromatopsia" role="menuitemradio" tabindex="0">Sorthvid</button>
-            <button data-mode="bluecone" role="menuitemradio" tabindex="0">Blåkone</button>
-          </div>
+            <div class="color-menu" id="colorMenu" hidden aria-label="Vælg farvetilstand">
+              <button data-mode="normal" aria-pressed="true">Normal</button>
+              <button data-mode="deuteranomaly" aria-pressed="false">Grønsvag</button>
+              <button data-mode="deuteranopia" aria-pressed="false">Grønblind</button>
+              <button data-mode="protanomaly" aria-pressed="false">Rødsvag</button>
+              <button data-mode="protanopia" aria-pressed="false">Rødblind</button>
+              <button data-mode="tritanomaly" aria-pressed="false">Blåsvag</button>
+              <button data-mode="tritanopia" aria-pressed="false">Blåblind</button>
+              <button data-mode="achromatopsia" aria-pressed="false">Sorthvid</button>
+              <button data-mode="bluecone" aria-pressed="false">Blåkone</button>
+            </div>
 
         </div>
       </div>

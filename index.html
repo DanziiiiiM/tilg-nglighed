@@ -10,9 +10,7 @@
 <body data-mode="normal" tabindex="0" aria-label="Forside for Grøn Hverdag">
 
   <!-- SKIPLINK -->
- <a href="#main" class="skip-link" aria-label="Spring direkte til hovedindhold">
-  Spring til hovedindhold
-</a>
+<a href="#main" class="skip-link">Spring til hovedindhold</a>
 
   <!-- === NAVIGATION === -->
   <nav class="topmenu" role="navigation" aria-label="Hovedmenu">
@@ -129,40 +127,48 @@
   </main>
 
   <!-- FOOTER -->
-  <footer role="contentinfo" aria-label="Sidefod med kontakt og links">
+   <footer role="contentinfo" aria-label="Sidefod med kontakt og info">
 
     <div class="miniflex">
 
-      <div class="foot f1" aria-label="Footer navigation">
-        <div class="items"><a href="stop-madspild.html" >❯ STOP MADSPILD</div>
-        <div class="items"><a href="index.html" aria-current="Nuværende side">❯ FORSIDE</a></div>
-        <div class="items"><a href="kontakt.html">❯ KONTAKT OS</a></a></div>
+      <div class="foot f1" aria-labelledby="footerLinks">
+        <h2 id="sider" class="visually-hidden">Sider</h2>
+        <div class="items"><a href="stop-madspild.html">❯ STOP MADSPILD</div>
+        <div class="items"><a href="index.html" aria-current="Nuværende side"> ❯ FORSIDE</a></div>
+        <div class="items"><a href="kontakt.html" >❯ KONTAKT OS</a></a></div>
       </div>
 
-      <div class="foot f2" tabindex="0" aria-label="Adresse og virksomhedsinformation">
+      <div class="foot f2" aria-labelledby="footerAdresse">
+        <h2 id="footerAdresse" class="visually-hidden">Adresse og sociale medier</h2>
         <p>❯ GRØN HVERDAG</p>
         <p>❯ BÆREDYGTIGHEDSVEJ 3</p>
         <p>❯ 8000 AARHUS C</p>
         <p>❯ KONTAKTPERSON: METTE</p>
         <p>❯ CVR: 69420360</p>
         <br>
-        <a href="#" tabindex="0" aria-label="Instagram profil">❯ INSTAGRAM: @GRONHVERDAG</a><br>
-        <a href="#" tabindex="0" aria-label="Facebook side">❯ FACEBOOK: /GRONHVERDAGDK</a><br>
-        <a href="#" tabindex="0" aria-label="TikTok profil">❯ TIKTOK: @GRONHVERDAG</a><br>
+        <a href="#" aria-label="Instagram profil – INSTAGRAM: @GRONHVERDAG">
+            ❯ INSTAGRAM: @GRONHVERDAG
+        </a>  
+        <a href="#" title="Besøg vores Facebook">❯ FACEBOOK: /GRONHVERDAGDK</a><br>
+        <a href="#" title="Besøg vores TikTok">❯ TIKTOK: @GRONHVERDAG</a><br>
       </div>
 
-      <div class="foot f3" tabindex="0" aria-label="Kontaktinformation">
+      <div class="foot f3" aria-labelledby="footerKontakt" >
+        <h2 id="footerKontakt" class="visually-hidden">Kontaktoplysninger</h2>
         <p>❯ EMAIL: INFO@GRONHVERDAG.DK</p>
         <p>❯ TELEFON: +45 67 69 42 00</p>
         <br>
+
         <p>❯ KUNDESERVICE: +45 98 76 54 32</p>
         <p>❯ ÅBENINGSTIDER</p>
         <p>❯ MANDAG – FREDAG 09:00–16:00</p>
       </div>
 
-      <div class="foot" tabindex="0" aria-label="Pressekontakt">
+      <div class="foot" aria-labelledby="footerPresse" >
+        <h2 id="footerPresse" class="visually-hidden">Presse kontakt</h2>
         <p>❯ PRESSE: PRESSE@GRONHVERDAG.DK</p>
         <p>❯ TELEFON: +45 22 33 44 55</p>
+        <br>
       </div>
 
     </div>
